@@ -1,0 +1,34 @@
+html {
+  --top-spacing: 100px;
+  scroll-padding-top: var(--top-spacing);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: var(--top-spacing) auto;
+  padding: 0 20px;
+  font: 18px/1.4 system-ui;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  position: relative;
+}
+
+.inputFields {
+  display: flex;
+  flex-direction: row;
+}

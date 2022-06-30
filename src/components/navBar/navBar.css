@@ -1,0 +1,24 @@
+.navBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fbf2db;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-areas: "empty title title  menu";
+}
+
+.mainMenu {
+  grid-area: menu;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.title {
+  grid-area: title;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
