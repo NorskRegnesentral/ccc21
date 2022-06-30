@@ -1,3 +1,11 @@
 .colorInput {
   padding: 1fr;
 }
+
+input{
+  height: 60px;
+  width: 60px;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+}
