@@ -25,7 +25,13 @@ code {
 }
 
 .content {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.contentGroup {
+
 }
 
 .inputFields {
@@ -47,5 +53,4 @@ button {
   font-size: 14px;
   max-width: 14em;
   cursor: pointer;
-  margin: 5px;
 }

@@ -10,7 +10,6 @@ const ColorInput = ({colorValue, index, updateColorValue}) => {
     <div className="colorInput">
       <input type="color" value={colorValue.colorValue} 
       onInput={e => {
-   
         {updateColorValue(index, e.target.value)}
     }}
       ></input>
