@@ -5,7 +5,7 @@ import ColorInput from "../../components/colorInput/colorInput";
 import ContrastTable from "../../components/contrastTable/contrastTable";
 
 function Home() {
-  const [colorList, setColorList] = useState(["#ffffff"]);
+  const [colorList, setColorList] = useState(["#000000"]);
   useEffect(() => {},[]);
 
   /** Metoden oppdaterer en farge i listen når du endrer fargen i brukergrensesnittet */
@@ -25,22 +25,20 @@ function Home() {
             ))}
           </div>
           <button
-            onClick={() => setColorList((colorList) => [...colorList, "#ffffff"])}
+            onClick={() => setColorList((colorList) => [...colorList, "#000000"])}
           >
             legg til fargekode
           </button>
         </div>
         <div className="contentGroup">
-          <h1>Her kommer tabell med størrelse {Object.keys(colorList).length}</h1>
+          <h1>Her kommer tabell med størrelse {Object.keys(colorList).length+1} x {Object.keys(colorList).length+1} </h1>
           <ContrastTable colorList={colorList}></ContrastTable>
         </div>
         <div className="contentGroup">
           <h1>Her kommer visning av komponenter i fargene</h1>
         </div>
       </div>
-      <div className="footer">
-        <p>footer 2022</p>
-      </div>
+    
     </div>
   );
 }

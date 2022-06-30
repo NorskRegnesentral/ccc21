@@ -1,30 +1,51 @@
 import "./contrastTable.css";
 import React, { useState, useEffect } from "react";
+import ColorChecker from "../../color-checker"; 
+
 
 const ContrastTable = ({colorList}) => {
-    //vet ikke om denne trengs
-    const [size, setSize] = useState(0);
+  const [tableList, setTableList] = useState([]);
 
+  //tabell-listen skal alltid være den samme som fargelisten, 
+  //men med ett tomt felt først
   useEffect(() => {
-    setSize(Object.keys(colorList).length)
+    setTableList([""].concat(colorList));
   },[colorList]);
 
+  const getCellColor = (rowIndex, columnIndex) => {
+    if(rowIndex === 0) return tableList[columnIndex];
+    else if (columnIndex === 0) return tableList[rowIndex];
+    return; 
+  }
+
   const getCellValue = (rowIndex, columnIndex) => {
-    console.log("getting value for ", rowIndex, columnIndex);
-    if(rowIndex === 0) return colorList[columnIndex];
-    else if (columnIndex === 0) return colorList[rowIndex];
+    if(rowIndex === 0) return tableList[columnIndex];
+    else if (columnIndex === 0) return tableList[rowIndex];
+    //HER SKAL KONTRASTSJEKKEN INN
+    if(rowIndex === columnIndex) return "egen farge, gir 0?"
     var jas = "r"+rowIndex+"c"+columnIndex; 
+    //return getContrast(rowIndex,columnIndex);
     return jas;
+  }
+
+  //work in progress
+  const getContrast = (rowIndex, columnIndex) => {
+    const color1 =  tableList[columnIndex];
+    const color2 = tableList[rowIndex];
+
+    const contrast = ColorChecker.checkColors(color1, color2);
+    console.log(contrast)
+    return contrast;
   }
 
   return (
     <div className="contrastTable">
         <table>
             <tbody>
-                {colorList.map((color, rowIndex) => (
+                {tableList.map((color, rowIndex) => (
                 <tr key={"row"+rowIndex}>
-                    {colorList.map((color, colIndex) => (
-                        <td>{getCellValue(rowIndex, colIndex)}</td>
+                    {tableList.map((color, colIndex) => (
+                        <td  style={{backgroundColor: getCellColor(rowIndex,colIndex)}}>{getCellValue(rowIndex, colIndex)}</td>
                     ))}
                 </tr>
                 ))}
