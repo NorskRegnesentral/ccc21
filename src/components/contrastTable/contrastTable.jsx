@@ -1,7 +1,6 @@
 import "./contrastTable.css";
 import React, { useState, useEffect } from "react";
-import ColorChecker from "../../color-checker"; 
-
+import {checkColors} from "../../color-checker"; 
 
 const ContrastTable = ({colorList}) => {
   const [tableList, setTableList] = useState([]);
@@ -21,21 +20,18 @@ const ContrastTable = ({colorList}) => {
   const getCellValue = (rowIndex, columnIndex) => {
     if(rowIndex === 0) return tableList[columnIndex];
     else if (columnIndex === 0) return tableList[rowIndex];
-    //HER SKAL KONTRASTSJEKKEN INN
-    if(rowIndex === columnIndex) return "egen farge, gir 0?"
-    var jas = "r"+rowIndex+"c"+columnIndex; 
-    //return getContrast(rowIndex,columnIndex);
-    return jas;
+    if(rowIndex === columnIndex) return "" //returnerer tom fordi det er samme fargene
+    return getContrast(rowIndex,columnIndex); 
   }
 
-  //work in progress
+  //bruker den importerte metoden fra color API 
   const getContrast = (rowIndex, columnIndex) => {
     const color1 =  tableList[columnIndex];
     const color2 = tableList[rowIndex];
 
-    const contrast = ColorChecker.checkColors(color1, color2);
+    const contrast = checkColors(color1, color2);
     console.log(contrast)
-    return contrast;
+    return contrast.contrast;
   }
 
   return (
@@ -45,7 +41,7 @@ const ContrastTable = ({colorList}) => {
                 {tableList.map((color, rowIndex) => (
                 <tr key={"row"+rowIndex}>
                     {tableList.map((color, colIndex) => (
-                        <td  style={{backgroundColor: getCellColor(rowIndex,colIndex)}}>{getCellValue(rowIndex, colIndex)}</td>
+                        <td key={rowIndex+colIndex}  style={{backgroundColor: getCellColor(rowIndex,colIndex)}}>{getCellValue(rowIndex, colIndex)}</td>
                     ))}
                 </tr>
                 ))}

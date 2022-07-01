@@ -1,5 +1,5 @@
-// json-two.html?f=000000&b=ffffff
 
+// json-two.html?f=000000&b=ffffff
 var foregroundHex;
 var backgroundHex;
 var colorData;
@@ -35,7 +35,7 @@ function getUrlVariable(param) {
   return vars;
 };
 
-function checkColors(foregroundColor, backgroundColor) {
+export function checkColors(foregroundColor, backgroundColor) {
   if (foregroundColor && backgroundColor) {
     foregroundHex = foregroundColor;
     backgroundHex = backgroundColor;
@@ -130,7 +130,7 @@ function checkColors(foregroundColor, backgroundColor) {
   // console.log("Foreground Luma: " + foregroundLuma);
   // console.log("Background Luma: " + backgroundLuma);
 
-  colorData = {
+  return colorData = {
     "foregroundHex":foregroundHex,
     "backgroundHex":backgroundHex,
     "foregroundRgb":foregroundR + ", " + foregroundG + ", " + foregroundB,
