@@ -1,7 +1,6 @@
-# Hvordan kjøre REACT fra datamaskinen
+# Hvordan kjøre koden fra datamaskinen
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## Slik gjør du
 1. Clone repository
 2. Gå inn i mappen i treminal
