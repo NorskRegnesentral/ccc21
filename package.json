@@ -1,6 +1,6 @@
 {
   "homepage": "https://kamillamortensen.github.io/contrastMatch/",
-  "name": "https://kamillamortensen.github.io/contrastMatch/",
+  "name": "contrastmatch",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -21,6 +21,12 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
   },
   "browserslist": {
     "production": [
