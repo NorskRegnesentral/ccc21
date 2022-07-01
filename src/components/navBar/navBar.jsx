@@ -9,7 +9,7 @@ const NavBar = () => {
       </div>
       <ul className="mainMenu">
         <li>
-          <p>Meny</p>
+          <p>Her kan komme en meny</p>
         </li>
       </ul>
     </div>

@@ -1,3 +1,25 @@
 .colorInput {
   padding: 1fr;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 4px 12px 4px 12px;
+  margin-bottom: 5px;
+  align-items: center;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  min-width: 125px; 
+}
+
+input{
+  height: 50px;
+  width: 50px;
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+p{
+  font-size: 14px;
 }
