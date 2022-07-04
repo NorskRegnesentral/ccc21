@@ -2,13 +2,13 @@
   padding: 1fr;
   display: flex;
   flex-direction: row;
-  gap: 1rem;
   padding: 4px 12px 4px 12px;
   margin-bottom: 5px;
   align-items: center;
   background-color: #f0f0f0;
   border-radius: 4px;
   min-width: 125px; 
+  width: fit-content;
 }
 
 input{
@@ -20,6 +20,28 @@ input{
   cursor: pointer;
 }
 
-p{
+#hex-input {
+  width: 70px;
+  background-color: transparent;
   font-size: 14px;
+}
+
+.deleteInput {
+  height: 1.2rem !important;
+  width: 1.2rem !important;
+  padding: 0.2rem;
+  font-size: 10px;
+  cursor: pointer;
+  display: flex; /* or display:grid */
+  align-items: center;
+  justify-content: center;
+  color: black;
+  background-color: #f0f0f0;
+
+}
+
+.deleteInput:hover{
+  cursor: pointer;
+  color: #f0f0f0;
+  background-color: black;
 }

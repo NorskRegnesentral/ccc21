@@ -13,6 +13,10 @@ function Home() {
     setColorList(colors => colors.map((value, i) => i === index ? newValue : value))
   }
 
+  var removeColorValue = (index) => {
+    setColorList((colorList) => colorList.filter((_, i) => i !== index.index))
+  }
+
   return (
     <div className="App">
       <NavBar></NavBar>
@@ -21,7 +25,7 @@ function Home() {
           <h1>Farger</h1>
           <div className="inputFields">
             {colorList.map((color, index) => (
-              <ColorInput key={"color"+index} index={index} colorValue={color} updateColorValue={updateColorValue} ></ColorInput>
+              <ColorInput key={"color"+index} index={index} colorValue={color} updateColorValue={updateColorValue} removeColorValue={removeColorValue} ></ColorInput>
             ))}
           </div>
           <button

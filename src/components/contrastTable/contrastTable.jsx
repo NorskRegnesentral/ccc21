@@ -29,9 +29,8 @@ const ContrastTable = ({colorList}) => {
     const color1 =  tableList[columnIndex];
     const color2 = tableList[rowIndex];
 
-    const contrast = checkColors(color1, color2);
-    console.log(contrast)
-    return contrast.contrast;
+    const contrast = checkColors(color1, color2); 
+    return contrast.contrast; //contrast har mange verdier. Console.log for å se alle muligheter:)
   }
 
   return (
@@ -41,7 +40,7 @@ const ContrastTable = ({colorList}) => {
                 {tableList.map((color, rowIndex) => (
                 <tr key={"row"+rowIndex}>
                     {tableList.map((color, colIndex) => (
-                        <td key={rowIndex+colIndex}  style={{backgroundColor: getCellColor(rowIndex,colIndex)}}>{getCellValue(rowIndex, colIndex)}</td>
+                        <td key={rowIndex+colIndex} ><div style={{'backgroundColor': getCellColor(rowIndex,colIndex)}} className="colorBox"/><div>{getCellValue(rowIndex, colIndex)}</div></td> //sett backgroundcolor i ytterste div for full dekning
                     ))}
                 </tr>
                 ))}
