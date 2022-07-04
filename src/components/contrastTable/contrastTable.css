@@ -17,3 +17,12 @@ table, th, td {
     min-width: 125px; 
     font-size: 14px;
   }
+
+  .colorBox{
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+    display: inline;
+    float: left;
+  }
+
