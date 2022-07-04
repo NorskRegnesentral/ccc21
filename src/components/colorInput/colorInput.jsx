@@ -20,13 +20,13 @@ const ColorInput = ({colorValue, index, updateColorValue, removeColorValue}) => 
 
   return (
     <div className="colorInput">
+       <button className="deleteInput" title="fjern inputboks" onClick={e => {{removeColorValue({index})}}}>x</button>
       <input type="color" value={colorValue} 
       onInput={e => {
         {updateColorValue(index, e.target.value)}
     }}
       ></input>
       <input type="text" id="hex-input" maxLength="7" value={colorTextInput} onChange={updateValue}></input>
-      <button className="deleteInput" onClick={e => {{removeColorValue({index})}}}>x fjern</button>
     </div>
   );
 };
