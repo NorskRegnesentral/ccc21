@@ -1,7 +1,7 @@
 import "./colorInput.css";
 import React, { useState, useEffect } from "react";
 
-const ColorInput = ({colorValue, index, updateColorValue}) => {
+const ColorInput = ({colorValue, index, updateColorValue, removeColorValue}) => {
   const [colorTextInput, setColorTextInput] = useState();
   useEffect(() => {},[]);
 
@@ -26,6 +26,7 @@ const ColorInput = ({colorValue, index, updateColorValue}) => {
     }}
       ></input>
       <input type="text" id="hex-input" maxLength="7" value={colorTextInput} onChange={updateValue}></input>
+      <button className="deleteInput" onClick={e => {{removeColorValue({index})}}}>x fjern</button>
     </div>
   );
 };
