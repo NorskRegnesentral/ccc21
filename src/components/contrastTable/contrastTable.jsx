@@ -40,7 +40,7 @@ const ContrastTable = ({colorList}) => {
                 {tableList.map((color, rowIndex) => (
                 <tr key={"row"+rowIndex}>
                     {tableList.map((color, colIndex) => (
-                        <td key={rowIndex+colIndex}><div className="colorBox" style={{backgroundColor: getCellColor(rowIndex,colIndex)}}/><div>{getCellValue(rowIndex, colIndex)}</div></td> //sett backgroundcolor i ytterste div for full dekning
+                        <td key={rowIndex+colIndex} ><div style={{'backgroundColor': getCellColor(rowIndex,colIndex)}} className="colorBox"/><div>{getCellValue(rowIndex, colIndex)}</div></td> //sett backgroundcolor i ytterste div for full dekning
                     ))}
                 </tr>
                 ))}
