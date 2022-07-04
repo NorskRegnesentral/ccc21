@@ -29,9 +29,8 @@ const ContrastTable = ({colorList}) => {
     const color1 =  tableList[columnIndex];
     const color2 = tableList[rowIndex];
 
-    const contrast = checkColors(color1, color2);
-    console.log(contrast)
-    return contrast.contrast;
+    const contrast = checkColors(color1, color2); 
+    return contrast.contrast; //contrast har mange verdier. Console.log for å se alle muligheter:)
   }
 
   return (
