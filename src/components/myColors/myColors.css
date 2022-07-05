@@ -1,0 +1,30 @@
+.myColors {
+  position: fixed;
+  top: 5rem;
+  left: 0;
+  width: 100vw;
+  background-color: #f1f1f1;
+  height: fit-content;
+  padding-bottom: 1rem;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  grid-template-areas: "heading colors";
+}
+
+.headingAndButton {
+  grid-area: heading;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  align-items: center;
+}
+
+.inputFields {
+  grid-area: input;
+  display: flex;
+  flex-direction: row;
+  margin: 1rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}

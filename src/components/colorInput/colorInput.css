@@ -5,19 +5,20 @@
   padding: 4px 12px 4px 12px;
   margin-bottom: 5px;
   align-items: center;
-  background-color: #f0f0f0;
+  background-color: #ffffff;
   border-radius: 4px;
-  min-width: 125px; 
+  min-width: 125px;
   width: fit-content;
 }
 
-input{
+input {
   height: 50px;
   width: 50px;
   border: none;
   outline: none;
   -webkit-appearance: none;
   cursor: pointer;
+  background-color: transparent;
 }
 
 #hex-input {
@@ -36,11 +37,10 @@ input{
   align-items: center;
   justify-content: center;
   color: black;
-  background-color: #f0f0f0;
-
+  background: #ffffff;
 }
 
-.deleteInput:hover{
+.deleteInput:hover {
   cursor: pointer;
   color: #f0f0f0;
   background-color: black;

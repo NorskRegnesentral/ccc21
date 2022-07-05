@@ -28,7 +28,8 @@ const ContrastSummary = ({ contrastMatrix }) => {
 
   return (
     <div className="contrastTable">
-      <h2>Supre kontraster</h2>
+      <h1>Kontrastoppsummering </h1>
+      <h3>Super kombinasjon</h3>
       <ul>
         {Object.values(AAAContrasts).map((item, index) => (
           <li key={"AA" + index}>
@@ -45,7 +46,7 @@ const ContrastSummary = ({ contrastMatrix }) => {
         ))}
       </ul>
 
-      <h2>Ok kontraster</h2>
+      <h3>Ok kombinasjon</h3>
       <ul>
         {Object.values(AAContrasts).map((item, index) => (
           <li key={"AAA" + index}>
@@ -63,7 +64,7 @@ const ContrastSummary = ({ contrastMatrix }) => {
         ))}
       </ul>
 
-      <h2>Dårlige kontraster</h2>
+      <h3>Dårlige kombinasjoner</h3>
       <ul>
         {Object.values(badContrasts).map((item, index) => (
           <li key={"bad" + index}>

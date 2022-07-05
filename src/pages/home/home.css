@@ -31,18 +31,15 @@ code {
 }
 
 .contentGroup {
-
-}
-
-.inputFields {
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+  gap: 2rem;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
 button {
-  background-color: #3E3E3E; /* Fargeøsnke? */
+  background-color: #3e3e3e; /* Fargeøsnke? */
   border: none;
   border-radius: 4px;
   color: #fff;
@@ -55,7 +52,19 @@ button {
   cursor: pointer;
 }
 
-button:hover{
+button:hover {
   cursor: pointer;
   background-color: black;
+}
+
+h1 {
+  font-size: 18px;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+h3 {
+  font-size: 16px;
 }

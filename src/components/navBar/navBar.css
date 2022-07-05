@@ -3,10 +3,12 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #fbf2db;
+  background-color: #1c4259;
+  color: #ffffff;
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-areas: "empty title title  menu";
+  height: 5rem;
 }
 
 .mainMenu {
@@ -14,6 +16,8 @@
   display: flex;
   justify-content: right;
   align-items: center;
+  height: inherit;
+  margin: 0;
 }
 
 .title {
@@ -23,8 +27,7 @@
   align-items: center;
   pointer-events: none;
   user-select: none;
+  height: inherit;
 }
 
-h1 {
-  font-size: 18px;
-}
+
