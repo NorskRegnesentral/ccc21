@@ -8,42 +8,42 @@ import {checkColors} from "../../color-checker";
 
 function Home() {
   const [colorList, setColorList] = useState(["#000000"]);
-  const [tableList, setTableList] = useState([]);
+  const [tableList, setTableList] = useState([""]); 
   const [contrastMatrix, setContrastMatrix] = useState();
 
-   //tabell-listen skal alltid være den samme som fargelisten, 
-  //men med ett tomt felt først
+  //denne kjører hver gang colorList oppdateres
   useEffect(() => {
-    setTableList([""].concat(colorList));
-    console.log("oppdater kontrast matrise")
-    const table2 = []
+    setTableList([""].concat(colorList)); //samme som colorList men med ett tomt felt først
+  },[colorList]);
+
+  useEffect(() =>{
+    setupContrastMatrix();
+  },[tableList])
+
+  const setupContrastMatrix = () => {
+    const table = []
     for(let row in tableList){
       let rowObject = []
       for(let column in tableList){
-        //rowObject.push((row+column))
         rowObject.push(getCellValue(row,column))
       }
-      table2.push(rowObject)
+      table.push(rowObject)
     }
-    console.log("tabell2", table2)
-  },[colorList]);
+    console.log("matrix laget", table)
+    setContrastMatrix(table)
+  }
 
   const getCellValue = (rowIndex, columnIndex) => {
-    console.log("get cell value", rowIndex + "og" + columnIndex)
-    console.log("table list atm", tableList)
-    if(rowIndex === 0) return tableList[columnIndex];
-    else if (columnIndex === 0) return tableList[rowIndex];
     if(rowIndex === columnIndex) return "" //returnerer tom fordi det er samme fargene
-    return "kommer";
-    //return getContrast(rowIndex,columnIndex); 
+    if(rowIndex == 0) return tableList[columnIndex]; 
+    else if (columnIndex == 0){ return tableList[rowIndex];}
+    return getContrast(rowIndex,columnIndex); 
   }
 
   //bruker den importerte metoden fra color API 
   const getContrast = (rowIndex, columnIndex) => {
     const color1 =  tableList[columnIndex];
-    console.log("color 2", tableList[rowIndex])
     const color2 = tableList[rowIndex];
-    console.log("finner fargekontrast", color1 + "og" + color2)
     const contrast = checkColors(color1, color2); 
     return contrast.contrast; //contrast har mange verdier. Console.log for å se alle muligheter:)
   }
@@ -58,8 +58,6 @@ function Home() {
   const removeColorValue = (index) => {
     setColorList((colorList) => colorList.filter((_, i) => i !== index.index))
   }
-
-
 
   return (
     <div className="App">
