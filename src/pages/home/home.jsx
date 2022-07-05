@@ -3,8 +3,9 @@ import React, { useEffect, useState } from "react";
 import NavBar from "../../components/navBar/navBar";
 import ColorInput from "../../components/colorInput/colorInput";
 import ContrastTable from "../../components/contrastTable/contrastTable";
-import ContrastPreview  from "../../components/contrastPreview/contrastPreview";
+import ContrastSummary  from "../../components/contrastSummary/contrastSummary";
 import {checkColors} from "../../color-checker"; 
+
 
 function Home() {
   const [colorList, setColorList] = useState(["#000000"]);
@@ -29,7 +30,7 @@ function Home() {
       }
       table.push(rowObject)
     }
-    console.log("matrix laget", table)
+    //console.log("matrix laget", table)
     setContrastMatrix(table)
   }
 
@@ -79,9 +80,11 @@ function Home() {
           <ContrastTable contrastMatrix={contrastMatrix}></ContrastTable>
         </div>
         <div className="contentGroup">
+          <h1>Her kommer kontrastoppsummering </h1>
+          <ContrastSummary contrastMatrix={contrastMatrix}></ContrastSummary>
+        </div>
+        <div className="contentGroup">
           <h1>Her kommer visning av komponenter i fargene</h1>
-          <ContrastPreview title="gode matcher"></ContrastPreview>
-          <ContrastPreview title="dårligere matcher"></ContrastPreview>
         </div>
       </div>
     
