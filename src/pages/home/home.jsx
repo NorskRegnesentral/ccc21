@@ -9,7 +9,7 @@ import {checkColors} from "../../color-checker";
 function Home() {
   const [colorList, setColorList] = useState(["#000000"]);
   const [tableList, setTableList] = useState([""]); 
-  const [contrastMatrix, setContrastMatrix] = useState();
+  const [contrastMatrix, setContrastMatrix] = useState([""].concat(colorList));
 
   //denne kjører hver gang colorList oppdateres
   useEffect(() => {
@@ -76,7 +76,7 @@ function Home() {
         </div>
         <div className="contentGroup">
           <h1>Her kommer tabell med størrelse {Object.keys(colorList).length+1} x {Object.keys(colorList).length+1} </h1>
-          <ContrastTable colorList={colorList}></ContrastTable>
+          <ContrastTable contrastMatrix={contrastMatrix}></ContrastTable>
         </div>
         <div className="contentGroup">
           <h1>Her kommer visning av komponenter i fargene</h1>
