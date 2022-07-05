@@ -1,6 +1,7 @@
 import "./contrastTable.css";
 import React, { useState } from "react";
 
+
 const ContrastTable = ({contrastMatrix}) => {
   const [contrastColors] = useState({none:"#F2B8B8",AA:"#F2E9B8",AAA:"#B7F1B8"}); //endre her hvis andre farger er ønskelig!
  
@@ -25,7 +26,7 @@ const ContrastTable = ({contrastMatrix}) => {
             {contrastMatrix.map((row, rowIndex) => (
               <tr key={"row"+rowIndex}>
                 {Object.values(row).map((rowItem, colIndex) =>(
-                  <td style={{'backgroundColor': getCellColorFromContrast(rowItem)}}>
+                  <td key={"row"+rowIndex+"col"+colIndex} style={{'backgroundColor': getCellColorFromContrast(rowItem)}}>
                     <div style={{'backgroundColor': getColorIfHex(rowItem)}} className="colorBox"/>
                     <div>{rowItem}</div>  
                   </td>
