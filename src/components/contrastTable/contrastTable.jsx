@@ -1,53 +1,41 @@
 import "./contrastTable.css";
-import React, { useState, useEffect } from "react";
-import {checkColors} from "../../color-checker"; 
+import React, { useState } from "react";
 
-const ContrastTable = ({colorList}) => {
-  const [tableList, setTableList] = useState([]);
 
-  //tabell-listen skal alltid være den samme som fargelisten, 
-  //men med ett tomt felt først
-  useEffect(() => {
-    setTableList([""].concat(colorList));
-  },[colorList]);
-
-  const getCellColor = (rowIndex, columnIndex) => {
-    if(rowIndex === 0) return tableList[columnIndex];
-    else if (columnIndex === 0) return tableList[rowIndex];
-    return; 
+const ContrastTable = ({contrastMatrix}) => {
+  const [contrastColors] = useState({none:"#F2B8B8",AA:"#F2E9B8",AAA:"#B7F1B8"}); //endre her hvis andre farger er ønskelig!
+ 
+  //Sjekker om verdien er en hex og returnerer fargen hvis ja
+  const getColorIfHex = (possibleHex) => {
+    const RegExp = /(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i;
+    return (possibleHex.length === 7 && RegExp.test(possibleHex)) ? possibleHex : ""; 
   }
 
-  const getCellValue = (rowIndex, columnIndex) => {
-    if(rowIndex === 0) return tableList[columnIndex];
-    else if (columnIndex === 0) return tableList[rowIndex];
-    if(rowIndex === columnIndex) return "" //returnerer tom fordi det er samme fargene
-    return getContrast(rowIndex,columnIndex); 
-  }
-
-  //bruker den importerte metoden fra color API 
-  const getContrast = (rowIndex, columnIndex) => {
-    const color1 =  tableList[columnIndex];
-    const color2 = tableList[rowIndex];
-
-    const contrast = checkColors(color1, color2); 
-    return contrast.contrast; //contrast har mange verdier. Console.log for å se alle muligheter:)
+  //Sjekker om verdien er kontrast, og returnerer evt passende farge etter oppfylte krav
+  const getCellColorFromContrast = (possibleContrast) => {
+    return  (possibleContrast >= 1 && possibleContrast <= 21) ? //kontraster er et tall mellom 1-21
+    (possibleContrast < 4.5) ? contrastColors.none :
+    (4.5 <= possibleContrast && possibleContrast < 7.0) ?  contrastColors.AA :
+    contrastColors.AAA : "";
   }
 
   return (
     <div className="contrastTable">
         <table>
-            <tbody>
-                {tableList.map((color, rowIndex) => (
-                <tr key={"row"+rowIndex}>
-                    {tableList.map((color, colIndex) => (
-                        <td key={rowIndex+colIndex} ><div style={{'backgroundColor': getCellColor(rowIndex,colIndex)}} className="colorBox"/><div>{getCellValue(rowIndex, colIndex)}</div></td> //sett backgroundcolor i ytterste div for full dekning
-                    ))}
-                </tr>
+          <tbody>
+            {contrastMatrix.map((row, rowIndex) => (
+              <tr key={"row"+rowIndex}>
+                {Object.values(row).map((rowItem, colIndex) =>(
+                  <td key={"row"+rowIndex+"col"+colIndex} style={{'backgroundColor': getCellColorFromContrast(rowItem)}}>
+                    <div style={{'backgroundColor': getColorIfHex(rowItem)}} className="colorBox"/>
+                    <div>{rowItem}</div>  
+                  </td>
                 ))}
-            </tbody>
+              </tr> 
+            ))}
+          </tbody>
         </table>
     </div>
   );
 };
-
 export default ContrastTable;
