@@ -11,7 +11,7 @@
   width: fit-content;
 }
 
-input {
+.inputForColor {
   height: 50px;
   width: 50px;
   border: none;

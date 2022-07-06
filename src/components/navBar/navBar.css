@@ -1,14 +1,10 @@
 .navBar {
-  position: fixed;
-  top: 0;
   left: 0;
   width: 100%;
-  background-color: #1c4259;
-  color: #ffffff;
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-areas: "empty title title  menu";
-  height: 5rem;
+  height: 4rem;
 }
 
 .mainMenu {
@@ -29,5 +25,3 @@
   user-select: none;
   height: inherit;
 }
-
-

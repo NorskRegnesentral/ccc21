@@ -1,11 +1,10 @@
 .myColors {
   position: fixed;
-  top: 5rem;
+  top: 4rem;
   left: 0;
   width: 100vw;
   background-color: #f1f1f1;
   height: fit-content;
-  padding-bottom: 1rem;
   display: grid;
   grid-template-columns: 15% 85%;
   grid-template-areas: "heading colors";

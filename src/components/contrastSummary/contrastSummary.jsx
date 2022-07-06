@@ -59,7 +59,6 @@ const ContrastSummary = ({ contrastMatrix }) => {
               style={{ backgroundColor: item.farge2 }}
             />
             {item.kontrastverdi}
-            {console.log(item)}
           </li>
         ))}
       </ul>

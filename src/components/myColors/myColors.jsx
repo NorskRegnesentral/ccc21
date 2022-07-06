@@ -4,19 +4,18 @@ import ColorInput from "../colorInput/colorInput";
 
 const MyColors = ({ colorList, setColorList }) => {
   /** Metoden oppdaterer en farge i listen når du endrer fargen i brukergrensesnittet */
-  // todo: flytt inn i myColors-component
   const updateColorValue = (index, newValue) => {
     setColorList((colors) =>
       colors.map((value, i) => (i === index ? newValue : value))
     );
   };
 
-  // todo: flytt inn i myColors-component
   const removeColorValue = (index) => {
-    setColorList((colorList) => colorList.filter((_, i) => i !== index.index));
+    setColorList((colorList) =>
+      colorList.filter((_, i) => i !== index.index || colorList.length === 2)
+    );
   };
 
-  console.log(colorList);
   return (
     <div className="myColors">
       <div className="headingAndButton">

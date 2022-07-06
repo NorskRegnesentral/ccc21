@@ -10,8 +10,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: var(--top-spacing) auto;
-  padding: 0 20px;
+  padding: 0;
   font: 18px/1.4 system-ui;
+  margin-bottom: 0;
 }
 
 code {
@@ -28,13 +29,14 @@ code {
   display: flex;
   flex-direction: column;
   gap: 5rem;
+  flex: 1;
 }
 
 .contentGroup {
   display: flex;
   flex-direction: row;
   gap: 2rem;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 

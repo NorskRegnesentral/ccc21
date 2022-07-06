@@ -1,0 +1,37 @@
+.mockupPage {
+  background-color: #f3f3f3;
+  width: 70vw;
+  height: fit-content;
+  min-height: 40vh; /* HARDKODA FOR NÅ, FJERN SENERE  */
+  margin-bottom: 20rem;
+}
+
+.mockupRow {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.rowItem-50 {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 50%;
+  padding: 2rem;
+}
+
+.mockupForm {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+.helloP {
+  font-size: 1rem;
+}
+
+.textBox {
+  padding: 3rem;
+}

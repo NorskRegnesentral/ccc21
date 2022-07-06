@@ -1,14 +1,15 @@
 import "./home.css";
 import React, { useEffect, useState } from "react";
 import NavBar from "../../components/navBar/navBar";
-import ColorInput from "../../components/colorInput/colorInput";
 import ContrastTable from "../../components/contrastTable/contrastTable";
 import ContrastSummary from "../../components/contrastSummary/contrastSummary";
+import MockupPage from "../../components/mockupPage/mockupPage";
 import MyColors from "../../components/myColors/myColors";
+import Footer from "../../components/footer/footer";
 import { checkColors } from "../../color-checker";
 
 function Home() {
-  const [colorList, setColorList] = useState(["#000000"]);
+  const [colorList, setColorList] = useState(["#000000", "#00FF00"]); //HARDKODA, FJERN SENERE
   const [tableList, setTableList] = useState([""]);
   const [contrastMatrix, setContrastMatrix] = useState([""].concat(colorList));
 
@@ -53,7 +54,12 @@ function Home() {
 
   return (
     <div className="App">
-      <NavBar></NavBar>
+      <NavBar
+        title="kontrastsjekker"
+        backgroundColor="#1c4259"
+        textColor="#ffffff"
+        topFixed={true}
+      ></NavBar>
       <div className="content">
         <div className="contentGroup">
           <MyColors
@@ -66,9 +72,14 @@ function Home() {
           <ContrastTable contrastMatrix={contrastMatrix}></ContrastTable>
         </div>
         <div className="contentGroup">
-          <h1>Her kommer visning av komponenter i fargene</h1>
+          <MockupPage contrastMatrix={contrastMatrix}></MockupPage>
         </div>
       </div>
+      <Footer
+        backgroundColor={"#1c4259"}
+        textColor={"#ffffff"}
+        text={"Kontakt: email@email.no"}
+      />
     </div>
   );
 }
