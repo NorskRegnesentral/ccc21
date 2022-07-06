@@ -1,50 +1,40 @@
-# Hvordan kjøre koden fra datamaskinen!
+Siden er hostet via github pages: https://kamillamortensen.github.io/contrastMatch/
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Hvordan kjøre koden i development-modus fra datamaskinen!
 ## Slik gjør du
-1. Clone repository
+1. Clone repository fra git
 2. Gå inn i mappen i treminal
 
 Du må ha npm/node installert på maskinen for de neste to trinn:
 
 3. Kjør `npm install` for å installere avhengigheter
 4. Kjør `npm start` for å starte
-5. Nå burde appen komme opp i nettleseren din! 
+5. Nå burde siden komme opp i nettleseren automatisk, eller du kan åpne [http://localhost:3000](http://localhost:3000) i nettleseren! 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Når du gjør endringer i koden skal localhost:3000 oppdateres automatisk. 
 
 
+## Om kildekoden
 
-## Learn More
+### Mappestruktur / arkitektur
+Inne i mappen til prosjektet ser det slik ut om du åpner den i en fil-editor: <br>
+![Skjermbilde 2022-07-06 kl  12 49 18](https://user-images.githubusercontent.com/55190927/177533880-df8bbff6-0ba2-4050-a308-41f4fd9249fb.png)<b>
+<ul>
+<li><b>Components<b/> inneholder alle komponentene som er i appen. Komponenter er biter med kode som kan brukes flere steder. Eksempler er meny, knapp, inputfelt, el.</li>
+<li><b>Pages<b/> er sidene i appen. I dette tilfellet er det alle sider som kan lastes når du skriver "nesside.no/xxxx" i nettleseren. Eksempler er Home (der vi sjekker kontrast) og About (planlagt å ha info om wcag)</li>
+<li><b>App.js<b/></li>
+<li><b>color-checker.js<b/></li>
+<li><b>contrast-calculations.js<b/></li>
+</ul>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Bibliotek 
 
-### Analyzing the Bundle Size
+<b>react-undraw-illustrations</b> er brukt for å vise illustrasjoner med de fargene som brukeren har valgt ut. <br>
+React-undraw-illustrations tar inn illustrasjoner med FRI LISENS og gjør dem om til react-komponenter så det er enkelt å bruke dem og gjøre justeringer som å endre farge. <br>
+Illustrasjonene kommer fra Undraw, en side hvor du kan finne svg-animasjoner på fri lisens: https://undraw.co/ <br>
+Biblioteket har ikke alle illustrasjonene som Undraw har, men utvalget finnes her: https://graemefulton.github.io/. <br> 
+En god bruksanvisning for hvordan man bruker komponentene er her:  https://github.com/GraemeFulton/react-undraw-illustrations.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
