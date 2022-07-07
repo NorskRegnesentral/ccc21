@@ -1,8 +1,10 @@
 import "./myColors.css";
 import React, { useState, useEffect } from "react";
 import ColorInput from "../colorInput/colorInput";
+import { getColorsFromDefaultPalette } from "../../contrast-calculations";
 
 const MyColors = ({ colorList, setColorList }) => {
+  
   /** Metoden oppdaterer en farge i listen når du endrer fargen i brukergrensesnittet */
   const updateColorValue = (index, newValue) => {
     setColorList((colors) =>
@@ -10,17 +12,24 @@ const MyColors = ({ colorList, setColorList }) => {
     );
   };
 
+  const addColorValue = () => {
+    console.log("sender inn lista nå", colorList)
+    if(colorList.length < 8)
+    setColorList((colorList) => [...colorList, getColorsFromDefaultPalette(1, colorList)[0]])
+  }
+
   const removeColorValue = (index) => {
     setColorList((colorList) =>
       colorList.filter((_, i) => i !== index.index || colorList.length === 2)
     );
   };
 
+
   return (
     <div className="myColors">
       <div className="headingAndButton">
-        <button
-          onClick={() => setColorList((colorList) => [...colorList, "#000000"])}
+        <button className="addColorButton"
+          onClick={addColorValue}
         >
           legg til fargekode
         </button>

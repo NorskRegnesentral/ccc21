@@ -15,10 +15,6 @@ const MockupPage = ({ contrastMatrix }) => {
   }, [contrastMatrix]);
 
   const getColor1 = () => {
-    console.log(
-      "color 1",
-      allColorCombos.length > 0 ? allColorCombos[0].farge1 : "#ffffff"
-    );
     return allColorCombos.length > 0 ? allColorCombos[0].farge1 : "#ffffff";
   };
 

@@ -8,6 +8,7 @@
   display: grid;
   grid-template-columns: 15% 85%;
   grid-template-areas: "heading colors";
+  margin-bottom: 2rem;
 }
 
 .headingAndButton {
@@ -17,6 +18,12 @@
   flex-direction: column;
   margin: 1rem;
   align-items: center;
+}
+
+.addColorButton{
+  width: fit-content;
+  padding: .7rem 0.7rem 0.7rem .7rem;
+
 }
 
 .inputFields {

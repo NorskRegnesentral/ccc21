@@ -31,3 +31,28 @@ export const getContrastList = (contrastMatrix, minContrast, maxContrast) => {
   }
   return list;
 };
+
+export const getColorsFromDefaultPalette = (numberOfColors, currentColorList) => {
+  console.log("finn liste med size", numberOfColors)
+  const defaultPalette = ["#ffffff", "#ff6e6c", "#1f1235", "#1b1425",  "#fbdd74", "#67568c", "#e2daeb", "#f4effc" ]
+  let colors = [];
+  if(numberOfColors === 1){
+    /*if(currentSizeOfColorList < 2) colors.push(defaultPalette[Math.floor(Math.random() * defaultPalette.length)]);
+    else colors.push(defaultPalette[currentSizeOfColorList+1]);*/
+    console.log("type",typeof(currentColorList))
+    let possibleColor = defaultPalette[Math.floor(Math.random() * defaultPalette.length)]
+    if(Object.values(currentColorList).includes(possibleColor)){
+      console.log("entry is in both")
+      while(Object.values(currentColorList).includes(possibleColor)){
+        possibleColor = defaultPalette[Math.floor(Math.random() * defaultPalette.length)]
+
+      }
+    }
+    colors.push(possibleColor)
+  } 
+  if(numberOfColors > 1 && numberOfColors <= defaultPalette.length){
+    while (colors.length < numberOfColors) colors.push(defaultPalette[colors.length])
+  }
+
+  return colors; 
+}

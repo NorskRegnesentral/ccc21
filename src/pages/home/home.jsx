@@ -7,9 +7,11 @@ import MockupPage from "../../components/mockupPage/mockupPage";
 import MyColors from "../../components/myColors/myColors";
 import Footer from "../../components/footer/footer";
 import { checkColors } from "../../color-checker";
+import { getColorsFromDefaultPalette } from "../../contrast-calculations";
 
 function Home() {
-  const [colorList, setColorList] = useState(["#000000", "#00FF00"]); //HARDKODA, FJERN SENERE
+  //const [colorList, setColorList] = useState(["#f5f5f5", "#404040", "#d4ece9", "#1c6e65",  "#ffeba3"]); //HARDKODA, FJERN SENERE
+  const [colorList, setColorList] = useState(getColorsFromDefaultPalette(5, 0)); //HARDKODA, FJERN SENERE
   const [tableList, setTableList] = useState([""]);
   const [contrastMatrix, setContrastMatrix] = useState([""].concat(colorList));
 
@@ -54,19 +56,20 @@ function Home() {
 
   return (
     <div className="App">
-      <NavBar
-        title="kontrastsjekker"
-        backgroundColor="#1c4259"
-        textColor="#ffffff"
-        topFixed={true}
-      ></NavBar>
-      <div className="content">
-        <div className="contentGroup">
-          <MyColors
+      <div>
+        <NavBar
+          title="kontrastsjekker"
+          backgroundColor="#1c4259"
+          textColor="#ffffff"
+          topFixed={true}
+        ></NavBar>
+        <MyColors
             colorList={colorList}
             setColorList={setColorList}
           ></MyColors>
-        </div>
+
+      </div>
+      <div className="content">
         <div className="contentGroup">
           <ContrastSummary contrastMatrix={contrastMatrix}></ContrastSummary>
           <ContrastTable contrastMatrix={contrastMatrix}></ContrastTable>
