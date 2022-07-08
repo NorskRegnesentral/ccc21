@@ -28,13 +28,6 @@ li {
   padding: 10px;
 }
 
-.header {
-  width: 100vw;
-  background-color: pink;
-  height: 200vh;
-  clip-path: polygon(0 0, 1600px 0, 1600px 87%, 0 100%);
-}
-
 .intro-text {
   top: 40vh;
   left: 10vw;

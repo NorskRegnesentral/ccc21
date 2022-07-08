@@ -71,3 +71,8 @@ h2 {
 h3 {
   font-size: 16px;
 }
+
+.h3-small {
+  font-size: 16px;
+  font-weight: normal;
+}

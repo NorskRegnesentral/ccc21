@@ -67,7 +67,6 @@ function Home() {
             colorList={colorList}
             setColorList={setColorList}
           ></MyColors>
-
       </div>
       <div className="content">
         <div className="contentGroup">
