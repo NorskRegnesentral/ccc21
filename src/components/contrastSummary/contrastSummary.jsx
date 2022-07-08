@@ -1,6 +1,9 @@
 import "./contrastSummary.css";
 import React, { useState, useEffect } from "react";
 import { getContrastList } from "../../contrast-calculations";
+import TextFieldsIcon from '@mui/icons-material/TextFields';
+import AutoAwesomeMosaicIcon from '@mui/icons-material/AutoAwesomeMosaic';
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 
 const ContrastSummary = ({ contrastMatrix }) => {
   const [AAAContrasts, setAAAContrasts] = useState(
@@ -16,6 +19,16 @@ const ContrastSummary = ({ contrastMatrix }) => {
     getContrastList(contrastMatrix, 1, 1)
   );
 
+
+
+  const [contrastColors] = useState({
+    none: "#ee8181",
+    AANontext: "#f7b87d",
+    AA: "#ecdb79",
+    AAA: "#cff7cf",
+  }); //endre her hvis andre farger er ønskelig!
+
+
   useEffect(() => {
     setBadContrasts("");
     setBadContrasts(getContrastList(contrastMatrix, 1.0, 3.0));
@@ -26,11 +39,16 @@ const ContrastSummary = ({ contrastMatrix }) => {
 
   return (
     <div className="contrastSummary">
-      <h1>Oppsummering av kombinasjoner </h1>
-      <h3 className="contrastSummaryHeading">Wcag AAA for tekst</h3>
+       <h1>Kombinasjoner </h1>
+
+      <div>
+      <div className="contrastSummaryHeading"  style={{ backgroundColor: contrastColors.AAA, borderRadius: "4px", padding:"2px"}}>
+        <TextFieldsIcon/>
+        <h3 className="contrastSummaryHeadingFont">Beste nivå for tekst (AAA)</h3>
+      </div>
       <ul className="contrastSummaryList">
         {Object.values(AAAContrasts).map((item, index) => (
-          <li key={"AA" + index}>
+          <li key={"AA" + index} className="contrastSummaryListItem">
             <div
               className="colorBox"
               style={{ backgroundColor: item.farge1 }}
@@ -39,15 +57,18 @@ const ContrastSummary = ({ contrastMatrix }) => {
               className="colorBox"
               style={{ backgroundColor: item.farge2 }}
             />
-            {/*item.kontrastverdi*/}
           </li>
         ))}
       </ul>
+      </div>
 
-      <h3 className="contrastSummaryHeading">Wcag AA for tekst</h3>
+      <div className="contrastSummaryHeading" style={{ backgroundColor: contrastColors.AA, borderRadius: "4px", padding:"2px"}}>
+        <TextFieldsIcon/>
+        <h3 className="contrastSummaryHeadingFont">Godt nivå for tekst (AA)</h3>
+      </div>
       <ul className="contrastSummaryList">
         {Object.values(AAContrasts).map((item, index) => (
-          <li key={"AAA" + index}>
+          <li key={"AAA" + index} className="contrastSummaryListItem">
              <div
               className="colorBox"
               style={{ backgroundColor: item.farge1 }}
@@ -56,15 +77,17 @@ const ContrastSummary = ({ contrastMatrix }) => {
               className="colorBox"
               style={{ backgroundColor: item.farge2 }}
             />
-            {/*item.kontrastverdi*/}
           </li>
         ))}
       </ul>
 
-      <h3 className="contrastSummaryHeading">Wcag AA for ikke-tekstlig innhold</h3>
+      <div className="contrastSummaryHeading"  style={{ backgroundColor: contrastColors.AANontext, borderRadius: "4px", padding:"2px"}}>
+        <AutoAwesomeMosaicIcon aria-label="tekst-ikon"/>
+        <h3 className="contrastSummaryHeadingFont">Godt nivå for ikke-tekst (AA)</h3>
+      </div>
       <ul className="contrastSummaryList">
         {Object.values(AANontextContrasts).map((item, index) => (
-          <li key={"AANontext" + index}>
+          <li key={"AANontext" + index} className="contrastSummaryListItem">
              <div
               className="colorBox"
               style={{ backgroundColor: item.farge1 }}
@@ -73,15 +96,18 @@ const ContrastSummary = ({ contrastMatrix }) => {
               className="colorBox"
               style={{ backgroundColor: item.farge2 }}
             />
-            {/*item.kontrastverdi*/}
           </li>
         ))}
       </ul>
 
-      <h3 className="contrastSummaryHeading">Kontrast under 3</h3>
+      <div>
+      <div className="contrastSummaryHeading"  style={{ backgroundColor: contrastColors.none, borderRadius: "4px", padding:"2px"}}>
+        <VisibilityOffIcon />
+        <h3 className="contrastSummaryHeadingFont">Lave kontraster</h3>
+      </div>
       <ul className="contrastSummaryList">
         {Object.values(badContrasts).map((item, index) => (
-          <li key={"bad" + index}>
+          <li className="contrastSummaryListItem" key={"bad" + index}>
             <div
               className="colorBox"
               style={{ backgroundColor: item.farge1 }}
@@ -90,10 +116,10 @@ const ContrastSummary = ({ contrastMatrix }) => {
               className="colorBox"
               style={{ backgroundColor: item.farge2 }}
             />
-            {/*item.kontrastverdi*/}
           </li>
         ))}
       </ul>
+    </div>
     </div>
   );
 };
