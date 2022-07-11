@@ -30,7 +30,11 @@ Inne i mappen til prosjektet ser det slik ut om du åpner den i en fil-editor: <
 
 
 
-## Bibliotek 
+## Bibliotek / dependencies
+
+<b>react i18next</b> er brukt for å enkelt kunne oversette siden mellom norsk og andre språk om det skulle bli ønskelig. Lenke: https://react.i18next.com/
+
+<b>Mui material icons</b> er bruk for å vise profesjonelle ikoner. Se ikonene: https://mui.com/material-ui/material-icons/?query=text og les litt om hvordan de brukes i react:  https://blog.wrappixel.com/how-to-use-mui-icons-in-react/. 
 
 <b>react-undraw-illustrations</b> er brukt for å vise illustrasjoner med de fargene som brukeren har valgt ut. <br>
 React-undraw-illustrations tar inn illustrasjoner med FRI LISENS og gjør dem om til react-komponenter så det er enkelt å bruke dem og gjøre justeringer som å endre farge. <br>
