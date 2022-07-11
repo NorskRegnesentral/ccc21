@@ -33,8 +33,7 @@ export const getContrastList = (contrastMatrix, minContrast, maxContrast) => {
 };
 
 export const getColorsFromDefaultPalette = (numberOfColors, currentColorList) => {
-  console.log("finn liste med size", numberOfColors)
-  const defaultPalette = ["#ffffff", "#ff6e6c", "#1f1235", "#1b1425",  "#fbdd74", "#67568c", "#e2daeb", "#f4effc" ]
+  const defaultPalette = [ "#1f1235", "#ffffff", "#ff6e6c", "#f3f3f3", "#e2daeb", "#fbdd74", "#67568c", "#f4effc", "#1b1425" ]
   let colors = [];
   if(numberOfColors === 1){
     /*if(currentSizeOfColorList < 2) colors.push(defaultPalette[Math.floor(Math.random() * defaultPalette.length)]);

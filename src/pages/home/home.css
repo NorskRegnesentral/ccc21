@@ -26,18 +26,26 @@ code {
 }
 
 .content {
-  margin-top: 8rem;
-  display: flex;
-  flex-direction: column;
-  gap: 5rem;
+  margin-top: 6rem;
+  gap: 1rem;
   flex: 1;
+  display: grid;
+  grid-template-areas: "contentLeft space contentRight";
+  grid-template-columns: 25% 5% 70%;
 }
 
-.contentGroup {
+.contentLeft {
+  grid-area: contentLeft;
   display: flex;
-  flex-direction: row;
+  left: 2rem;
+  position: fixed;
+}
+
+.contentRight {
+  grid-area: contentRight;
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
-  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 

@@ -69,12 +69,12 @@ function Home() {
           ></MyColors>
       </div>
       <div className="content">
-        <div className="contentGroup">
+        <div className="contentLeft">
           <ContrastSummary contrastMatrix={contrastMatrix}></ContrastSummary>
-          <ContrastTable contrastMatrix={contrastMatrix}></ContrastTable>
         </div>
-        <div className="contentGroup">
-          <MockupPage contrastMatrix={contrastMatrix}></MockupPage>
+        <div className="contentRight">
+            <ContrastTable contrastMatrix={contrastMatrix}></ContrastTable>
+            <MockupPage contrastMatrix={contrastMatrix} colorList={colorList}></MockupPage>
         </div>
       </div>
       <Footer
