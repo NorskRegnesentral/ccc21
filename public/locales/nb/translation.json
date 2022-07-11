@@ -1,0 +1,24 @@
+{
+    "title" : "contrast match 2.1",
+    "footer-text": "kontakt: email@email.no",
+    "input-delete" : "fjern farge",
+
+    "contrast-summary-heading": "kombinasjoner",
+    "contrast-summary-aaa": "Beste nivå for tekst (AAA)",
+    "contrast-summary-aa" : "Godt nivå for tekst (AA)",
+    "contrast-summary-nontext-aa" : "Godt nivå for ikke-tekst (AA)",
+    "contrast-summary-low" : "Lave kontraster",
+
+    "table-switch" : "Bytt visning: ",
+    "traffic-lights" : "trafikklys",
+    "view-chosen-colors" : "se fargevalg",
+
+    "mockup-title" : "Slik ser fargene ut",
+    "mockup-text-small" : "Se hvordan fargevalgene dine påvirker lesbarhet og design! ",
+    "mockup-form-title" : "Avkrysningsspørsmål",
+    "mockup-form-statement1" : "Jeg er kul",
+    "mockup-form-statement2" : "Jeg er snill",
+    "mockup-footer-text" : "Jeg er en footer",
+
+    "add-color" : "legg til fargekode"
+}

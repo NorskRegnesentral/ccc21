@@ -4,8 +4,10 @@ import NavBar from "../navBar/navBar";
 import Footer from "../footer/footer";
 import { getContrastList } from "../../contrast-calculations";
 import { UndrawBrainstorming } from "react-undraw-illustrations";
+import { useTranslation } from 'react-i18next';
 
 const MockupPage = ({ contrastMatrix, colorList }) => {
+  const { t } = useTranslation();
   const [allColorCombos, setAllColorCombos] = useState(
     getContrastList(contrastMatrix, 1.0, 21)
   );
@@ -61,7 +63,7 @@ const getPieChartColors = () => {
               fontSize: "14px"
             }}
           >
-            En typisk coorporate webside
+            {t('mockup-title')}
           </h1>
           <p
             className="helloP"
@@ -69,8 +71,7 @@ const getPieChartColors = () => {
               color: colorList[0],
             }}
           >
-            Virker foreløpig bare på de to første fargene. Viser deg hvordan
-            fargene dine påvirker lesbarhet og design!
+            {t('mockup-text-small')}
           </p>
         </div>
         <div className="rowItem-50">
@@ -93,7 +94,7 @@ const getPieChartColors = () => {
             <h1 style={{
               color: colorList[0],
               fontSize: "14px"
-            }}>test form</h1>
+            }}>{t('mockup-form-title')}</h1>
             <div>
               <input
                 type="checkbox"
@@ -103,7 +104,7 @@ const getPieChartColors = () => {
               />
               <label for="vehicle1" style={{
               color: colorList[0],   fontSize: "12px"
-            }}> Jeg har en katt</label>
+            }}>{t('mockup-form-statement1')}</label>
             </div>
             <div>
               {" "}
@@ -115,7 +116,7 @@ const getPieChartColors = () => {
               />
               <label for="vehicle1" style={{
               color: colorList[0], fontSize: "12px"
-            }}> Jeg er fornøyd</label>
+            }}>{t('mockup-form-statement2')}</label>
             </div>
           </form>
         </div>
@@ -126,7 +127,7 @@ const getPieChartColors = () => {
       <Footer
         backgroundColor={getColor1FromCombo(0)}
         textColor={getColor2FromCombo(0)}
-        text={"this is a footer text"}
+        text={t('mockup-footer-text')}
       />
     </div>
   );

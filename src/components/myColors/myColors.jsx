@@ -2,8 +2,10 @@ import "./myColors.css";
 import React, { useState, useEffect } from "react";
 import ColorInput from "../colorInput/colorInput";
 import { getColorsFromDefaultPalette } from "../../contrast-calculations";
+import { useTranslation } from 'react-i18next';
 
 const MyColors = ({ colorList, setColorList }) => {
+  const { t } = useTranslation();
   
   /** Metoden oppdaterer en farge i listen når du endrer fargen i brukergrensesnittet */
   const updateColorValue = (index, newValue) => {
@@ -31,7 +33,7 @@ const MyColors = ({ colorList, setColorList }) => {
         <button className="addColorButton"
           onClick={addColorValue}
         >
-          legg til fargekode
+          {t('add-color')}
         </button>
       </div>
       <div>

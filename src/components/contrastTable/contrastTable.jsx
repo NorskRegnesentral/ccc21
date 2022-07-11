@@ -1,7 +1,9 @@
 import "./contrastTable.css";
 import React, { useState } from "react";
+import { useTranslation } from 'react-i18next';
 
 const ContrastTable = ({ contrastMatrix }) => {
+  const { t } = useTranslation();
   const [contrastColors] = useState({
     none: "#ee8181",
     AANontext: "#f7b87d",
@@ -52,7 +54,7 @@ const ContrastTable = ({ contrastMatrix }) => {
             <input type="checkbox" onChange={toggle}/>
             <span className="slider round"></span>
           </label>
-          <h3 className="h3-small">Bytt visning: {colorsInTable ? "trafikklys" : "se fargevalg"}</h3>
+          <h3 className="h3-small">{t('table-switch')} {colorsInTable ? t('traffic-lights') : t('view-chosen-colors')}</h3>
         </div>
       </div>
       

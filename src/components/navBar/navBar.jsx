@@ -1,5 +1,5 @@
 import "./navBar.css";
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 const NavBar = ({ title, backgroundColor, textColor, topFixed }) => {
   return (
@@ -15,11 +15,6 @@ const NavBar = ({ title, backgroundColor, textColor, topFixed }) => {
       <div className="title">
         <h1>{title}</h1>
       </div>
-      <ul className="mainMenu">
-        <li>
-          <p>Meny (kommer)</p>
-        </li>
-      </ul>
     </div>
   );
 };

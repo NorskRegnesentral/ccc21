@@ -8,8 +8,10 @@ import MyColors from "../../components/myColors/myColors";
 import Footer from "../../components/footer/footer";
 import { checkColors } from "../../color-checker";
 import { getColorsFromDefaultPalette } from "../../contrast-calculations";
+import { useTranslation } from 'react-i18next';
 
 function Home() {
+  const { t } = useTranslation();
   //const [colorList, setColorList] = useState(["#f5f5f5", "#404040", "#d4ece9", "#1c6e65",  "#ffeba3"]); //HARDKODA, FJERN SENERE
   const [colorList, setColorList] = useState(getColorsFromDefaultPalette(5, 0)); //HARDKODA, FJERN SENERE
   const [tableList, setTableList] = useState([""]);
@@ -58,7 +60,7 @@ function Home() {
     <div className="App">
       <div>
         <NavBar
-          title="kontrastsjekker"
+          title={t('title')}
           backgroundColor="#1c4259"
           textColor="#ffffff"
           topFixed={true}
@@ -80,7 +82,7 @@ function Home() {
       <Footer
         backgroundColor={"#1c4259"}
         textColor={"#ffffff"}
-        text={"Kontakt: email@email.no"}
+        text={t('footer-text')}
       />
     </div>
   );

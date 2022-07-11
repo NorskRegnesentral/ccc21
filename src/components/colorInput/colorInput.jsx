@@ -1,5 +1,6 @@
 import "./colorInput.css";
 import React, { useState, useEffect } from "react";
+import { useTranslation } from 'react-i18next';
 
 const ColorInput = ({
   colorValue,
@@ -7,9 +8,8 @@ const ColorInput = ({
   updateColorValue,
   removeColorValue,
 }) => {
+  const { t } = useTranslation();
   const [colorTextInput, setColorTextInput] = useState();
-  useEffect(() => {}, []);
-
   useEffect(() => {
     setColorTextInput(colorValue);
   }, [colorValue]);
@@ -29,7 +29,7 @@ const ColorInput = ({
     <div className="colorInput">
       <button
         className="deleteInput"
-        title="fjern inputboks"
+        title={t('input-delete')}
         onClick={(e) => {
           {
             removeColorValue({ index });

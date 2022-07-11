@@ -1,9 +1,11 @@
 import "./about.css";
+import { useTranslation } from 'react-i18next';
 
 function About() {
+  const { t } = useTranslation();
+  
   return (
     <div className="About">
-      <h1>Hva er WCAG?</h1>
     </div>
   );
 }

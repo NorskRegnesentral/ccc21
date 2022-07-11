@@ -4,8 +4,10 @@ import { getContrastList } from "../../contrast-calculations";
 import TextFieldsIcon from '@mui/icons-material/TextFields';
 import AutoAwesomeMosaicIcon from '@mui/icons-material/AutoAwesomeMosaic';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
+import { useTranslation } from 'react-i18next';
 
 const ContrastSummary = ({ contrastMatrix }) => {
+  const { t } = useTranslation();
   const [AAAContrasts, setAAAContrasts] = useState(
     getContrastList(contrastMatrix, 4.51, 21)
   );
@@ -39,12 +41,12 @@ const ContrastSummary = ({ contrastMatrix }) => {
 
   return (
     <div className="contrastSummary">
-       <h1>Kombinasjoner </h1>
+       <h1>{t('contrast-summary-heading')} </h1>
 
       <div>
       <div className="contrastSummaryHeading"  style={{ backgroundColor: contrastColors.AAA, borderRadius: "4px", padding:"2px"}}>
         <TextFieldsIcon/>
-        <h3 className="contrastSummaryHeadingFont">Beste nivå for tekst (AAA)</h3>
+        <h3 className="contrastSummaryHeadingFont">{t('contrast-summary-aaa')}</h3>
       </div>
       <ul className="contrastSummaryList">
         {Object.values(AAAContrasts).map((item, index) => (
@@ -64,7 +66,7 @@ const ContrastSummary = ({ contrastMatrix }) => {
 
       <div className="contrastSummaryHeading" style={{ backgroundColor: contrastColors.AA, borderRadius: "4px", padding:"2px"}}>
         <TextFieldsIcon/>
-        <h3 className="contrastSummaryHeadingFont">Godt nivå for tekst (AA)</h3>
+        <h3 className="contrastSummaryHeadingFont">{t('contrast-summary-aa')}</h3>
       </div>
       <ul className="contrastSummaryList">
         {Object.values(AAContrasts).map((item, index) => (
@@ -83,7 +85,7 @@ const ContrastSummary = ({ contrastMatrix }) => {
 
       <div className="contrastSummaryHeading"  style={{ backgroundColor: contrastColors.AANontext, borderRadius: "4px", padding:"2px"}}>
         <AutoAwesomeMosaicIcon aria-label="tekst-ikon"/>
-        <h3 className="contrastSummaryHeadingFont">Godt nivå for ikke-tekst (AA)</h3>
+        <h3 className="contrastSummaryHeadingFont">{t('contrast-summary-nontext-aa')}</h3>
       </div>
       <ul className="contrastSummaryList">
         {Object.values(AANontextContrasts).map((item, index) => (
@@ -103,7 +105,7 @@ const ContrastSummary = ({ contrastMatrix }) => {
       <div>
       <div className="contrastSummaryHeading"  style={{ backgroundColor: contrastColors.none, borderRadius: "4px", padding:"2px"}}>
         <VisibilityOffIcon />
-        <h3 className="contrastSummaryHeadingFont">Lave kontraster</h3>
+        <h3 className="contrastSummaryHeadingFont">{t('contrast-summary-low')}</h3>
       </div>
       <ul className="contrastSummaryList">
         {Object.values(badContrasts).map((item, index) => (
