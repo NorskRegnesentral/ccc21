@@ -3,12 +3,13 @@ import React, { useEffect, useState } from "react";
 import NavBar from "../../components/navBar/navBar";
 import ContrastTable from "../../components/contrastTable/contrastTable";
 import ContrastSummary from "../../components/contrastSummary/contrastSummary";
+import ContrastSummaryBox from "../../components/contrastSummaryBox/contrastSummaryBox";
 import MockupPage from "../../components/mockupPage/mockupPage";
 import MyColors from "../../components/myColors/myColors";
 import Footer from "../../components/footer/footer";
 import TextBox from "../../components/textBox/textBox";
 import { checkColors } from "../../color-checker";
-import { getColorsFromDefaultPalette } from "../../contrast-calculations";
+import { getColorsFromDefaultPalette, getContrastList } from "../../contrast-calculations";
 import { useTranslation } from 'react-i18next';
 import InvertColorsRoundedIcon from '@mui/icons-material/InvertColorsRounded';
 import TextFieldsIcon from '@mui/icons-material/TextFields';
@@ -116,6 +117,27 @@ function Home() {
         {/*<div><ContrastSummary contrastMatrix={contrastMatrix}></ContrastSummary></div>*/}
         <div className="mockupSection">
           <MockupPage contrastMatrix={contrastMatrix} colorList={colorList}></MockupPage>
+        </div>
+        <div className="summarySection">
+          <div className="summarySectionChild" >
+            <ContrastSummaryBox title={t('contrast-summary-aaa')} titleIcon={<TextFieldsIcon/>} backgroundColor={contrastColors.AAA}
+            colorCombinationsList={getContrastList(contrastMatrix, 7.01, 21.0)}></ContrastSummaryBox>
+          </div>
+          <div className="summarySectionChild" >
+            <ContrastSummaryBox title={t('contrast-summary-aa')} titleIcon={<TextFieldsIcon/>} backgroundColor={contrastColors.AA}
+            colorCombinationsList={getContrastList(contrastMatrix, 4.5, 7.0)}></ContrastSummaryBox>
+          </div>
+          <div className="summarySectionChild" >
+            <ContrastSummaryBox title={t('contrast-summary-aaa')} titleIcon={<AutoAwesomeMosaicIcon/>} backgroundColor={contrastColors.AANontext}
+            colorCombinationsList={getContrastList(contrastMatrix, 3.01, 4.5)}></ContrastSummaryBox>
+          </div>
+          <div className="summarySectionChild" >
+            <ContrastSummaryBox title={t('contrast-summary-aaa')} titleIcon={<VisibilityOffIcon />} backgroundColor={contrastColors.none}
+            colorCombinationsList={getContrastList(contrastMatrix, 0, 3.0)}></ContrastSummaryBox>
+          </div>
+ 
+          
+           
         </div>
         <Footer
         backgroundColor="#f8f5f2"
