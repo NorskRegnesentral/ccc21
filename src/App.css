@@ -1,21 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap");
-:root {
-  --var-color-one: #f5efe1;
-  --var-color-two: #161616;
-}
 
 * {
   font-family: "Roboto", sans-serif;
-}
-
-.navBar {
-  position: fixed;
-  z-index: 1000;
-  width: 100vw;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background-color: pink;
 }
 
 ul {
@@ -28,46 +14,14 @@ li {
   padding: 10px;
 }
 
-.intro-text {
-  top: 40vh;
-  left: 10vw;
-  position: fixed;
-  user-select: none;
+h1 {
+  font-size: 18px;
 }
 
-.intro-text-2 {
-  top: 45vh;
-  left: 10vw;
-  position: fixed;
-  user-select: none;
-  opacity: 50%;
+h2 {
+  font-size: 16px;
 }
 
-.content {
-  margin-top: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  height: 100vh;
-}
-
-.footer {
-  height: 35vh;
-  background-color: pink;
-}
-
-.cursor {
-  position: fixed;
-  border-radius: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  pointer-events: none;
-  left: -100px;
-  top: 50%;
-  mix-blend-mode: difference;
-  background-color: #de7a6d;
-  z-index: 10000;
-  border: 2px solid rgb(163, 154, 154);
-  height: 30px;
-  width: 30px;
-  transition: all 300ms ease-out;
+h3 {
+  font-size: 16px;
 }

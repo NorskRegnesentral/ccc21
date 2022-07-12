@@ -1,23 +1,35 @@
+@import "../../variables.css";
+
 .mockupPage {
   width: 45vw;
   height: fit-content;
-  min-height: 40vh; /* HARDKODA FOR NÅ, FJERN SENERE  */
-  margin-bottom: 20rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border: 4px solid var(--base-color-mid-grey);
+  border-radius: 4px;
 }
 
 .mockupRow {
   display: flex;
+  gap: 1rem;
   flex-direction: row;
-  margin-top: 1rem;
   flex-wrap: wrap;
+  width: 100%;
+  height: fit-content;
+  margin-left: 1rem;
 }
 
-.rowItem-50 {
+.textBox {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  width: 50%;
-  padding: 2rem;
+  width: 45%;
+  padding: 2rem 1rem 0rem 1rem;
+}
+
+.mockupIllustration {
+  width: 45%;
 }
 
 .mockupForm {
@@ -29,24 +41,11 @@
 }
 
 .piechart {
-  margin-top: 2rem;
   width: 10vw;
   height: 10vw;
   border-radius: 50%;
-  background-image: conic-gradient(
-    #ffffff 70deg, 
-    lightblue 0 235deg, 
-    orange 0);
 }
 
-.helloP {
+.mockupParagraph {
   font-size: 10px;
-}
-
-.textBox {
-  padding: 2rem 1rem 0rem 3rem;
-}
-
-.active {
-  border: 4px solid orange;
 }

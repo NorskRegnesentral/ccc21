@@ -10,7 +10,7 @@ const Footer = ({ backgroundColor, textColor, text }) => {
         color: textColor,
       }}
     >
-      <p className="helloP">{text}</p>
+      <p>{text}</p>
     </div>
   );
 };

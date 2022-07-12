@@ -4,7 +4,7 @@
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-areas: "empty title title  menu";
-  height: 4rem;
+  height: 7vh;
 }
 
 .mainMenu {

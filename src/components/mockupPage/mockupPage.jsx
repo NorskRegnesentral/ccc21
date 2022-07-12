@@ -43,58 +43,42 @@ const getPieChartColors = () => {
 }
 
   return (
-    <div className="mockupPage" style={{
-      backgroundColor: colorList[3],
-    }}>
-      <div>
-        <NavBar
-          className="mockupNav" 
-          title="mockup website"
-          backgroundColor={colorList[0]}
-          textColor={colorList[1]}
-          topFixed={false}
-        ></NavBar>
+    <div className="mockupPage" style={{ backgroundColor: colorList[3]}}>
+      <NavBar
+        className="mockupNav" 
+        title="mockup website"
+        backgroundColor={colorList[0]}
+        textColor={colorList[1]}
+      ></NavBar>
+      <div className="mockupRow">
+          <div className="textBox">
+            <h1 style={{ color: colorList[0], fontSize: "14px" }}>
+              {t('mockup-title')}
+            </h1>
+            <p className="mockupParagraph" style={{ color: colorList[0] }}>
+              {t('mockup-text-small')}
+            </p>
+          </div>
+          <div className="mockupIllustration">
+            <UndrawBrainstorming
+              primaryColor={colorList[2]}
+              secondaryColor={colorList[0]}
+              accentColor={colorList[4]}
+              height="70%"
+            />
+          </div>
       </div>
       <div className="mockupRow">
-        <div className="rowItem-50 textBox">
-          <h1
-            style={{
-              color: colorList[0],
-              fontSize: "14px"
-            }}
-          >
-            {t('mockup-title')}
-          </h1>
-          <p
-            className="helloP"
-            style={{
-              color: colorList[0],
-            }}
-          >
-            {t('mockup-text-small')}
-          </p>
-        </div>
-        <div className="rowItem-50">
-          <UndrawBrainstorming
-            primaryColor={colorList[2]}
-            secondaryColor={colorList[0]}
-            accentColor={colorList[4]}
-            height="80%"
-          />
-        </div>
-      </div>
-      <div className="mocupRow">
-        <div className="rowItem-50">
+        <div>
           <form
             className="mockupForm"
             style={{
               backgroundColor: colorList[4],
             }}
           >
-            <h1 style={{
-              color: colorList[0],
-              fontSize: "14px"
-            }}>{t('mockup-form-title')}</h1>
+            <h1 style={{ color: colorList[0], fontSize: "14px" }}>
+              {t('mockup-form-title')}
+            </h1>
             <div>
               <input
                 type="checkbox"
@@ -102,27 +86,24 @@ const getPieChartColors = () => {
                 name="vehicle1"
                 value="Bike"
               />
-              <label for="vehicle1" style={{
-              color: colorList[0],   fontSize: "12px"
-            }}>{t('mockup-form-statement1')}</label>
+              <label for="vehicle1" style={{ color: colorList[0],   fontSize: "12px" }}>
+                {t('mockup-form-statement1')}
+              </label>
             </div>
             <div>
-              {" "}
               <input
                 type="checkbox"
                 id="vehicle1"
                 name="vehicle1"
                 value="Bike"
               />
-              <label for="vehicle1" style={{
-              color: colorList[0], fontSize: "12px"
-            }}>{t('mockup-form-statement2')}</label>
+              <label for="vehicle1" style={{ color: colorList[0], fontSize: "12px"}}>
+                {t('mockup-form-statement2')}
+              </label>
             </div>
           </form>
         </div>
-        <div className="rowItem-50">
-          <div class="piechart" style={{backgroundImage: pieChartValues}}></div>
-        </div>
+        <div class="piechart" style={{backgroundImage: pieChartValues}}></div>
       </div>
       <Footer
         backgroundColor={getColor1FromCombo(0)}

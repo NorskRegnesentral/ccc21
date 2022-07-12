@@ -49,35 +49,37 @@ const ContrastTable = ({ contrastMatrix }) => {
   return (
     <div className="contrastTable">
       <div className="tableHeader" aria-describedby="visning av fargekombinasjonene med deres kontrastverdier i en matrise">
-        <div className="toggle">
-          <label className="switch">
-            <input type="checkbox" onChange={toggle}/>
-            <span className="slider round"></span>
-          </label>
-          <h3 className="h3-small">{t('table-switch')} {colorsInTable ? t('traffic-lights') : t('view-chosen-colors')}</h3>
-        </div>
+        <label for="html" onClick={()=>setColorsInTable(false)}>
+          <input type="radio" className="radio-button" checked={colorsInTable ? false : true} name="table-view"/>
+          {t('view-contrast-level-by-color')}
+        </label>
+        <label for={t('view-chosen-colors')}  onClick={()=>setColorsInTable(true)}>
+          <input type="radio"  className="radio-button"  checked={colorsInTable ? true : false} name="table-view"/>
+          {t('view-chosen-colors')}
+        </label>        
       </div>
-      
-      <table>
-        <tbody>
-          {contrastMatrix.map((row, rowIndex) => (
-            <tr key={"row" + rowIndex}>
-              {Object.values(row).map((rowItem, colIndex) => (
-                <td
-                  key={"row" + rowIndex + "col" + colIndex}
-                  style={{ backgroundColor: colorsInTable && colIndex != 0 && rowIndex != colIndex ? getRowColor(rowIndex, colIndex, rowItem) : getCellColorFromContrast(rowItem) }}
-                >
-                  <div
-                    style={{ backgroundColor: isHex ? rowItem : "" }}
-                    className="colorBox"
-                  />
-                  <p className="tableText"  style={{ color: colorsInTable && rowIndex != 0 ?  getColumnColor(rowIndex, colIndex, rowItem) : "#000000" }}>{rowItem}</p> 
-                </td>
-              ))}
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <div className="tableBody">
+        <table>
+          <tbody>
+            {contrastMatrix.map((row, rowIndex) => (
+              <tr key={"row" + rowIndex}>
+                {Object.values(row).map((rowItem, colIndex) => (
+                  <td
+                    key={"row" + rowIndex + "col" + colIndex}
+                    style={{ backgroundColor: colorsInTable && colIndex != 0 && rowIndex != colIndex ? getRowColor(rowIndex, colIndex, rowItem) : getCellColorFromContrast(rowItem) }}
+                  >
+                    <div
+                      style={{ backgroundColor: isHex ? rowItem : "" }}
+                      className="colorBox"
+                    />
+                    <p className="tableText"  style={{ color: colorsInTable && rowIndex != 0 ?  getColumnColor(rowIndex, colIndex, rowItem) : "#000000" }}>{rowItem}</p> 
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };

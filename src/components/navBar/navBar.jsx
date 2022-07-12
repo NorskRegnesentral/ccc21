@@ -1,18 +1,18 @@
 import "./navBar.css";
 import React from "react";
 
-const NavBar = ({ title, backgroundColor, textColor, topFixed }) => {
+const NavBar = ({ title, titleIcon, backgroundColor, textColor }) => {
   return (
     <div
       className="navBar"
       style={{
         backgroundColor: backgroundColor,
         color: textColor,
-        top: topFixed ? 0 : "none",
-        position: topFixed ? "fixed" : "static",
+        position: "static",
       }}
     >
       <div className="title">
+        <div className="title">{titleIcon}</div>
         <h1>{title}</h1>
       </div>
     </div>

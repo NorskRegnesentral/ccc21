@@ -1,0 +1,32 @@
+.textBox {
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    width: fit-content;
+    margin: 0;
+    padding: 20px 16px 20px 16px;
+    gap: .3rem;
+    min-width: 180px;
+  }
+  
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    user-select: none;
+    height: inherit;
+    width: fit-content;
+    gap: .3rem;
+  }
+  
+  .h1-text-box {
+    font-size: 16px;
+    font-weight: normal;
+  }
+
+  .p-text-box {
+    font-size: 14px;
+    max-width: 30ch; 
+    margin: 0 0 0 0;
+  }

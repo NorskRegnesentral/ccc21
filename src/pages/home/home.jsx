@@ -6,16 +6,27 @@ import ContrastSummary from "../../components/contrastSummary/contrastSummary";
 import MockupPage from "../../components/mockupPage/mockupPage";
 import MyColors from "../../components/myColors/myColors";
 import Footer from "../../components/footer/footer";
+import TextBox from "../../components/textBox/textBox";
 import { checkColors } from "../../color-checker";
 import { getColorsFromDefaultPalette } from "../../contrast-calculations";
 import { useTranslation } from 'react-i18next';
+import InvertColorsRoundedIcon from '@mui/icons-material/InvertColorsRounded';
+import TextFieldsIcon from '@mui/icons-material/TextFields';
+import AutoAwesomeMosaicIcon from '@mui/icons-material/AutoAwesomeMosaic';
+import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 
 function Home() {
   const { t } = useTranslation();
-  //const [colorList, setColorList] = useState(["#f5f5f5", "#404040", "#d4ece9", "#1c6e65",  "#ffeba3"]); //HARDKODA, FJERN SENERE
-  const [colorList, setColorList] = useState(getColorsFromDefaultPalette(5, 0)); //HARDKODA, FJERN SENERE
+  const [colorList, setColorList] = useState(getColorsFromDefaultPalette(5, 0)); 
   const [tableList, setTableList] = useState([""]);
   const [contrastMatrix, setContrastMatrix] = useState([""].concat(colorList));
+  
+  const [contrastColors] = useState({
+    none: "#ee8181",
+    AANontext: "#f7b87d",
+    AA: "#ecdb79",
+    AAA: "#cff7cf",
+  }); //endre her hvis andre farger er ønskelig!
 
   //denne kjører hver gang colorList oppdateres
   useEffect(() => {
@@ -26,6 +37,7 @@ function Home() {
     setupContrastMatrix();
   }, [tableList]);
 
+  //Lager matrise av fargelisten
   const setupContrastMatrix = () => {
     const table = [];
     for (let row in tableList) {
@@ -35,7 +47,6 @@ function Home() {
       }
       table.push(rowObject);
     }
-    //console.log("matrix laget", table)
     setContrastMatrix(table);
   };
 
@@ -52,38 +63,66 @@ function Home() {
   const getContrast = (rowIndex, columnIndex) => {
     const color1 = tableList[columnIndex];
     const color2 = tableList[rowIndex];
-    const contrast = checkColors(color1, color2);
-    return contrast.contrast; //contrast har mange verdier. Console.log for å se alle muligheter:)
+    const colorComparison = checkColors(color1, color2);
+    return colorComparison.contrast; 
   };
 
   return (
     <div className="App">
-      <div>
+      <div className="colorBar">
+        <MyColors
+          colorList={colorList}
+          setColorList={setColorList}
+        />
+      </div>
+      <div className="rightSideBar">
+        {/** 
         <NavBar
           title={t('title')}
-          backgroundColor="#1c4259"
-          textColor="#ffffff"
-          topFixed={true}
-        ></NavBar>
-        <MyColors
-            colorList={colorList}
-            setColorList={setColorList}
-          ></MyColors>
-      </div>
-      <div className="content">
-        <div className="contentLeft">
-          <ContrastSummary contrastMatrix={contrastMatrix}></ContrastSummary>
+          titleIcon={<InvertColorsRoundedIcon></InvertColorsRoundedIcon>}
+          backgroundColor="#f8f5f2"
+          textColor="#1f1235"  
+  /> */}
+        <div className="aboutSection">
+          <div className="aboutSectionLeft">
+            <div className="row">
+              <InvertColorsRoundedIcon></InvertColorsRoundedIcon>
+              <h1 className="h1-aboutSection-title">{t('about-title')}</h1>
+            </div>
+            <div>
+            <p className="p-small-about">{t('about-description')} </p>
+            {/*<p className="p-small-about">{t('about-wcag')}</p>*/}
+            <a href="https://www.uutilsynet.no/fremtidig-regelverk/wcag-21-standarden/140"  target="_blank" rel="noreferrer noopener">
+              <button className="primaryButton">{t('about-button-linking-to-wcag')}</button>
+            </a> 
+            </div>
+          </div>
+          <div className="aboutSectionRight">
+            <div className="aboutSectionTextBoxContainer">
+              <TextBox title={t('contrast-summary-aaa')} titleIcon={<TextFieldsIcon/>} 
+              backgroundColor={contrastColors.AAA} mainText={t('about-wcag-aaa')}></TextBox>
+              <TextBox title={t('contrast-summary-aa')} titleIcon={<TextFieldsIcon/>} 
+              backgroundColor={contrastColors.AA} mainText={t('about-wcag-aa')}></TextBox>
+              <TextBox title={t('contrast-summary-nontext-aa')} titleIcon={<AutoAwesomeMosaicIcon/>} 
+              backgroundColor={contrastColors.AANontext} mainText={t('about-wcag-nontext-aa')}></TextBox>
+              <TextBox title={t('contrast-summary-low')} titleIcon={<VisibilityOffIcon/>} 
+              backgroundColor={contrastColors.none} mainText={t('about-wcag-low')}></TextBox>
+            </div>
+          </div>
         </div>
-        <div className="contentRight">
-            <ContrastTable contrastMatrix={contrastMatrix}></ContrastTable>
-            <MockupPage contrastMatrix={contrastMatrix} colorList={colorList}></MockupPage>
+        <div className="tableSection">
+          <ContrastTable contrastMatrix={contrastMatrix}></ContrastTable>
         </div>
-      </div>
-      <Footer
-        backgroundColor={"#1c4259"}
-        textColor={"#ffffff"}
+        {/*<div><ContrastSummary contrastMatrix={contrastMatrix}></ContrastSummary></div>*/}
+        <div className="mockupSection">
+          <MockupPage contrastMatrix={contrastMatrix} colorList={colorList}></MockupPage>
+        </div>
+        <Footer
+        backgroundColor="#f8f5f2"
+        textColor="#1f1235"  
         text={t('footer-text')}
-      />
+        />
+      </div>
     </div>
   );
 }

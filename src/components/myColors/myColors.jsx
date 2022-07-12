@@ -29,13 +29,6 @@ const MyColors = ({ colorList, setColorList }) => {
 
   return (
     <div className="myColors">
-      <div className="headingAndButton">
-        <button className="addColorButton"
-          onClick={addColorValue}
-        >
-          {t('add-color')}
-        </button>
-      </div>
       <div>
         <div className="inputFields">
           {Object.values(colorList).map((color, index) => (
@@ -48,6 +41,13 @@ const MyColors = ({ colorList, setColorList }) => {
             ></ColorInput>
           ))}
         </div>
+      </div>
+      <div className="button">
+        <button className="addColorButton"
+          onClick={addColorValue}
+        >
+          {t('add-color')}
+        </button>
       </div>
     </div>
   );
