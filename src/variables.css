@@ -7,4 +7,13 @@
     --base-color-white: #fcfcfc;
     --base-color-pink: #ff8280;
     --base-color-dark-pink: #b44d4b;
+
+
+    --contrast-color-aaa: #cff7cf;
+    --contrast-color-aa: #ecdb79;
+    --contrast-color-aa-nontext: "#f7b87d";
+    --contrast-color-none: #ee8181;
+
+    --color-sidebar-width: 185px;
+
 }

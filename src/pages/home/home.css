@@ -4,7 +4,7 @@
   display: grid;
   overflow: hidden;
   grid-template-areas: "colorbar content";
-  grid-template-columns: 185px auto;
+  grid-template-columns: var(--color-sidebar-width) auto;
   height: 100vh;
   background-color: var(--base-color-white);
 }
@@ -68,15 +68,16 @@
 
 .summarySection {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
+  justify-content: flex-start;
   gap: 0;
   margin: 0;
-  width: 90%; /* calc this*/
+  flex-shrink: 0;
 }
 
 .summarySectionChild{
-  flex: 0 1 calc(50%);
+  margin:0;
 }
 
 button {
@@ -121,6 +122,7 @@ button:hover {
 .p-small-about {
   font-size: 14px;
   max-width: 50ch;
+  line-height: 150%;
 }
 
 .row{
@@ -129,4 +131,3 @@ button:hover {
   justify-content: left;
   align-items: baseline;
 }
-

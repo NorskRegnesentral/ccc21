@@ -15,6 +15,7 @@ import InvertColorsRoundedIcon from '@mui/icons-material/InvertColorsRounded';
 import TextFieldsIcon from '@mui/icons-material/TextFields';
 import AutoAwesomeMosaicIcon from '@mui/icons-material/AutoAwesomeMosaic';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
+import "../../variables.css";
 
 function Home() {
   const { t } = useTranslation();
@@ -135,9 +136,6 @@ function Home() {
             <ContrastSummaryBox title={t('contrast-summary-aaa')} titleIcon={<VisibilityOffIcon />} backgroundColor={contrastColors.none}
             colorCombinationsList={getContrastList(contrastMatrix, 0, 3.0)}></ContrastSummaryBox>
           </div>
- 
-          
-           
         </div>
         <Footer
         backgroundColor="#f8f5f2"

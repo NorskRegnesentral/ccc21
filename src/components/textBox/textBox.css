@@ -6,7 +6,7 @@
     margin: 0;
     padding: 20px 16px 20px 16px;
     gap: .3rem;
-    min-width: 180px;
+    min-width: 250px;
   }
   
   .title {
@@ -29,4 +29,5 @@
     font-size: 14px;
     max-width: 30ch; 
     margin: 0 0 0 0;
+    line-height: 150%;
   }
