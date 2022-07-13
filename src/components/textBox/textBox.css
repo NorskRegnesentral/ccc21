@@ -13,8 +13,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    pointer-events: none;
-    user-select: none;
     height: inherit;
     width: fit-content;
     gap: .3rem;

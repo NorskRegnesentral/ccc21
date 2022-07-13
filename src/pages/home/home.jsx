@@ -1,10 +1,10 @@
 import "./home.css";
 import React, { useEffect, useState } from "react";
-import NavBar from "../../components/navBar/navBar";
 import ContrastTable from "../../components/contrastTable/contrastTable";
-import ContrastSummary from "../../components/contrastSummary/contrastSummary";
-import MockupPage from "../../components/mockupPage/mockupPage";
+import MockupTextBox from "../../components/mockupTextBox/mockupTextBox";
+import MockupIllustration from "../../components/MockupIllustration/mockupIllustration"
 import MyColors from "../../components/myColors/myColors";
+import MockupGraph from "../../components/mockupGraph/mockupGraph";
 import Footer from "../../components/footer/footer";
 import TextBox from "../../components/textBox/textBox";
 import { checkColors } from "../../color-checker";
@@ -14,23 +14,21 @@ import InvertColorsRoundedIcon from '@mui/icons-material/InvertColorsRounded';
 import TextFieldsIcon from '@mui/icons-material/TextFields';
 import AutoAwesomeMosaicIcon from '@mui/icons-material/AutoAwesomeMosaic';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
+import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
+import ColorLensIcon from '@mui/icons-material/ColorLens';
+import HandymanIcon from '@mui/icons-material/Handyman';
+import { contrastColors } from "../../varialbes";
+
 
 function Home() {
   const { t } = useTranslation();
   const [colorList, setColorList] = useState(getColorsFromDefaultPalette(5, 0)); 
   const [tableList, setTableList] = useState([""]);
   const [contrastMatrix, setContrastMatrix] = useState([""].concat(colorList));
-  
-  const [contrastColors] = useState({
-    none: "#ee8181",
-    AANontext: "#f7b87d",
-    AA: "#ecdb79",
-    AAA: "#cff7cf",
-  }); //endre her hvis andre farger er ønskelig!
 
-  //denne kjører hver gang colorList oppdateres
   useEffect(() => {
-    setTableList([""].concat(colorList)); //samme som colorList men med ett tomt felt først
+    //samme som colorList men med ett tomt felt først
+    setTableList([""].concat(colorList)); 
   }, [colorList]);
 
   useEffect(() => {
@@ -51,7 +49,8 @@ function Home() {
   };
 
   const getCellValue = (rowIndex, columnIndex) => {
-    if (rowIndex === columnIndex) return ""; //returnerer tom fordi det er samme fargene
+    //returnerer tom fordi det er samme fargene
+    if (rowIndex === columnIndex) return ""; 
     if (rowIndex == 0) return tableList[columnIndex];
     else if (columnIndex == 0) {
       return tableList[rowIndex];
@@ -76,18 +75,11 @@ function Home() {
         />
       </div>
       <div className="rightSideBar">
-        {/** 
-        <NavBar
-          title={t('title')}
-          titleIcon={<InvertColorsRoundedIcon></InvertColorsRoundedIcon>}
-          backgroundColor="#f8f5f2"
-          textColor="#1f1235"  
-  /> */}
         <div className="aboutSection">
           <div className="aboutSectionLeft">
             <div className="row">
               <InvertColorsRoundedIcon></InvertColorsRoundedIcon>
-              <h1 className="h1-aboutSection-title">{t('about-title')}</h1>
+              <h1 className="big-title">{t('about-title')}</h1>
             </div>
             <div>
             <p className="p-small-about">{t('about-description')} </p>
@@ -111,14 +103,31 @@ function Home() {
           </div>
         </div>
         <div className="tableSection">
+          <div className="see-contrast-heading">
+            <ColorLensIcon></ColorLensIcon>
+            <h2 className="big-title">{t('table-section-title')}</h2>
+          </div>
           <ContrastTable contrastMatrix={contrastMatrix}></ContrastTable>
         </div>
         {/*<div><ContrastSummary contrastMatrix={contrastMatrix}></ContrastSummary></div>*/}
         <div className="mockupSection">
-          <MockupPage contrastMatrix={contrastMatrix} colorList={colorList}></MockupPage>
+          <div className="mockup-section-title">
+            <HandymanIcon></HandymanIcon>
+            <h2 className="big-title">{t('mockup-section-title')}</h2>
+          </div>
+          <div className="aboutSectionTextBoxContainer">
+            <MockupTextBox colorList={colorList} title={t('mockup-textbox-header')}  
+            mainText={t('mockup-textbox-maintext')} 
+            titleIcon={<AutoAwesomeIcon/>} color1={colorList[3]} color2={colorList[2]}></MockupTextBox>
+            <MockupIllustration colorList={colorList} color1={colorList[3]} color2={colorList[2]}></MockupIllustration>
+            <MockupGraph colorList={colorList}></MockupGraph>
+          </div>
         </div>
+        {/*<div>
+          <MockupPage contrastMatrix={contrastMatrix} colorList={colorList}></MockupPage>
+        </div>*/}
         <Footer
-        backgroundColor="#f8f5f2"
+        backgroundColor="#fcfcfc"
         textColor="#1f1235"  
         text={t('footer-text')}
         />

@@ -1,0 +1,8 @@
+.colorBlock{
+    width: 25px;
+    height: 25px;
+}
+
+.mockup-color-picker-list{
+    border: 2px solid var(--base-color-white);
+}

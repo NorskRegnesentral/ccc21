@@ -1,0 +1,23 @@
+@import "../../variables.css";
+
+.mockup-graph {
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+    width: fit-content;
+    align-items: center;
+    min-width: 316px;
+    height: 12rem;
+    background-color: var(--base-color-white);
+    border-radius: 4px;
+    border: 1px solid var(--base-color-light-grey);
+    padding-left: .4rem;
+    font-size: 12px;
+  }
+
+  .piechart {
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+  }
+ 

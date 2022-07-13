@@ -62,8 +62,19 @@
   padding: 2rem;
   background-color: var(--base-color-light-beige);
   display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.mockup-section-title{
+  display: flex;
   flex-direction: row;
-  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: .2rem;
+  margin:0;
 }
 
 button {
@@ -96,13 +107,38 @@ button:hover {
 }
 
 
-.h1-aboutSection-title {
+.big-title {
   font-size: 26px;
+}
+
+.dark-pink {
+  color: var(--base-color-dark-pink);
+}
+
+.h2-title {
+  font-size: 22px;
+  color: var(--base-color-black);
+}
+
+.see-contrast-heading{
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: .2rem;
+  justify-content: flex-end;
+  padding-right: 4rem;
+  margin:0;
 }
 
 .h3-small {
   font-size: 16px;
   font-weight: normal;
+}
+
+.flex-end{
+  display: flex;
+  justify-content: flex-end;
+  
 }
 
 .p-small-about {

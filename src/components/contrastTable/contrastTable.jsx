@@ -1,15 +1,10 @@
 import "./contrastTable.css";
 import React, { useState } from "react";
 import { useTranslation } from 'react-i18next';
+import { contrastColors, wcagRules as w } from "../../varialbes";
 
 const ContrastTable = ({ contrastMatrix }) => {
   const { t } = useTranslation();
-  const [contrastColors] = useState({
-    none: "#ee8181",
-    AANontext: "#f7b87d",
-    AA: "#ecdb79",
-    AAA: "#cff7cf",
-  }); //endre her hvis andre farger er ønskelig!
   const [colorsInTable, setColorsInTable] = useState(false); 
 
   //Sjekker om verdien er en hex og returnerer fargen hvis ja
@@ -22,12 +17,12 @@ const ContrastTable = ({ contrastMatrix }) => {
 
   //Sjekker om verdien er kontrast, og returnerer evt passende farge etter oppfylte krav
   const getCellColorFromContrast = (possibleContrast) => {
-    return possibleContrast >= 1 && possibleContrast <= 21 //kontraster er et tall mellom 1-21
-      ? possibleContrast < 3.0
+    return possibleContrast >= w.contrastMin && possibleContrast <= w.contrastMax  //kontraster er et tall mellom 1-21
+      ? possibleContrast < w.lowContrastMax
         ? contrastColors.none
-        : 3.0 <= possibleContrast && possibleContrast < 4.5 
+        : w.aaNonTextMin <= possibleContrast && possibleContrast < w.aaNonTextMax
         ? contrastColors.AANontext :
-        4.5 <= possibleContrast && possibleContrast < 7.0
+        w.aaTextMin <= possibleContrast && possibleContrast < w.aaTextMax
         ? contrastColors.AA
         : contrastColors.AAA
       : "";

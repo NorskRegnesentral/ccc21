@@ -7,6 +7,11 @@
     "about-wcag-aa" : "Dette er kontraster med verdi mellom 4.5 og 7. Gode kontraster for tekst og bakgrunnsfarge.",
     "about-wcag-nontext-aa" : "Dette er kontraster med verdi mellom 3 og 4.5. Burde ikke brukes som tekst og bakgrunn, men kan brukes i ulike komponenter.",
     "about-wcag-low" : "Verdier under 3. Anbefales ikke til bruk på tekst eller andre sentrale komponenter.",
+    "table-section-title" : "Se kontrastnivå for fargepalettet ditt",
+    "mockup-section-title" : "Test fargene i praksis!",
+
+
+
     "footer-text": "kontakt: email@email.no",
     "input-delete" : "fjern farge",
 
@@ -27,6 +32,8 @@
     "mockup-form-statement1" : "Jeg er kul",
     "mockup-form-statement2" : "Jeg er snill",
     "mockup-footer-text" : "Jeg er en footer",
+    "mockup-textbox-header" : "Test fargene i en tekstboks!",
+    "mockup-textbox-maintext" : "Du kan endre farger til venstre for å se andre mulige kombinasjonser fra palettet.",
 
     "add-color" : "legg til fargekode"
 }
