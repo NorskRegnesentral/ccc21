@@ -108,6 +108,7 @@ button:hover {
 .p-small-about {
   font-size: 14px;
   max-width: 50ch;
+  line-height: 150%;
 }
 
 .row{
