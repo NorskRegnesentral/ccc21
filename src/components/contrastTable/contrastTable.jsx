@@ -41,14 +41,18 @@ const ContrastTable = ({ contrastMatrix }) => {
     <div className="contrastTable" aria-describedby={t('contrast-table-title')}>
         <fieldset className="tableHeader">
           <legend hidden>{t('contrast-table-radiobutton-title')}</legend>
-          <label for={t('view-contrast-level-by-color')} onClick={()=>setColorsInTable(false)}>
-            <input type="radio" className="radio-button" checked={colorsInTable ? false : true} name={t('view-contrast-level-by-color')}/>
-            {t('view-contrast-level-by-color')}
-          </label>
-          <label for={t('view-chosen-colors')}  onClick={()=>setColorsInTable(true)}>
-            <input type="radio"  className="radio-button"  checked={colorsInTable ? true : false} name={t('view-chosen-colors')}/>
-            {t('view-chosen-colors')}
-          </label>       
+          <div className="radio-button-container" onClick={()=>setColorsInTable(false)}>
+            <label for={t('view-contrast-level-by-color')}>
+              {t('view-contrast-level-by-color')}
+            </label>
+            <input type="radio" className="radio-button" checked={colorsInTable ? false : true} id={t('view-contrast-level-by-color')}/>
+            </div>
+            <div className="radio-button-container" onClick={()=>setColorsInTable(true)}>
+              <label for={t('view-chosen-colors')}>
+              {t('view-chosen-colors')}
+              </label>
+              <input type="radio"  className="radio-button"  checked={colorsInTable ? true : false} id={t('view-chosen-colors')}/>   
+            </div>    
         </fieldset> 
       <div className="tableBody">
         <table>

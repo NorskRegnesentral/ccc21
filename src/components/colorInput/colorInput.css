@@ -24,7 +24,7 @@
   background-color: transparent;
 }
 
-#hex-input {
+.hex-input {
   width: 70px;
   background-color: transparent;
   font-size: 12px;
