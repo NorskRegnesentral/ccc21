@@ -76,7 +76,7 @@ const ContrastSummary = ({ contrastMatrix }) => {
       </ul>
 
       <div className="contrastSummaryHeading"  style={{ backgroundColor: contrastColors.AANontext, borderRadius: "4px", padding:"2px"}}>
-        <AutoAwesomeMosaicIcon aria-label="tekst-ikon"/>
+        <AutoAwesomeMosaicIcon/>
         <h3 className="contrastSummaryHeadingFont">{t('contrast-summary-nontext-aa')}</h3>
       </div>
       <ul className="contrastSummaryList">
