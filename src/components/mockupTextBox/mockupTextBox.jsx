@@ -21,7 +21,7 @@ const MockupTextBox = ({ title, titleIcon, textColor, mainText, color1, color2, 
         <div className="mockup-element-content">
             <div className="title">
                 <div style={{ color: colorForText }}>{titleIcon}</div>
-                <h1 className="h1-text-box" style={{ color: colorForText }}>{title}</h1>
+                <h2 className="h1-text-box" style={{ color: colorForText }}>{title}</h2>
             </div>
             <div>
                 <p className="p-text-box" style={{ color: colorForText }}>{mainText}</p>

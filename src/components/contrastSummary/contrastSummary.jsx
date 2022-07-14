@@ -26,7 +26,7 @@ const ContrastSummary = ({ contrastMatrix }) => {
   useEffect(() => {
     setBadContrasts("");
     setBadContrasts(getContrastList(contrastMatrix, w.contrastMin, w.lowContrastMax));
-    setAANontextContrasts(getContrastList(contrastMatrix, w.aaNonTextMin, w.aaNonTextMax)); //https://www.uutilsynet.no/wcag-standarden/1411-kontrast-ikke-tekstlig-innhold-niva-aa/145
+    setAANontextContrasts(getContrastList(contrastMatrix, w.aaNonTextMin, w.aaNonTextMax));
     setAAContrasts(getContrastList(contrastMatrix, w.aaTextMin, w.aaTextMax));
     setAAAContrasts(getContrastList(contrastMatrix, w.aaaTextMin, w.contrastMax));
   }, [contrastMatrix]);

@@ -28,20 +28,20 @@ const MyColors = ({ colorList, setColorList }) => {
 
 
   return (
-    <div className="myColors">
-      <div>
-        <div className="inputFields">
-          {Object.values(colorList).map((color, index) => (
-            <ColorInput
+    <div className="myColors"  aria-label={t('my-colors-heading')}>
+      <ul className="my-color-list">
+        {Object.values(colorList).map((color, index) => (
+          <li className="my-color-list-item">
+              <ColorInput
               key={"color" + index}
               index={index}
               colorValue={color}
               updateColorValue={updateColorValue}
               removeColorValue={removeColorValue}
             ></ColorInput>
-          ))}
-        </div>
-      </div>
+          </li>
+        ))}
+      </ul>
       <div className="button">
         <button className="addColorButton"
           onClick={addColorValue}

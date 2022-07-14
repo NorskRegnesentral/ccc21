@@ -18,7 +18,7 @@ import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import ColorLensIcon from '@mui/icons-material/ColorLens';
 import HandymanIcon from '@mui/icons-material/Handyman';
 import { contrastColors } from "../../varialbes";
-
+import ContrastSummary from "../../components/contrastSummary/contrastSummary";
 
 function Home() {
   const { t } = useTranslation();
@@ -90,22 +90,30 @@ function Home() {
             </div>
           </div>
           <div className="aboutSectionRight">
-            <div className="aboutSectionTextBoxContainer">
-              <TextBox title={t('contrast-summary-aaa')} titleIcon={<TextFieldsIcon/>} 
-              backgroundColor={contrastColors.AAA} mainText={t('about-wcag-aaa')}></TextBox>
-              <TextBox title={t('contrast-summary-aa')} titleIcon={<TextFieldsIcon/>} 
-              backgroundColor={contrastColors.AA} mainText={t('about-wcag-aa')}></TextBox>
-              <TextBox title={t('contrast-summary-nontext-aa')} titleIcon={<AutoAwesomeMosaicIcon/>} 
-              backgroundColor={contrastColors.AANontext} mainText={t('about-wcag-nontext-aa')}></TextBox>
-              <TextBox title={t('contrast-summary-low')} titleIcon={<VisibilityOffIcon/>} 
-              backgroundColor={contrastColors.none} mainText={t('about-wcag-low')}></TextBox>
-            </div>
+            <ul className="aboutSectionTextBoxContainer" aria-label={t('about-wcag-list-heading')}>
+              <li>
+                <TextBox title={t('contrast-summary-aaa')} titleIcon={<TextFieldsIcon/>} 
+                backgroundColor={contrastColors.AAA} mainText={t('about-wcag-aaa')}></TextBox>
+              </li>
+              <li>
+                <TextBox title={t('contrast-summary-aa')} titleIcon={<TextFieldsIcon/>} 
+                backgroundColor={contrastColors.AA} mainText={t('about-wcag-aa')}></TextBox>
+              </li>
+              <li>
+                <TextBox title={t('contrast-summary-nontext-aa')} titleIcon={<AutoAwesomeMosaicIcon/>} 
+                backgroundColor={contrastColors.AANontext} mainText={t('about-wcag-nontext-aa')}></TextBox>
+              </li>
+              <li>
+                <TextBox title={t('contrast-summary-low')} titleIcon={<VisibilityOffIcon/>} 
+                backgroundColor={contrastColors.none} mainText={t('about-wcag-low')}></TextBox>
+              </li>
+            </ul>
           </div>
         </div>
         <div className="tableSection">
           <div className="see-contrast-heading">
             <ColorLensIcon></ColorLensIcon>
-            <h2 className="big-title">{t('table-section-title')}</h2>
+            <h1 className="big-title">{t('table-section-title')}</h1>
           </div>
           <ContrastTable contrastMatrix={contrastMatrix}></ContrastTable>
         </div>
@@ -113,7 +121,7 @@ function Home() {
         <div className="mockupSection">
           <div className="mockup-section-title">
             <HandymanIcon></HandymanIcon>
-            <h2 className="big-title">{t('mockup-section-title')}</h2>
+            <h1 className="big-title">{t('mockup-section-title')}</h1>
           </div>
           <div className="aboutSectionTextBoxContainer">
             <MockupTextBox colorList={colorList} title={t('mockup-textbox-header')}  
@@ -123,9 +131,10 @@ function Home() {
             <MockupGraph colorList={colorList}></MockupGraph>
           </div>
         </div>
-        {/*<div>
-          <MockupPage contrastMatrix={contrastMatrix} colorList={colorList}></MockupPage>
-        </div>*/}
+        <div>
+          {/*<MockupPage contrastMatrix={contrastMatrix} colorList={colorList}></MockupPage>*/}
+          <ContrastSummary contrastMatrix={contrastMatrix}></ContrastSummary>
+        </div>
         <Footer
         backgroundColor="#fcfcfc"
         textColor="#1f1235"  

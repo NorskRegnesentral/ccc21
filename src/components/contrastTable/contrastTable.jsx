@@ -37,22 +37,19 @@ const ContrastTable = ({ contrastMatrix }) => {
     return contrastMatrix[colIndex][0];
   }
 
-  const toggle = () => {
-    setColorsInTable(!colorsInTable);
-  }
-
   return (
-    <div className="contrastTable">
-      <div className="tableHeader" aria-describedby="visning av fargekombinasjonene med deres kontrastverdier i en matrise">
-        <label for="html" onClick={()=>setColorsInTable(false)}>
-          <input type="radio" className="radio-button" checked={colorsInTable ? false : true} name="table-view"/>
-          {t('view-contrast-level-by-color')}
-        </label>
-        <label for={t('view-chosen-colors')}  onClick={()=>setColorsInTable(true)}>
-          <input type="radio"  className="radio-button"  checked={colorsInTable ? true : false} name="table-view"/>
-          {t('view-chosen-colors')}
-        </label>        
-      </div>
+    <div className="contrastTable" aria-describedby={t('contrast-table-title')}>
+        <fieldset className="tableHeader">
+          <legend hidden>{t('contrast-table-radiobutton-title')}</legend>
+          <label for={t('view-contrast-level-by-color')} onClick={()=>setColorsInTable(false)}>
+            <input type="radio" className="radio-button" checked={colorsInTable ? false : true} name={t('view-contrast-level-by-color')}/>
+            {t('view-contrast-level-by-color')}
+          </label>
+          <label for={t('view-chosen-colors')}  onClick={()=>setColorsInTable(true)}>
+            <input type="radio"  className="radio-button"  checked={colorsInTable ? true : false} name={t('view-chosen-colors')}/>
+            {t('view-chosen-colors')}
+          </label>       
+        </fieldset> 
       <div className="tableBody">
         <table>
           <tbody>

@@ -12,7 +12,7 @@ const TextBox = ({ title, titleIcon, backgroundColor, textColor, mainText }) => 
     >
       <div className="title">
         <div>{titleIcon}</div>
-        <h1 className="h1-text-box">{title}</h1>
+        <h2 className="h1-text-box">{title}</h2>
       </div>
       <div>
         <p className="p-text-box">{mainText}</p>

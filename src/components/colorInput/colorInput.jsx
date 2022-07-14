@@ -26,37 +26,35 @@ const ColorInput = ({
   };
 
   return (
-    <div className="colorInput">
+    <fieldset className="colorInput">
+      <legend hidden>{colorValue}</legend>
       <button
         className="deleteInput"
         title={t('input-delete')}
-        onClick={(e) => {
-          {
-            removeColorValue({ index });
-          }
-        }}
-      >
-        x
+        onClick={(e) => {{ removeColorValue({ index }) }}}> 
+          x
       </button>
-      <input
-        className="inputForColor"
-        type="color"
-        value={colorValue}
-        onInput={(e) => {
-          {
-            updateColorValue(index, e.target.value);
-          }
-        }}
-      ></input>
-      <input
-        className="inputForColor"
-        type="text"
-        id="hex-input"
-        maxLength="7"
-        value={colorTextInput}
-        onChange={updateValue}
-      ></input>
-    </div>
+      <label for={t('color-value-by-colorpicker')} >    
+        <input
+          className="inputForColor"
+          name={t('color-value-by-colorpicker')} //todo GI EN T('')
+          type="color"
+          value={colorValue}
+          onInput={(e) => {{ updateColorValue(index, e.target.value);}}}
+        ></input>
+      </label> 
+      <label for={t('color-value-by-text')}>
+        <input
+          className="inputForColor"
+          type="text"
+          id="hex-input"
+          maxLength="7"
+          value={colorTextInput}
+          onChange={updateValue}
+          name={t('color-value-by-text')}
+        ></input>
+      </label>
+    </fieldset>
   );
 };
 
