@@ -1,5 +1,5 @@
 import "./myColors.css";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import ColorInput from "../colorInput/colorInput";
 import { getColorsFromDefaultPalette } from "../../contrast-calculations";
 import { useTranslation } from 'react-i18next';
