@@ -62,13 +62,13 @@ const ContrastTable = ({ contrastMatrix }) => {
                 {Object.values(row).map((rowItem, colIndex) => (
                   <td
                     key={"row" + rowIndex + "col" + colIndex}
-                    style={{ backgroundColor: colorsInTable && colIndex != 0 && rowIndex != colIndex ? getRowColor(rowIndex, colIndex, rowItem) : getCellColorFromContrast(rowItem) }}
+                    style={{ backgroundColor: colorsInTable && colIndex !== 0 && rowIndex !== colIndex ? getRowColor(rowIndex, colIndex, rowItem) : getCellColorFromContrast(rowItem) }}
                   >
                     <div
                       style={{ backgroundColor: isHex ? rowItem : "" }}
                       className="colorBox"
                     />
-                    <p className="tableText"  style={{ color: colorsInTable && rowIndex != 0 ?  getColumnColor(rowIndex, colIndex, rowItem) : "#000000" }}>{rowItem}</p> 
+                    <p className="tableText"  style={{ color: colorsInTable && rowIndex !== 0 ?  getColumnColor(rowIndex, colIndex, rowItem) : "#000000" }}>{rowItem}</p> 
                   </td>
                 ))}
               </tr>
