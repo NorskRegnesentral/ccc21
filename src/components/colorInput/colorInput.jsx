@@ -35,16 +35,15 @@ const ColorInput = ({
         onClick={(e) => {{ removeColorValue({ index }) }}}> 
           x
       </button>
-      <label for={'color-value-by-colorpicker-'+index} >    
-        <input
+      <label for={'color-value-by-colorpicker-'+index} hidden> {"color-chooser-input"} </label> 
+      <input
           className="inputForColor"
           id={'color-value-by-colorpicker-'+index} 
           type="color"
           value={colorValue}
           onInput={(e) => {{ updateColorValue(index, e.target.value);}}}
         ></input>
-      </label> 
-      <label for={'color-value-by-text-'+index}>
+      <label for={'color-value-by-text-'+index} hidden> {"color-text-input"} </label>
         <input
           className="inputForColor hex-input"
           type="text"
@@ -53,7 +52,6 @@ const ColorInput = ({
           value={colorTextInput}
           onChange={updateValue}
         ></input>
-      </label>
     </fieldset>
   );
 };
