@@ -13,8 +13,6 @@
     "contrast-table-title"  : "Visning av valgte fargekombinasjoner med kontrastverdier i en matrise", 
     "contrast-table-radiobutton-title" :  "Velg visning for tabellen",
     "my-colors-heading" : "Mitt fargepalett", 
-    "color-value-by-colorpicker" : "farge i fargevelger",
-    "color-value-by-text" : "farge i tekst",
 
     "footer-text": "kontakt: email@email.no",
     "input-delete" : "fjern farge",

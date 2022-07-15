@@ -10,7 +10,7 @@ const MockupColorPicker = ({ chosenColor, setChosenColor, colorList, topColorPic
   return (
     <div className="mockup-color-picker">
         <button className = {topColorPicker ? "mockup-color-bar-color mockup-color-bar-color-top" : bottomColorPicker ? "mockup-color-bar-color mockup-color-bar-color-bottom" : "mockup-color-bar-color" }  
-        style={{ backgroundColor: chosenColor }} onClick={() => setcolorsVisibility(!colorsVisibility)} title="change color">
+        style={{ backgroundColor: chosenColor }} onClick={() => setcolorsVisibility(!colorsVisibility)} value="change color">
             <ColorizeIcon style={{color : getBlackOrWhiteAsBestContrast(chosenColor)}}></ColorizeIcon>
         </button>      
         <ul className="mockup-color-picker-list" style={{ display: colorsVisibility ?  "flex" : "none" }}> 
