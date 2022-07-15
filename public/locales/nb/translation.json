@@ -13,6 +13,7 @@
     "contrast-table-title"  : "Visning av valgte fargekombinasjoner med kontrastverdier i en matrise", 
     "contrast-table-radiobutton-title" :  "Velg visning for tabellen",
     "my-colors-heading" : "Mitt fargepalett", 
+    "change-color" : "Endre farge",
 
     "footer-text": "kontakt: email@email.no",
     "input-delete" : "fjern farge",
@@ -24,7 +25,6 @@
     "contrast-summary-low" : "Lave kontraster",
 
     "table-switch" : "Bytt visning: ",
-    "traffic-lights" : "trafikklys",
     "view-chosen-colors" : "se fargevalg",
     "view-contrast-level-by-color" : "se kontrastnivå",
 

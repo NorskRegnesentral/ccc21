@@ -115,7 +115,7 @@ function Home() {
             <ColorLensIcon></ColorLensIcon>
             <h1 className="big-title">{t('table-section-title')}</h1>
           </div>
-          <ContrastTable contrastMatrix={contrastMatrix}></ContrastTable>
+          <ContrastTable aria-details={t('contrast-table-title')} contrastMatrix={contrastMatrix}></ContrastTable>
         </div>
         {/*<div><ContrastSummary contrastMatrix={contrastMatrix}></ContrastSummary></div>*/}
         <div className="mockupSection">
