@@ -17,8 +17,8 @@ Når du gjør endringer i koden skal localhost:3000 oppdateres automatisk.
 
 
 # Hvordan deploye react-koden til github pages
-1. I dette prosjektet er alt klargjort for https://kamillamortensen.github.io/contrastMatch på grunn av konfigurasjonene i package.json. Det du må gjøre er å sørge for at du og den nye koden er på master branch. Deretter kan du kjøre `npm run deploy` fra terminalen, og siden skal oppdateres!
-Tutorial: https://www.freecodecamp.org/news/deploy-a-react-app-to-github-pages/
+Det du må gjøre i dette prosjektet er å sørge for at du og den nye koden er på master branch. Deretter kan du kjøre `npm run deploy` fra terminalen, og siden skal oppdateres! <br>
+Tutorial til oppsett og endring av host-side: https://www.freecodecamp.org/news/deploy-a-react-app-to-github-pages/
 
 
 
