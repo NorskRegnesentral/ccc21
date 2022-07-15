@@ -16,7 +16,7 @@ const MockupColorPicker = ({ chosenColor, setChosenColor, colorList, topColorPic
         <ul className="mockup-color-picker-list" style={{ display: colorsVisibility ?  "flex" : "none" }}> 
             {Object.values(colorList).map((color, index) => (
                 <li className="color-picker-list-item-wrap">
-                    <button onClick={() => setChosenColor(color)} className="colorBlock" style={{ backgroundColor: color }}></button>
+                    <button onClick={() => setChosenColor(color)} className="colorBlock" title={color} style={{ backgroundColor: color }}></button>
                 </li>
             ))}
         </ul>
