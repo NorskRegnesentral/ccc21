@@ -39,7 +39,7 @@ const ContrastTable = ({ contrastMatrix }) => {
 
   return (
     <div className="contrastTable">
-        <fieldset className="tableHeader" aria-describedby={t('contrast-table-title')}>
+        <fieldset className="tableHeader">
           <legend hidden>{t('contrast-table-radiobutton-title')}</legend>
           <div className="radio-button-container" onClick={()=>setColorsInTable(false)}>
             <label for={t('view-contrast-level-by-color')}>
