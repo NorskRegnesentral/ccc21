@@ -8,7 +8,7 @@ import MockupGraph from "../../components/mockupGraph/mockupGraph";
 import Footer from "../../components/footer/footer";
 import TextBox from "../../components/textBox/textBox";
 import { checkColors } from "../../color-checker";
-import { getColorsFromDefaultPalette } from "../../contrast-calculations";
+import { getColorsFromDefaultPalette, getContrastList  } from "../../contrast-calculations";
 import { useTranslation } from 'react-i18next';
 import InvertColorsRoundedIcon from '@mui/icons-material/InvertColorsRounded';
 import TextFieldsIcon from '@mui/icons-material/TextFields';
@@ -17,8 +17,11 @@ import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import ColorLensIcon from '@mui/icons-material/ColorLens';
 import HandymanIcon from '@mui/icons-material/Handyman';
-import { contrastColors } from "../../varialbes";
+import { contrastColors, wcagRules as w } from "../../varialbes";
 import ContrastSummary from "../../components/contrastSummary/contrastSummary";
+import InventoryRoundedIcon from '@mui/icons-material/InventoryRounded';
+import MockupButton from "../../components/mockupButton/mockupButton";
+import ContrastSummaryBox from "../../components/contrastSummaryBox/contrastSummaryBox";
 
 function Home() {
   const { t } = useTranslation();
@@ -129,11 +132,32 @@ function Home() {
             titleIcon={<AutoAwesomeIcon/>} color1={colorList[3]} color2={colorList[2]}></MockupTextBox>
             <MockupIllustration colorList={colorList} color1={colorList[3]} color2={colorList[2]}></MockupIllustration>
             <MockupGraph colorList={colorList}></MockupGraph>
+            <MockupButton colorList={colorList} contrastMatrix={contrastMatrix} color1={colorList[3]} color2={colorList[2]}></MockupButton>
           </div>
         </div>
         <div>
+          <div className="see-contrast-heading">
+            <InventoryRoundedIcon/>
+            <h1 className="big-title">{t('recommendation-section-title')}</h1>
+          </div>
           {/*<MockupPage contrastMatrix={contrastMatrix} colorList={colorList}></MockupPage>*/}
           <ContrastSummary contrastMatrix={contrastMatrix}></ContrastSummary>
+        </div>
+        <div className="summarySection">
+          <div className="see-contrast-heading">
+            <InventoryRoundedIcon/>
+            <h1 className="big-title">{t('recommendation-section-title')}</h1>
+          </div>
+          <div className="aboutSectionTextBoxContainer">
+            <ContrastSummaryBox title={t('contrast-summary-aaa')} titleIcon={<TextFieldsIcon/>} backgroundColor={contrastColors.AAA}
+              colorCombinationsList={getContrastList(contrastMatrix, w.aaaTextMin, w.contrastMax)}></ContrastSummaryBox>
+            <ContrastSummaryBox title={t('contrast-summary-aa')} titleIcon={<TextFieldsIcon/>} backgroundColor={contrastColors.AA}
+              colorCombinationsList={getContrastList(contrastMatrix, w.aaTextMin, w.aaTextMax)}></ContrastSummaryBox>
+            <ContrastSummaryBox title={t('contrast-summary-nontext-aa')} titleIcon={<AutoAwesomeMosaicIcon/>} backgroundColor={contrastColors.AANontext}
+              colorCombinationsList={getContrastList(contrastMatrix, w.aaNonTextMin, w.aaNonTextMax)}></ContrastSummaryBox>
+            <ContrastSummaryBox title={t('contrast-summary-low')} titleIcon={<VisibilityOffIcon/>} backgroundColor={contrastColors.none}
+              colorCombinationsList={getContrastList(contrastMatrix, w.contrastMin, w.aaNonTextMin)}></ContrastSummaryBox>
+          </div>
         </div>
         <Footer
         backgroundColor="#fcfcfc"

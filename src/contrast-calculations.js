@@ -62,6 +62,5 @@ export const getBlackOrWhiteAsBestContrast = (color) => {
   const white = "#fcfcfc";
   const black = "#1f1235";
   const contrastToBlack = checkColors(color, "#000000");
-  console.log("fargen", color, " har kontrast med svart " , contrastToBlack)
   return contrastToBlack.contrast > 7 ? black : white; 
 }

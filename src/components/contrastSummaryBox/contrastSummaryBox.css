@@ -1,0 +1,28 @@
+@import "../../variables.css";
+
+.contrast-summary-content {
+    background-color: var(--base-color-white);
+    border-radius: 4px;
+}
+
+.contrast-summary-list-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+.color-combo-circle {
+    border-radius: 30px;
+    border-width: 30px;
+    border-style: solid;
+    height: 0px;
+    width: 0px;
+}
+
+.color-combo-text {
+    margin: 0;
+    padding: .1rem 0rem .1rem .8rem;
+
+}
+ 

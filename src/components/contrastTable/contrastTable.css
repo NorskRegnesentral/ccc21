@@ -26,13 +26,13 @@
   border-radius: 4px;
 } 
 
- table, td {
+ table, td, th {
     /*border: 4px solid white;*/
     border: 4px solid var(--base-color-white);
     border-collapse: collapse;
   }
 
-  td {
+  td, th {
     padding: 6px;
     background-color: var(--base-color-light-grey);
     min-width: 85px; 
@@ -45,9 +45,15 @@
     float: left;
   }
 
-  .tableText{
+  .table-text-header{
     margin: 0px 4px 0px 4px;
     float: left;
+    font-weight: normal;
+  }
+
+  .table-text-entry{
+    margin: 0px 4px 0px 4px;
+    text-align: center;
   }
 
   .radio-button-container {

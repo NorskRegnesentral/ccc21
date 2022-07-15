@@ -60,15 +60,17 @@ const ContrastTable = ({ contrastMatrix }) => {
             {contrastMatrix.map((row, rowIndex) => (
               <tr key={"row" + rowIndex}>
                 {Object.values(row).map((rowItem, colIndex) => (
+                  rowIndex == 0 || colIndex == 0 ? 
+                  <th key={"row" + rowIndex + "col" + colIndex}>
+                    <div style={{ backgroundColor: rowItem }} className="colorBox"/>
+                    <p className="table-text-header">{rowItem}</p> 
+                  </th>
+                  :
                   <td
                     key={"row" + rowIndex + "col" + colIndex}
-                    style={{ backgroundColor: colorsInTable && colIndex !== 0 && rowIndex !== colIndex ? getRowColor(rowIndex, colIndex, rowItem) : getCellColorFromContrast(rowItem) }}
+                    style={{ backgroundColor: colorsInTable && rowIndex !== colIndex ? getRowColor(rowIndex, colIndex, rowItem) : getCellColorFromContrast(rowItem) }}
                   >
-                    <div
-                      style={{ backgroundColor: isHex ? rowItem : "" }}
-                      className="colorBox"
-                    />
-                    <p className="tableText"  style={{ color: colorsInTable && rowIndex !== 0 ?  getColumnColor(rowIndex, colIndex, rowItem) : "#000000" }}>{rowItem}</p> 
+                    <p className="table-text-entry"  style={{ color: colorsInTable ?  getColumnColor(rowIndex, colIndex, rowItem) : "#000000" }}>{rowItem}</p> 
                   </td>
                 ))}
               </tr>

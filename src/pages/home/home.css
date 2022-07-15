@@ -51,6 +51,7 @@
   flex-wrap: wrap;
   gap: 1rem;
   margin: 0;
+  padding: 2rem;
 }
 
 .tableSection {
@@ -59,7 +60,7 @@
 }
 
 .mockupSection {
-  padding: 2rem;
+  padding-left: 2rem;
   background-color: var(--base-color-light-beige);
   display: flex;
   flex-direction: column;
