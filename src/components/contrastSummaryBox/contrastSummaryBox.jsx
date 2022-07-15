@@ -5,7 +5,7 @@ import React from "react";
 const ContrastSummaryBox = ({ colorCombinationsList, title, titleIcon, backgroundColor }) => {
 
   return (
-    <div className="contrastSummary" style={{ backgroundColor:backgroundColor }}>
+    <div className="contrastSummary" style={{ /*backgroundColor:backgroundColor*/ backgroundColor: '#f8f5f2' }}>
         <div className="title">
             <div>{titleIcon}</div>
             <h2 className="contrast-summary-h2"> {title} </h2>     
