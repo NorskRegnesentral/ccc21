@@ -1,7 +1,7 @@
 {
   "name": "first-react-app",
-  "homepage": "https://Kamillamortensen.github.io/contrastMatch",
   "version": "0.1.0",
+  "homepage": "https://Kamillamortensen.github.io/contrastMatch",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.9.3",
