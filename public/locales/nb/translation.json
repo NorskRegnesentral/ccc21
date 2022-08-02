@@ -17,17 +17,15 @@
     "change-color" : "Endre farge",
     "footer-text": "kontakt: email@email.no",
     "input-delete" : "fjern farge",
-
+    "add-color" : "legg til fargekode",
     "contrast-summary-heading": "kombinasjoner",
     "contrast-summary-aaa": "Beste nivå for tekst (AAA)",
     "contrast-summary-aa" : "Godt nivå for tekst (AA)",
     "contrast-summary-nontext-aa" : "Godt nivå for ikke-tekst (AA)",
     "contrast-summary-low" : "Lave kontraster",
-
     "table-switch" : "Bytt visning: ",
     "view-chosen-colors" : "se fargevalg",
     "view-contrast-level-by-color" : "se kontrastnivå",
-
     "mockup-title" : "Slik ser fargene ut",
     "mockup-text-small" : "Se hvordan fargevalgene dine påvirker lesbarhet og design! ",
     "mockup-form-title" : "Avkrysningsspørsmål",
@@ -36,7 +34,5 @@
     "mockup-footer-text" : "Jeg er en footer",
     "mockup-textbox-header" : "Test fargene i en tekstboks!",
     "mockup-textbox-maintext" : "Du kan endre farger til venstre for å se andre mulige kombinasjonser fra palettet.",
-    "button-with-contrast" : "Knapp med kontrast",
-
-    "add-color" : "legg til fargekode"
+    "button-with-contrast" : "Knapp med kontrast"
 }
