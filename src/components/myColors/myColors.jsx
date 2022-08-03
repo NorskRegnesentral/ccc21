@@ -3,7 +3,7 @@ import React from "react";
 import ColorInput from "../colorInput/colorInput";
 import { getColorsFromDefaultPalette } from "../../contrast-calculations";
 import { useTranslation } from 'react-i18next';
-import { colorBarFormats, numberOfColors } from "../../varialbes";
+import { colorBarFormats, numberOfColors } from "../../variables";
 import PivotTableChartIcon from '@mui/icons-material/PivotTableChart';
 
 const MyColors = ({ colorList, setColorList, direction, setDirection }) => {

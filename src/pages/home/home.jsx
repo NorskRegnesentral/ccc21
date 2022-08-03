@@ -17,12 +17,11 @@ import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import ColorLensIcon from '@mui/icons-material/ColorLens';
 import HandymanIcon from '@mui/icons-material/Handyman';
-import { contrastColors, wcagRules as w } from "../../varialbes";
+import { contrastColors, colorBarFormats, wcagRules as w } from "../../variables";
 import ContrastSummary from "../../components/contrastSummary/contrastSummary";
 import InventoryRoundedIcon from '@mui/icons-material/InventoryRounded';
 import MockupButton from "../../components/mockupButton/mockupButton";
 import ContrastSummaryBox from "../../components/contrastSummaryBox/contrastSummaryBox";
-import { colorBarFormats } from "../../varialbes";
 
 function Home() {
   const { t } = useTranslation();
