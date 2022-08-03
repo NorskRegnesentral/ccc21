@@ -27,9 +27,10 @@ Inne i mappen til prosjektet ser det slik ut om du åpner den i en fil-editor: <
 ![Skjermbilde 2022-07-06 kl  12 49 18](https://user-images.githubusercontent.com/55190927/177533880-df8bbff6-0ba2-4050-a308-41f4fd9249fb.png)
 <ul>
   <li><b>Components</b> inneholder alle komponentene som er i appen. Komponenter er biter med kode som kan brukes flere steder. Eksempler er meny, knapp, inputfelt, el.</li>
-<li><b>Pages</b> er sidene i appen. I dette tilfellet er det alle sider som kan lastes når du skriver "nesside.no/xxxx" i nettleseren. Eksempler er Home (der vi sjekker kontrast) og About (planlagt å ha info om wcag)</li>
-<li><b>Flere forklaringer kommer!</b></li>
-
+<li><b>Pages</b> er sidene i appen. I dette tilfellet er det alle sider som kan lastes når du skriver "nesside.no/xxxx" i nettleseren. Eksempler er Home (der vi sjekker kontrast) og About (her planla jeg å ha info om wcag, men ble aldri brukt)</li>
+<li><b>color-checker.js</b> er viktig: den inneholder koden som finner kontrastene mellom farger. Er hentet fra https://colorcontrast.dev/api/</li>
+<li><b>contrast-calbulations.js</b> er en fil med andre metoder som gjør diverse kalkulasjoner som har med fargekontraster å gjøre</li>
+<li><b>viarbles.css og variables.js</b> er filer som inneholder variabler som går igjen på tvers av sider og filer. Endres de, så endres variablen alle steder de har blitt brukt. </li>
 </ul>
 
 
