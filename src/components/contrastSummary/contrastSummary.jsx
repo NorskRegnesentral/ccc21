@@ -5,8 +5,8 @@ import TextFieldsIcon from '@mui/icons-material/TextFields';
 import AutoAwesomeMosaicIcon from '@mui/icons-material/AutoAwesomeMosaic';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import { useTranslation } from 'react-i18next';
-import { contrastColors } from "../../varialbes";
-import { wcagRules as w } from "../../varialbes";
+import { contrastColors } from "../../variables";
+import { wcagRules as w } from "../../variables";
 
 const ContrastSummary = ({ contrastMatrix }) => {
   const { t } = useTranslation();

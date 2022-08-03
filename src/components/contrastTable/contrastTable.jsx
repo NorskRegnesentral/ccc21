@@ -1,7 +1,7 @@
 import "./contrastTable.css";
 import React, { useState } from "react";
 import { useTranslation } from 'react-i18next';
-import { contrastColors, wcagRules as w } from "../../varialbes";
+import { contrastColors, wcagRules as w } from "../../variables";
 
 const ContrastTable = ({ contrastMatrix }) => {
   const { t } = useTranslation();

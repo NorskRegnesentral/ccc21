@@ -23,6 +23,10 @@ export const colorBarFormats = {
 }
 
 export const numberOfColors = {
-    "MIN" : 2,
-    "MAX" : 8
+    "MIN" : 0,
+    "MAX" : 8 //obs! Hvis du øker denne burde du øke farger i default color palette, eller endre metoden for å sende ut farge i contrast-calculations.js
 }
+
+export const defaultColorPalette = [ 
+    "#1f1235", "#ffffff", "#ff6e6c", "#f3f3f3", "#e3615f", "#fbdd74", "#67568c", "#f4effc", "#1b1425" 
+]

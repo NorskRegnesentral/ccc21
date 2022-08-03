@@ -1,4 +1,5 @@
 import { checkColors } from "./color-checker";
+import { defaultColorPalette } from "./variables";
 
 export const getContrastList = (contrastMatrix, minContrast, maxContrast) => {
   const list = [];
@@ -35,24 +36,21 @@ export const getContrastList = (contrastMatrix, minContrast, maxContrast) => {
 };
 
 export const getColorsFromDefaultPalette = (numberOfColors, currentColorList) => {
-  const defaultPalette = [ "#1f1235", "#ffffff", "#ff6e6c", "#f3f3f3", "#e3615f", "#fbdd74", "#67568c", "#f4effc", "#1b1425" ]
   let colors = [];
   if(numberOfColors === 1){
     /*if(currentSizeOfColorList < 2) colors.push(defaultPalette[Math.floor(Math.random() * defaultPalette.length)]);
     else colors.push(defaultPalette[currentSizeOfColorList+1]);*/
-    console.log("type",typeof(currentColorList))
-    let possibleColor = defaultPalette[Math.floor(Math.random() * defaultPalette.length)]
+    let possibleColor = defaultColorPalette[Math.floor(Math.random() * defaultColorPalette.length)]
     if(Object.values(currentColorList).includes(possibleColor)){
-      console.log("entry is in both")
       while(Object.values(currentColorList).includes(possibleColor)){
-        possibleColor = defaultPalette[Math.floor(Math.random() * defaultPalette.length)]
+        possibleColor = defaultColorPalette[Math.floor(Math.random() * defaultColorPalette.length)]
 
       }
     }
     colors.push(possibleColor)
   } 
-  if(numberOfColors > 1 && numberOfColors <= defaultPalette.length){
-    while (colors.length < numberOfColors) colors.push(defaultPalette[colors.length])
+  if(numberOfColors > 1 && numberOfColors <= defaultColorPalette.length){
+    while (colors.length < numberOfColors) colors.push(defaultColorPalette[colors.length])
   }
 
   return colors; 

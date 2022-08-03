@@ -3,7 +3,7 @@ import React from "react";
 import ColorInput from "../colorInput/colorInput";
 import { getColorsFromDefaultPalette } from "../../contrast-calculations";
 import { useTranslation } from 'react-i18next';
-import { colorBarFormats, numberOfColors } from "../../varialbes";
+import { colorBarFormats, numberOfColors } from "../../variables";
 import PivotTableChartIcon from '@mui/icons-material/PivotTableChart';
 
 const MyColors = ({ colorList, setColorList, direction, setDirection }) => {
@@ -18,7 +18,7 @@ const MyColors = ({ colorList, setColorList, direction, setDirection }) => {
 
   /** Legg til farge hvis vi ikke har nådd maks antall */
   const addColorValue = () => {
-    if(colorList.length < numberOfColors.MAX)
+    if(colorList.length >= 0 && colorList.length < numberOfColors.MAX)
     setColorList((colorList) => [...colorList, getColorsFromDefaultPalette(1, colorList)[0]])
   }
 
@@ -52,7 +52,9 @@ const MyColors = ({ colorList, setColorList, direction, setDirection }) => {
           </li>
         ))}
       </ul>
-        <button className="addColorButton"
+        <button 
+          disabled={colorList.length === numberOfColors.MAX ? true : false } 
+          className="addColorButton"
           onClick={addColorValue}
         >
           {t('add-color')}
