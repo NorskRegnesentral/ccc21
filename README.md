@@ -11,8 +11,6 @@ Du må ha npm/node installert på maskinen for de neste to trinn:
 4. Kjør `npm start` for å starte
 5. Nå burde siden komme opp i nettleseren automatisk, eller du kan åpne [http://localhost:3000](http://localhost:3000) i nettleseren! 
 
-<kbd>![Skjermbilde 2022-07-06 kl  12 58 35](https://user-images.githubusercontent.com/55190927/177535411-0aac5e1f-ce19-438c-a25d-e83c2236038f.png )</kbd>
-
 Når du gjør endringer i koden skal localhost:3000 oppdateres automatisk. 
 
 
