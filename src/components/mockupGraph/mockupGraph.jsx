@@ -1,21 +1,20 @@
 import "./mockupGraph.css";
 import React, {useState, useEffect} from "react";
-import MockupColorPicker from "../mockupColorPicker/mockupColorPicker";
-
 
 const MockupGraph = ({ colorList }) => {
     const [degreesPerColor, setDegreesPerColor]= useState(360/colorList.length);
     const [pieChartValues, setPieChartValues] = useState();
     useEffect(() => {
-        setDegreesPerColor(360/colorList.length);
-        setPieChartValues(getPieChartColors);
-      }, [colorList]);
+      console.log("Endring i liste, burde oppdater graf")
+      setDegreesPerColor(360/colorList.length);
+      setPieChartValues(getPieChartColors);
+    }, [colorList]);
 
-        /*Returnerer en string som brukes til å sette fargene i pie chart
+    /*Returnerer en string som brukes til å sette fargene i pie chart
     * Formen er "conic-gradinet( #hex xdeg ydeg, #hex2 ydeg zdeg) 
     * hvor gradene er start- og slutt-sted for hver enkelt farge
     */
-const getPieChartColors = () => {
+  const getPieChartColors = () => {
     let string = "conic-gradient("
     colorList.map((value, i) => (i+1 === colorList.length ? string = string + colorList[i] + " " + degreesPerColor*i + "deg " + (degreesPerColor*i+degreesPerColor) + "deg" : string = string + colorList[i] + " " + degreesPerColor*i + "deg " + (degreesPerColor*i+degreesPerColor) + "deg, "))
     string = string + ")"

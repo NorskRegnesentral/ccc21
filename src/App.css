@@ -25,3 +25,33 @@ h2 {
 h3 {
   font-size: 16px;
 }
+
+button {
+  background-color: var(--base-color-dark-grey); /* Fargeøsnke? */
+  border: none;
+  border-radius: 4px;
+  color: var(--base-color-white);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  max-width: 14em;
+  cursor: pointer;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: var(--base-color-pink);
+}
+
+button:disabled {
+  cursor: default;
+  opacity: .20;
+}
+
+button:disabled:hover {
+  background-color: var(--base-color-dark-grey);
+  cursor: default;
+  opacity: .20;
+}
