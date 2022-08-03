@@ -22,12 +22,14 @@ import ContrastSummary from "../../components/contrastSummary/contrastSummary";
 import InventoryRoundedIcon from '@mui/icons-material/InventoryRounded';
 import MockupButton from "../../components/mockupButton/mockupButton";
 import ContrastSummaryBox from "../../components/contrastSummaryBox/contrastSummaryBox";
+import { colorBarFormats } from "../../varialbes";
 
 function Home() {
   const { t } = useTranslation();
   const [colorList, setColorList] = useState(getColorsFromDefaultPalette(5, 0)); 
   const [tableList, setTableList] = useState([""]);
   const [contrastMatrix, setContrastMatrix] = useState([""].concat(colorList));
+  const [colorBarDirection, setColorBarDirection] = useState(colorBarFormats.VERTICAL);
 
   useEffect(() => {
     //samme som colorList men med ett tomt felt først
@@ -70,11 +72,13 @@ function Home() {
   };
 
   return (
-    <div className="App">
+    <div className={colorBarDirection === colorBarFormats.VERTICAL ? "app-vertical-bar" : "app-horizontal-bar"}> 
       <div className="colorBar">
         <MyColors
           colorList={colorList}
           setColorList={setColorList}
+          direction={colorBarDirection} 
+          setDirection={setColorBarDirection}
         />
       </div>
       <div className="rightSideBar">
@@ -135,14 +139,16 @@ function Home() {
             <MockupButton colorList={colorList} contrastMatrix={contrastMatrix} color1={colorList[3]} color2={colorList[2]}></MockupButton>
           </div>
         </div>
-        <div>
+        {/* 
+         <div>
           <div className="see-contrast-heading">
             <InventoryRoundedIcon/>
             <h1 className="big-title">{t('recommendation-section-title')}</h1>
           </div>
-          {/*<MockupPage contrastMatrix={contrastMatrix} colorList={colorList}></MockupPage>*/}
+          <MockupPage contrastMatrix={contrastMatrix} colorList={colorList}></MockupPage>
           <ContrastSummary contrastMatrix={contrastMatrix}></ContrastSummary>
         </div>
+        */}
         <div className="summarySection">
           <div className="see-contrast-heading">
             <InventoryRoundedIcon/>
@@ -160,7 +166,7 @@ function Home() {
           </div>
         </div>
         <Footer
-        backgroundColor="#fcfcfc"
+        backgroundColor="#f8f5f2"
         textColor="#1f1235"  
         text={t('footer-text')}
         />

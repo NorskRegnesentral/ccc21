@@ -12,7 +12,7 @@
     "mockup-section-title" : "Test fargene i praksis!",
     "contrast-table-title"  : "Visning av valgte fargekombinasjoner med kontrastverdier i en matrise", 
     "contrast-table-radiobutton-title" :  "Velg visning for tabellen",
-    "recommendation-section-title" : "Oppsummering",
+    "recommendation-section-title" : "Oppsummering av fargekombinasjoner",
     "my-colors-heading" : "Mitt fargepalett", 
     "change-color" : "Endre farge",
     "footer-text": "kontakt: email@email.no",
@@ -34,5 +34,6 @@
     "mockup-footer-text" : "Jeg er en footer",
     "mockup-textbox-header" : "Test fargene i en tekstboks!",
     "mockup-textbox-maintext" : "Du kan endre farger til venstre for å se andre mulige kombinasjonser fra palettet.",
-    "button-with-contrast" : "Knapp med kontrast"
+    "button-with-contrast" : "Knapp med kontrast",
+    "change-color-menu-direction": "Endre plassering av fargemeny"
 }

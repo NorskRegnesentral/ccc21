@@ -2,23 +2,19 @@
     "title" : "contrast match 2.1",
     "footer-text": "Contact: email@email.no",
     "input-delete" : "remove color",
-
     "contrast-summary-heading": "combinations",
     "contrast-summary-aaa": "Best level for text (AAA)",
     "contrast-summary-aa" : "Good level for text (AA)",
     "contrast-summary-nontext-aa" : "Godt level for non-text (AA)",
     "contrast-summary-low" : "Low contrast level",
-
     "table-switch" : "Swap view: ",
     "traffic-lights" : "traffic light",
     "view-chosen-colors" : "view colors",
-
     "mockup-title" : "Here are the colors",
     "mockup-text-small" : "See how you color choises affect readability and design! ",
     "mockup-form-title" : "Questionnaire",
     "mockup-form-statement1" : "I am cool",
     "mockup-form-statement2" : "I am kind",
     "mockup-footer-text" : "I am a footer text",
-
     "add-color" : "add color"
 }

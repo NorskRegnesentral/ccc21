@@ -5,7 +5,7 @@ export const contrastColors = {
     AAA: "#cff7cf",
 }
 
- //https://www.uutilsynet.no/wcag-standarden/1411-kontrast-ikke-tekstlig-innhold-niva-aa/145
+//https://www.uutilsynet.no/wcag-standarden/1411-kontrast-ikke-tekstlig-innhold-niva-aa/145
 export const wcagRules = {
     contrastMin: 1,
     lowContrastMax: 3.0,
@@ -15,4 +15,14 @@ export const wcagRules = {
     aaTextMax: 7.0,
     aaaTextMin: 7.0,
     contrastMax: 21.0
+}
+
+export const colorBarFormats = {
+ "HORIZONTAL" : "horizontal",
+ "VERTICAL": "vertical"
+}
+
+export const numberOfColors = {
+    "MIN" : 2,
+    "MAX" : 8
 }

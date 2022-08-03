@@ -1,43 +1,67 @@
 @import "../../variables.css";
 
-.myColors {
-  min-height: 100vh;
-  height: fit-content;
+.vertical-bar {
+  height: 100vh;
   background-color: var(--base-color-light-grey);
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-areas: "togglebutton" "colorlist" "addbutton";
+  grid-template-rows: 82px 1fr 82px;
   border-right: 2px groove var(--base-color-dark-grey);
 }
 
+.horizontal-bar {
+  width: 100vw;
+  height: 100px;
+  background-color: var(--base-color-light-grey);
+  display: grid;
+  grid-template-areas: "togglebutton colorlist addbutton";
+  grid-template-columns: 82px 1fr 150px;
+  border-bottom: 2px groove var(--base-color-dark-grey);
+}
 
-.my-color-list {
+.vertical-color-list {
+  grid-area: colorlist;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  margin: 0 1rem 0 1rem;
+  gap: 1rem;
+  padding: 0;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.horizontal-color-list {
+  grid-area: colorlist;
+  flex-wrap: nowrap;
   margin: 1rem;
   gap: 1rem;
-  flex-wrap: wrap;
-  justify-content: center;
   padding: 0;
+  overflow-y: hidden; 
+  overflow-x: scroll;
 }
 
 .my-color-list-item {
   padding: 0;
 }
 
-.button {
-  margin: 1rem;
+.toggle-button {
+  grid-area: togglebutton;
+  width: 50px;
+  height: 50px;
+  margin: 1rem; 
   display: flex;
-  flex-direction: column;
-  margin: 1rem 1rem 5rem 1rem;
   align-items: center;
+  justify-content: center;
+  padding: 0;
 }
 
 .addColorButton{
-  width: fit-content;
+  grid-area: addbutton;
   padding: .7rem 0.7rem 0.7rem .7rem;
   font-size: 12px;
+  height: 50px;
+  margin: 1rem; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
