@@ -126,7 +126,7 @@ function Home() {
             </legend>
             {Object.values(defaultColorPalettes).map((palette, index) => (
               <div className="default-palette-container" onClick={()=>setColorList(palette)}>
-                <input id={"color-palette-"+index} type="radio"  className="radio-button"  checked={colorList == palette ? true : false} id={t('try-default-palettes')}/>   
+                <input id={"color-palette-"+index} type="radio"  className="radio-button"  checked={colorList == palette ? true : false}/>   
                 <ColorPalette colors={palette} labelId={"color-palette-"+index}></ColorPalette>
               </div>
             ))}
