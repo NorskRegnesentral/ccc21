@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 import "./App.css";
 import React, { Suspense } from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom"; //tried HashRouter not BrowserRouter

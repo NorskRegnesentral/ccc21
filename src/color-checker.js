@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 // json-two.html?f=000000&b=ffffff
 var foregroundHex;
 var backgroundHex;
