@@ -49,7 +49,7 @@ const ContrastTable = ({ contrastMatrix }) => {
             </div>
             <div className="radio-button-container" onClick={()=>setColorsInTable(true)}>
               <label for={t('view-chosen-colors')}>
-              {t('view-chosen-colors')}
+                {t('view-chosen-colors')}
               </label>
               <input type="radio"  className="radio-button"  checked={colorsInTable ? true : false} id={t('view-chosen-colors')}/>   
             </div>    

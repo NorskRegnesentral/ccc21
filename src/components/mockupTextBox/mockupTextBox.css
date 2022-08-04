@@ -1,15 +1,4 @@
 @import "../../variables.css";
-
-.mockupElement {
-    display: flex;
-    flex-direction: row;
-    width: fit-content;
-    height: fit-content;
-    background-color: var(--base-color-white);
-    border-radius: 4px;
-    /*border: 1px solid var(--base-color-dark-grey)*/
-  }
-
   .mockup-color-bar {
     display: flex;
     flex-direction: column;

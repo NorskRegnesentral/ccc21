@@ -10,7 +10,7 @@
     height: 12rem;
     background-color: var(--base-color-white);
     border-radius: 4px;
-    border: 1px solid var(--base-color-light-grey);
+    border: 5px solid var(--base-color-light-grey);
     padding-left: .4rem;
     font-size: 12px;
   }

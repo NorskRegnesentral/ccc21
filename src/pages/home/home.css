@@ -58,23 +58,37 @@
   flex-wrap: wrap;
   gap: 1rem;
   margin: 0;
+  padding: 1rem;
+}
+
+.colorPaletteSection {
   padding: 2rem;
+  background-color: var(--base-color-white);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 4rem;
 }
 
 .tableSection {
   padding: 2rem;
-  background-color: var(--base-color-white);
+  background-color: var(--base-color-light-beige);
 }
 
 .mockupSection {
   padding-left: 2rem;
-  background-color: var(--base-color-light-beige);
+  background-color: var(--base-color-white);
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-.mockup-section-title{
+.summarySection {
+  background-color: var(--base-color-light-beige);
+}
+
+.mockup-section-title {
   display: flex;
   flex-direction: row;
   gap: 2rem;
@@ -85,12 +99,12 @@
   margin:0;
 }
 
-.primaryButton{
+.primaryButton {
   background-color: var(--base-color-pink);
   color: var(--base-color-black)
 }
 
-.primaryButton:hover{
+.primaryButton:hover {
   background-color: var(--base-color-dark-pink);
   color: var(--base-color-white);
 }
@@ -100,16 +114,12 @@
   font-size: 26px;
 }
 
-.dark-pink {
-  color: var(--base-color-dark-pink);
-}
-
 .h2-title {
   font-size: 22px;
   color: var(--base-color-black);
 }
 
-.see-contrast-heading{
+.see-contrast-heading {
   display: flex;
   flex-direction: row;
   align-items: baseline;
@@ -143,3 +153,60 @@
   align-items: baseline;
 }
 
+.default-palettes-container {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: .8rem;
+  width: fit-content;
+  height: fit-content;
+  padding: 1rem;
+}
+
+.default-palette-container{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 0.3rem;
+}
+
+
+.default-palette-container:hover {
+  transform: scale(1.04);
+  /* animation-play-state: paused; */
+}
+
+.speech-bubble {
+  background: var(--base-color-pink);
+  color: black;
+  font-size: 14px;
+  line-height: 2em;
+  margin-bottom: 1em;
+  padding: 0 1em;
+  position: relative;
+  text-align: center;
+  vertical-align: top;
+  min-width: 7em;
+  max-width: 270px;
+  min-height: 90px;
+  max-height: 150px;
+  margin: 30px 10px;
+  border-radius: 4px;
+}
+
+.speech-bubble:after {
+	border: 1em solid transparent;
+	border-top-color: var(--base-color-pink);
+	content: '';
+	margin-left: -5em;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	width: 0;
+	height: 0;
+}
+
+.speech-bubble-text {
+  font-weight: normal;
+}

@@ -30,3 +30,10 @@ export const numberOfColors = {
 export const defaultColorPalette = [ 
     "#1f1235", "#ffffff", "#ff6e6c", "#f3f3f3", "#e3615f", "#fbdd74", "#67568c", "#f4effc", "#1b1425" 
 ]
+
+export const defaultColorPalettes = [
+    ["#010101", "#69c9d0", "#EE1D52", "#ffffff"],
+    ["#0F0C24", "#A350A3", "#d30d4f", "#f0eef2"],
+    ["#FB8122", "#1D2228", "#E1E2E2"],
+    ["#3b5998", "#Dfe3ee", "#f7f7f7"]
+]
