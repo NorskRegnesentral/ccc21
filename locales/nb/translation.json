@@ -9,6 +9,7 @@
     "about-wcag-nontext-aa" : "Dette er kontraster med verdi mellom 3 og 4.5. Burde ikke brukes som tekst og bakgrunn, men kan brukes i ulike komponenter.",
     "about-wcag-low" : "Verdier under 3. Anbefales ikke til bruk på tekst eller andre sentrale komponenter.",
     "table-section-title" : "Se kontrastnivå for fargepalettet ditt",
+    "try-default-palettes" : "Start med et fargepallett" ,
     "mockup-section-title" : "Test fargene i praksis!",
     "contrast-table-title"  : "Visning av valgte fargekombinasjoner med kontrastverdier i en matrise", 
     "contrast-table-radiobutton-title" :  "Velg visning for tabellen",
@@ -35,5 +36,6 @@
     "mockup-textbox-header" : "Test fargene i en tekstboks!",
     "mockup-textbox-maintext" : "Du kan endre farger til venstre for å se andre mulige kombinasjonser fra palettet.",
     "button-with-contrast" : "Knapp med kontrast",
-    "change-color-menu-direction": "Endre plassering av fargemeny"
+    "change-color-menu-direction": "Endre plassering av fargemeny",
+    "try-palette-or-try-yourself" : "...eller legg til fargekoder fra menyen til venstre!"
 }
