@@ -1,13 +1,13 @@
 import "./colorPalette.css";
 import React, {useState} from "react";
 
-const ColorPalette = ({ colors }) => {
+const ColorPalette = ({ colors, labelId }) => {
 
   return (
     <div className="color-palette-container">
-        {/*<label for={"tekst"}>
-            {"tekst"}
-     </label>*/}
+        <label for={labelId} hidden>
+            {labelId}
+        </label>
         {Object.values(colors).map((color, index) => (
             <div className="color-palette-color" style={{backgroundColor:color}}>
             </div>
