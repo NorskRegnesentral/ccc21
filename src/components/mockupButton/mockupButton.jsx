@@ -16,8 +16,11 @@ const MockupButton = ({ colorList, color1, color2 }) => {
         <MockupColorPicker  bottomColorPicker={true} chosenColor={colorSecondary} setChosenColor={setColorSecondary} colorList={colorList}></MockupColorPicker>
     </div>
     <div className="mockup-test-button-container">
+      <button style={{ color: colorMain, backgroundColor: colorSecondary, border: "2px solid "}} className="mockupn" >
+        {t('ok')}  
+      </button>
       <button style={{ color: colorSecondary, backgroundColor: colorMain, border: "2px solid "}} className="mockupn" >
-      {t('button-with-contrast') + " " + checkColors(colorMain, colorSecondary).contrast}  
+        {t('avbryt')}  
       </button>
     </div>
 </div>
