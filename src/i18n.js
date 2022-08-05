@@ -13,7 +13,7 @@ i18next
     debug: true,
     fallbackLng: 'nb', //norwegian bokmål
     backend: {
-        //trenger linjen fordi homepage er satt i package.json
+        //trenger linjen fordi homepage er satt i package.json, må tilpasses eget prosjekt
         loadPath: '/contrastMatch/locales/nb/{{ns}}.json' //BRUK DEN UNDER OM DET BLIR AKTUELT MED SPRÅKBYTTE
         //loadPath: '/contrastMatch/locales/{{lng}}/{{ns}}.json'
     }

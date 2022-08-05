@@ -1,10 +1,11 @@
 import "./mockupTextBox.css";
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import MockupColorPicker from "../mockupColorPicker/mockupColorPicker";
 
 const MockupTextBox = ({ title, titleIcon, textColor, mainText, color1, color2, colorList }) => {
-    const [colorForText, setcolorForText] = useState(color1);
-    const [colorForBackground, setcolorForBackground] = useState(color2);
+    const [colorForText, setcolorForText] = useState(colorList.length >= 2 ? colorList[0] : "#ffffff");
+    const [colorForBackground, setcolorForBackground] = useState(colorList.length >= 2 ? colorList[1] : "#000000");
+
 
   return (
     <div
