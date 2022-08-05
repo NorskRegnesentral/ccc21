@@ -1,3 +1,4 @@
+/*SPDX-License-Identifier: GPL-3.0-or-later*/
 import "./mockupPage.css";
 import React, { useState, useEffect } from "react";
 import NavBar from "../navBar/navBar";

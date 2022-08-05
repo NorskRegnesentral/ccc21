@@ -1,9 +1,10 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
 import "./mockupColorPicker.css";
 import React, {useState, useEffect} from "react";
 import ColorizeIcon from '@mui/icons-material/Colorize';
 import { getBlackOrWhiteAsBestContrast } from "../../contrast-calculations";
 import { useTranslation } from 'react-i18next';
-import { color } from "@mui/system";
+
 
 
 const MockupColorPicker = ({ chosenColor, setChosenColor, colorList, topColorPicker, bottomColorPicker }) => {

@@ -1,5 +1,6 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
 import "./mockupTextBox.css";
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import MockupColorPicker from "../mockupColorPicker/mockupColorPicker";
 
 const MockupTextBox = ({ title, titleIcon, textColor, mainText, color1, color2, colorList }) => {

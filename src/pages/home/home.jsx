@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
 import "./home.css";
 import React, { useEffect, useState } from "react";
 import ContrastTable from "../../components/contrastTable/contrastTable";
