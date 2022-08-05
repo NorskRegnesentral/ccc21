@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 import { checkColors } from "./color-checker";
 import { defaultColorPalette } from "./variables";
 

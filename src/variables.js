@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 export const contrastColors = {
     none: "#ee8181",
     AANontext: "#f7b87d",
