@@ -1,3 +1,4 @@
+/*SPDX-License-Identifier: GPL-3.0-or-later*/
 import "./colorInput.css";
 import React, { useState, useEffect } from "react";
 import { useTranslation } from 'react-i18next';

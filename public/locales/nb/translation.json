@@ -35,7 +35,8 @@
     "mockup-footer-text" : "Jeg er en footer",
     "mockup-textbox-header" : "Test fargene i en tekstboks!",
     "mockup-textbox-maintext" : "Du kan endre farger til venstre for å se andre mulige kombinasjonser fra palettet.",
-    "button-with-contrast" : "Knapp med kontrast",
     "change-color-menu-direction": "Endre plassering av fargemeny",
-    "try-palette-or-try-yourself" : "...eller legg til fargekoder fra menyen til venstre!"
+    "try-palette-or-try-yourself" : "...eller legg til fargekoder fra menyen til venstre!",
+    "ok" : "ok",
+    "cancel" : "avbryt"
 }

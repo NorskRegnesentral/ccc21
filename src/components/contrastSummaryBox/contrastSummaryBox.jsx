@@ -1,3 +1,4 @@
+/*SPDX-License-Identifier: GPL-3.0-or-later*/
 import "./contrastSummaryBox.css";
 import React from "react";
 
