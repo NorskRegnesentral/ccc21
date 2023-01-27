@@ -5,7 +5,7 @@
   display: grid;
   overflow: hidden;
   grid-template-areas: "colorbar content";
-  grid-template-columns: auto auto;
+  grid-template-columns: max-content auto;
   height: 100vh;
   background-color: var(--base-color-white);
 }
