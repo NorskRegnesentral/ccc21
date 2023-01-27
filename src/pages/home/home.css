@@ -12,6 +12,7 @@
 
 .app-horizontal-bar {
   display: grid;
+  align-content: flex-start;  
   overflow: hidden;
   grid-template-areas: "colorbar" "content";
   height: 100vh;
