@@ -34,13 +34,13 @@
   width: 100%;
 }
 
-.aboutSection {
+.tab-section {
+  padding: 2rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
-  background-color: var(--base-color-light-beige);
-  padding: 30px;
-  justify-content: space-between;
+  align-items: flex-start;
+  gap: 4rem;
 }
 
 .aboutSectionLeft {
@@ -64,33 +64,6 @@
   gap: 1rem;
   margin: 0;
   padding: 1rem;
-}
-
-.colorPaletteSection {
-  padding: 2rem;
-  background-color: var(--base-color-white);
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: flex-end;
-  gap: 4rem;
-}
-
-.tableSection {
-  padding: 2rem;
-  background-color: var(--base-color-light-beige);
-}
-
-.mockupSection {
-  padding-left: 2rem;
-  background-color: var(--base-color-white);
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.summarySection {
-  background-color: var(--base-color-light-beige);
 }
 
 .mockup-section-title {

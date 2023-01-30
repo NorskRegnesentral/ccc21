@@ -85,7 +85,7 @@ function Home() {
       <div className="rightSideBar">
         <Tabs defaultActiveKey="about" id="main-tab-group" className="mb-3">
           <Tab eventKey="about" title={t('about-tab-title')}>
-            <div className="aboutSection">
+            <div className="tab-section">
               <div className="aboutSectionLeft">
                 <div className="row">
                   <InvertColorsRoundedIcon></InvertColorsRoundedIcon>
@@ -122,11 +122,11 @@ function Home() {
             </div>
           </Tab>
           <Tab eventKey="palette" title={t('default-palettes-tab-title')}>
-            <div className="colorPaletteSection">
+            <div className="tab-section">
+              <div className="see-contrast-heading">
+                <h1 className="big-title">{t('try-default-palettes')}</h1>
+              </div>
               <fieldset className="default-palettes-container">
-                <legend className="mockup-section-title">
-                  <h1 className="big-title">{t('try-default-palettes')}</h1>
-                </legend>
                 {Object.values(defaultColorPalettes).map((palette, index) => (
                   <div className="default-palette-container" onClick={()=>setColorList(palette)}>
                     <input id={"color-palette-"+index} type="radio"  className="radio-button"  checked={colorList == palette ? true : false}/>   
@@ -142,7 +142,7 @@ function Home() {
             </div>
           </Tab>
           <Tab eventKey="table" title={t('contrast-level-tab-title')}>
-            <div className="tableSection">
+            <div className="tab-section">
               <div className="see-contrast-heading">
                 <h1 className="big-title">{t('table-section-title')}</h1>
               </div>
@@ -150,7 +150,7 @@ function Home() {
             </div>
           </Tab>
           <Tab eventKey="testing" title={t('testing-tab-title')}>
-            <div className="mockupSection">
+            <div className="tab-section">
               <div className="mockup-section-title">
                 <h1 className="big-title">{t('mockup-section-title')}</h1>
               </div>
@@ -165,7 +165,7 @@ function Home() {
             </div>
           </Tab>
           <Tab eventKey="summary" title={t('summary-tab-title')}>
-            <div className="summarySection">
+            <div className="tab-section">
               <div className="see-contrast-heading">
                 <h1 className="big-title">{t('recommendation-section-title')}</h1>
               </div>
