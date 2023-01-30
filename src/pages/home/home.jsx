@@ -16,7 +16,6 @@ import InvertColorsRoundedIcon from '@mui/icons-material/InvertColorsRounded';
 import TextFieldsIcon from '@mui/icons-material/TextFields';
 import AutoAwesomeMosaicIcon from '@mui/icons-material/AutoAwesomeMosaic';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
-import ColorizeIcon from '@mui/icons-material/Colorize';
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import ColorLensIcon from '@mui/icons-material/ColorLens';
 import HandymanIcon from '@mui/icons-material/Handyman';
@@ -122,11 +121,10 @@ function Home() {
               </div>
             </div>
           </Tab>
-          <Tab eventKey="palette" title="Fargepalett">
+          <Tab eventKey="palette" title="Startpaletter">
             <div className="colorPaletteSection">
               <fieldset className="default-palettes-container">
                 <legend className="mockup-section-title">
-                  <ColorizeIcon></ColorizeIcon>
                   <h1 className="big-title">{t('try-default-palettes')}</h1>
                 </legend>
                 {Object.values(defaultColorPalettes).map((palette, index) => (
@@ -143,10 +141,9 @@ function Home() {
               </div>
             </div>
           </Tab>
-          <Tab eventKey="table" title="Tabell">
+          <Tab eventKey="table" title="Kontrastnivå">
             <div className="tableSection">
               <div className="see-contrast-heading">
-                <ColorLensIcon></ColorLensIcon>
                 <h1 className="big-title">{t('table-section-title')}</h1>
               </div>
               <ContrastTable aria-details={t('contrast-table-title')} contrastMatrix={contrastMatrix}></ContrastTable>
@@ -155,7 +152,6 @@ function Home() {
           <Tab eventKey="testing" title="Test">
             <div className="mockupSection">
               <div className="mockup-section-title">
-                <HandymanIcon></HandymanIcon>
                 <h1 className="big-title">{t('mockup-section-title')}</h1>
               </div>
               <div className="aboutSectionTextBoxContainer">
@@ -171,7 +167,6 @@ function Home() {
           <Tab eventKey="summary" title="Oppsummering">
             <div className="summarySection">
               <div className="see-contrast-heading">
-                <InventoryRoundedIcon/>
                 <h1 className="big-title">{t('recommendation-section-title')}</h1>
               </div>
               <div className="aboutSectionTextBoxContainer">
