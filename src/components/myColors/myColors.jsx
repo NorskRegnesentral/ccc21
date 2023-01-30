@@ -4,8 +4,7 @@ import React from "react";
 import ColorInput from "../colorInput/colorInput";
 import { getColorsFromDefaultPalette } from "../../contrast-calculations";
 import { useTranslation } from 'react-i18next';
-import { colorBarFormats, numberOfColors } from "../../variables";
-import PivotTableChartIcon from '@mui/icons-material/PivotTableChart';
+import { numberOfColors } from "../../variables";
 
 const MyColors = ({ colorList, setColorList, direction, setDirection }) => {
   const { t } = useTranslation();
@@ -30,17 +29,9 @@ const MyColors = ({ colorList, setColorList, direction, setDirection }) => {
     );
   };
 
-  /** Dette er endring mellom å ha farge-baren på toppen av siden (horizontal) 
-   * eller til venstre (vertical). 
-   */
-  const changeFormat = () => {
-    setDirection(direction === colorBarFormats.VERTICAL ? colorBarFormats.HORIZONTAL : colorBarFormats.VERTICAL)
-  }
-
   return (
-    <div className={direction === colorBarFormats.VERTICAL ? "vertical-bar" : "horizontal-bar"}  aria-label={t('my-colors-heading')}>
-      <button className="toggle-button" onClick={changeFormat}><PivotTableChartIcon/> <p className="hide-text">{t('change-color-menu-direction')}</p> </button>
-      <ul className={direction === colorBarFormats.VERTICAL ?  "vertical-color-list" :  "horizontal-color-list"}>
+    <div className="adaptive-bar"  aria-label={t('my-colors-heading')}>
+      <ul className="adaptive-color-list">
         {Object.values(colorList).map((color, index) => (
           <li className="my-color-list-item">
               <ColorInput

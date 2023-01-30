@@ -1,44 +1,53 @@
 /*SPDX-License-Identifier: GPL-3.0-or-later*/
 @import "../../variables.css";
 
-.vertical-bar {
-  height: 100vh;
+.adaptive-bar {
   background-color: var(--base-color-light-grey);
   display: grid;
-  grid-template-areas: "togglebutton" "colorlist" "addbutton";
-  grid-template-rows: 82px 1fr 82px;
-  border-right: 2px groove var(--base-color-dark-grey);
 }
 
-.horizontal-bar {
-  width: 100vw;
-  height: 100px;
-  background-color: var(--base-color-light-grey);
-  display: grid;
-  grid-template-areas: "togglebutton colorlist addbutton";
-  grid-template-columns: 82px 1fr 150px;
-  border-bottom: 2px groove var(--base-color-dark-grey);
+@media screen and (min-width: 1400px) {
+    .adaptive-bar {
+        border-right: 2px groove var(--base-color-dark-grey);
+        grid-template-areas: "togglebutton" "colorlist" "addbutton";
+        grid-template-rows: 82px 1fr 82px;
+        height: 100vh;
+    }
 }
 
-.vertical-color-list {
-  grid-area: colorlist;
-  display: flex;
-  flex-direction: column;
-  margin: 0 1rem 0 1rem;
+@media not screen and (min-width: 1400px) {
+    .adaptive-bar {
+        border-bottom: 2px groove var(--base-color-dark-grey);
+        grid-template-areas: "togglebutton colorlist addbutton";
+        grid-template-columns: 82px 1fr 150px;
+        height: 100px;
+        width: 100vw;
+    }
+}
+
+.adaptive-color-list {
   gap: 1rem;
+  grid-area: colorlist;
   padding: 0;
-  overflow-y: scroll;
-  overflow-x: hidden;
 }
 
-.horizontal-color-list {
-  grid-area: colorlist;
-  flex-wrap: nowrap;
-  margin: 1rem;
-  gap: 1rem;
-  padding: 0;
-  overflow-y: hidden; 
-  overflow-x: scroll;
+@media screen and (min-width: 1400px) {
+    .adaptive-color-list {
+        display: flex;
+        flex-direction: column;
+        margin: 0 1rem 0 1rem;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+}
+
+@media not screen and (min-width: 1400px) {
+    .adaptive-color-list {
+        flex-wrap: nowrap;
+        margin: 1rem;
+        overflow-x: scroll;
+        overflow-y: hidden; 
+    }
 }
 
 .my-color-list-item {

@@ -1,22 +1,25 @@
 /*// SPDX-License-Identifier: GPL-3.0-or-later*/
 @import "../../variables.css";
 
-.app-vertical-bar {
-  display: grid;
-  overflow: hidden;
-  grid-template-areas: "colorbar content";
-  grid-template-columns: max-content auto;
-  height: 100vh;
+.app-adaptive-bar {
+  align-content: flex-start;
   background-color: var(--base-color-white);
+  display: grid;
+  height: 100vh;
+  overflow: hidden;
 }
 
-.app-horizontal-bar {
-  display: grid;
-  align-content: flex-start;  
-  overflow: hidden;
-  grid-template-areas: "colorbar" "content";
-  height: 100vh;
-  background-color: var(--base-color-white);
+@media screen and (min-width: 1400px) {
+    .app-adaptive-bar {
+        grid-template-areas: "colorbar content";
+        grid-template-columns: max-content auto;
+    }
+}
+
+@media not screen and (min-width: 1400px) {
+    .app-adaptive-bar {
+        grid-template-areas: "colorbar" "content";
+    }
 }
 
 .colorBar {

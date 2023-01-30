@@ -20,7 +20,7 @@ import ColorizeIcon from '@mui/icons-material/Colorize';
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import ColorLensIcon from '@mui/icons-material/ColorLens';
 import HandymanIcon from '@mui/icons-material/Handyman';
-import { contrastColors, colorBarFormats, defaultColorPalettes, wcagRules as w } from "../../variables";
+import { contrastColors, defaultColorPalettes, wcagRules as w } from "../../variables";
 import InventoryRoundedIcon from '@mui/icons-material/InventoryRounded';
 import MockupButton from "../../components/mockupButton/mockupButton";
 import ContrastSummaryBox from "../../components/contrastSummaryBox/contrastSummaryBox";
@@ -34,7 +34,6 @@ function Home() {
   const [colorList, setColorList] = useState(getColorsFromDefaultPalette(5, 0)); //starte med fem farger i appen 
   const [tableList, setTableList] = useState([""]);
   const [contrastMatrix, setContrastMatrix] = useState([""].concat(colorList));
-  const [colorBarDirection, setColorBarDirection] = useState(colorBarFormats.VERTICAL);
 
   useEffect(() => {
     //samme som colorList men med ett tomt felt først
@@ -77,13 +76,11 @@ function Home() {
   };
 
   return (
-    <div className={colorBarDirection === colorBarFormats.VERTICAL ? "app-vertical-bar" : "app-horizontal-bar"}> 
+    <div className="app-adaptive-bar"> 
       <div className="colorBar">
         <MyColors
           colorList={colorList}
           setColorList={setColorList}
-          direction={colorBarDirection} 
-          setDirection={setColorBarDirection}
         />
       </div>
       <div className="rightSideBar">
