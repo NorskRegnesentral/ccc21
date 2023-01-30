@@ -9,8 +9,8 @@
 @media screen and (min-width: 1400px) {
     .adaptive-bar {
         border-right: 2px groove var(--base-color-dark-grey);
-        grid-template-areas: "togglebutton" "colorlist" "addbutton";
-        grid-template-rows: 82px 1fr 82px;
+        grid-template-areas: "colorlist" "addbutton";
+        grid-template-rows: 1fr 82px;
         height: 100vh;
     }
 }
@@ -18,8 +18,8 @@
 @media not screen and (min-width: 1400px) {
     .adaptive-bar {
         border-bottom: 2px groove var(--base-color-dark-grey);
-        grid-template-areas: "togglebutton colorlist addbutton";
-        grid-template-columns: 82px 1fr 150px;
+        grid-template-areas: "colorlist addbutton";
+        grid-template-columns: 1fr 150px;
         height: 100px;
         width: 100vw;
     }
@@ -29,13 +29,13 @@
   gap: 1rem;
   grid-area: colorlist;
   padding: 0;
+  margin: 1rem;
 }
 
 @media screen and (min-width: 1400px) {
     .adaptive-color-list {
         display: flex;
         flex-direction: column;
-        margin: 0 1rem 0 1rem;
         overflow-x: hidden;
         overflow-y: scroll;
     }
@@ -44,7 +44,6 @@
 @media not screen and (min-width: 1400px) {
     .adaptive-color-list {
         flex-wrap: nowrap;
-        margin: 1rem;
         overflow-x: scroll;
         overflow-y: hidden; 
     }
