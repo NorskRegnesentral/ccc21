@@ -9,8 +9,8 @@
 @media screen and (min-width: 1400px) {
     .adaptive-bar {
         border-right: 2px groove var(--base-color-dark-grey);
-        grid-template-areas: "colorlist" "addbutton";
-        grid-template-rows: 1fr 82px;
+        grid-template-areas: "heading" "colorlist" "addbutton";
+        grid-template-rows: max-content 1fr 82px;
         height: 100vh;
     }
 }
@@ -18,8 +18,8 @@
 @media not screen and (min-width: 1400px) {
     .adaptive-bar {
         border-bottom: 2px groove var(--base-color-dark-grey);
-        grid-template-areas: "colorlist addbutton";
-        grid-template-columns: 1fr 150px;
+        grid-template-areas: "heading colorlist addbutton";
+        grid-template-columns: max-content 1fr 150px;
         height: 100px;
         width: 100vw;
     }
@@ -47,6 +47,16 @@
         overflow-x: scroll;
         overflow-y: hidden; 
     }
+}
+
+.color-bar-heading {
+    grid-area: heading;
+    padding: .7rem 0.7rem 0.7rem .7rem;
+    font-size: 16pt;
+    margin: 1rem; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .my-color-list-item {
