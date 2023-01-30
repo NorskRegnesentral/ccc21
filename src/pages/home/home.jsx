@@ -84,7 +84,7 @@ function Home() {
       </div>
       <div className="rightSideBar">
         <Tabs defaultActiveKey="about" id="main-tab-group" className="mb-3">
-          <Tab eventKey="about" title="Om">
+          <Tab eventKey="about" title={t('about-tab-title')}>
             <div className="aboutSection">
               <div className="aboutSectionLeft">
                 <div className="row">
@@ -121,7 +121,7 @@ function Home() {
               </div>
             </div>
           </Tab>
-          <Tab eventKey="palette" title="Startpaletter">
+          <Tab eventKey="palette" title={t('default-palettes-tab-title')}>
             <div className="colorPaletteSection">
               <fieldset className="default-palettes-container">
                 <legend className="mockup-section-title">
@@ -141,7 +141,7 @@ function Home() {
               </div>
             </div>
           </Tab>
-          <Tab eventKey="table" title="Kontrastnivå">
+          <Tab eventKey="table" title={t('contrast-level-tab-title')}>
             <div className="tableSection">
               <div className="see-contrast-heading">
                 <h1 className="big-title">{t('table-section-title')}</h1>
@@ -149,7 +149,7 @@ function Home() {
               <ContrastTable aria-details={t('contrast-table-title')} contrastMatrix={contrastMatrix}></ContrastTable>
             </div>
           </Tab>
-          <Tab eventKey="testing" title="Test">
+          <Tab eventKey="testing" title={t('testing-tab-title')}>
             <div className="mockupSection">
               <div className="mockup-section-title">
                 <h1 className="big-title">{t('mockup-section-title')}</h1>
@@ -164,7 +164,7 @@ function Home() {
               </div>
             </div>
           </Tab>
-          <Tab eventKey="summary" title="Oppsummering">
+          <Tab eventKey="summary" title={t('summary-tab-title')}>
             <div className="summarySection">
               <div className="see-contrast-heading">
                 <h1 className="big-title">{t('recommendation-section-title')}</h1>

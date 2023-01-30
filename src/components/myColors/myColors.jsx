@@ -32,7 +32,7 @@ const MyColors = ({ colorList, setColorList, direction, setDirection }) => {
   return (
     <div className="adaptive-bar"  aria-label={t('my-colors-heading')}>
       <div className="color-bar-heading">
-        Palett
+        {t('my-colors-heading')}
       </div>
       <ul className="adaptive-color-list">
         {Object.values(colorList).map((color, index) => (

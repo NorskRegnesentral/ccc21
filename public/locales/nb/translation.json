@@ -14,7 +14,7 @@
     "contrast-table-title"  : "Visning av valgte fargekombinasjoner med kontrastverdier i en matrise", 
     "contrast-table-radiobutton-title" :  "Velg visning for tabellen",
     "recommendation-section-title" : "Oppsummering av fargekombinasjoner",
-    "my-colors-heading" : "Mitt fargepalett", 
+    "my-colors-heading" : "Min palett", 
     "change-color" : "Endre farge",
     "footer-text": "",
     "input-delete" : "fjern farge",
@@ -38,5 +38,10 @@
     "change-color-menu-direction": "Endre plassering av fargemeny",
     "try-palette-or-try-yourself" : "...eller legg til fargekoder fra menyen til venstre!",
     "ok" : "ok",
-    "cancel" : "avbryt"
+  "cancel" : "avbryt",
+  "about-tab-title" : "Om",
+  "default-palettes-tab-title" : "Startpaletter",
+  "contrast-level-tab-title" : "Kontrastnivå",
+  "testing-tab-title" : "Test",
+  "summary-tab-title" : "Oppsummering"
 }
