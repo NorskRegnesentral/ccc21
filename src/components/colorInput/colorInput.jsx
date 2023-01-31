@@ -29,13 +29,6 @@ const ColorInput = ({
   return (
     <fieldset className="colorInput">
       <legend hidden>{colorValue}</legend>
-      <button
-        className="deleteInput"
-        value="delete color"
-        title={t('input-delete')}
-        onClick={(e) => {{ removeColorValue({ index }) }}}> 
-          x
-      </button>
       <label for={'color-value-by-colorpicker-'+index} hidden> {"color from chooser box"} </label> 
       <input
           className="inputForColor"
@@ -53,6 +46,13 @@ const ColorInput = ({
           value={colorTextInput}
           onChange={updateValue}
         ></input>
+      <button
+        className="deleteInput"
+        value="delete color"
+        title={t('input-delete')}
+        onClick={(e) => {{ removeColorValue({ index }) }}}> 
+          ×
+      </button>
     </fieldset>
   );
 };

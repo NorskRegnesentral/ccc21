@@ -35,7 +35,8 @@
   height: 1.2rem !important;
   width: 1.2rem !important;
   padding: 0.2rem;
-  font-size: 10px;
+  font-size: 24px;
+  font-weight: bold;
   cursor: pointer;
   display: flex; /* or display:grid */
   align-items: center;
