@@ -30,7 +30,7 @@ import Tabs from 'react-bootstrap/Tabs';
 
 function Home() {
   const { t } = useTranslation();
-  const [colorList, setColorList] = useState(getColorsFromDefaultPalette(5, 0)); //starte med fem farger i appen 
+  const [colorList, setColorList] = useState(getColorsFromDefaultPalette(0, 0)); //starte med fem farger i appen 
   const [tableList, setTableList] = useState([""]);
   const [contrastMatrix, setContrastMatrix] = useState([""].concat(colorList));
 
