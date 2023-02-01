@@ -43,6 +43,9 @@ const MyColors = ({ colorList, setColorList, direction, setDirection }) => {
         <li className={`my-color-list-item empty-message ${colorList.length > 0 ? "disabled-message" : ""}`}>
           TOM PALETT
         </li>
+        <li className="my-color-list-item dummy-item">
+          <ColorInput/>
+        </li>
         {Object.values(colorList).map((color, index) => (
           <li className="my-color-list-item">
             <ColorInput
@@ -54,9 +57,6 @@ const MyColors = ({ colorList, setColorList, direction, setDirection }) => {
             ></ColorInput>
           </li>
         ))}
-        <li className="my-color-list-item dummy-item">
-          <ColorInput/>
-        </li>
       </ul>
         <button 
           disabled={colorList.length === numberOfColors.MAX ? true : false } 
