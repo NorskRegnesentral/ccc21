@@ -9,7 +9,7 @@
 @media screen and (min-width: 1400px) {
     .adaptive-bar {
         border-right: 2px groove var(--base-color-dark-grey);
-        grid-template-areas: "heading" "colorlist" "addbutton";
+        grid-template-areas: "heading" "colorlist" "addbutton" "clearbutton";
         grid-template-rows: max-content 1fr 82px;
         height: 100vh;
     }
@@ -18,7 +18,7 @@
 @media not screen and (min-width: 1400px) {
     .adaptive-bar {
         border-bottom: 2px groove var(--base-color-dark-grey);
-        grid-template-areas: "heading colorlist addbutton";
+        grid-template-areas: "heading colorlist addbutton clearbutton";
         grid-template-columns: max-content 1fr 150px;
         height: 100px;
         width: 100vw;
@@ -88,8 +88,7 @@
   padding: 0;
 }
 
-.addColorButton{
-  grid-area: addbutton;
+.palette-button {
   padding: .7rem 0.7rem 0.7rem .7rem;
   font-size: 12px;
   height: 50px;
@@ -97,4 +96,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.palette-add {
+  grid-area: addbutton;
+}
+
+.palette-clear {
+  grid-area: clearbutton;
 }

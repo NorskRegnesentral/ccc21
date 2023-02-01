@@ -29,6 +29,11 @@ const MyColors = ({ colorList, setColorList, direction, setDirection }) => {
     );
   };
 
+  /** Fjern farge hvis det er flere enn minimum antall */
+  const clearColorValues = () => {
+    setColorList((colorList) => getColorsFromDefaultPalette(0, 0));
+  };
+
   return (
     <div className="adaptive-bar"  aria-label={t('my-colors-heading')}>
       <div className="color-bar-heading">
@@ -55,10 +60,17 @@ const MyColors = ({ colorList, setColorList, direction, setDirection }) => {
       </ul>
         <button 
           disabled={colorList.length === numberOfColors.MAX ? true : false } 
-          className="addColorButton"
+          className="palette-button palette-add"
           onClick={addColorValue}
         >
           {t('add-color')}
+        </button>
+        <button 
+          disabled={colorList.length === 0 ? true : false } 
+          className="palette-button palette-clear"
+          onClick={clearColorValues}
+        >
+          {t('clear-palette')}
         </button>
     </div>
   );

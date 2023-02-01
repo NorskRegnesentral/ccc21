@@ -19,6 +19,7 @@
     "footer-text": "",
     "input-delete" : "fjern farge",
     "add-color" : "legg til fargekode",
+    "clear-palette" : "tøm paletten",
     "contrast-summary-heading": "kombinasjoner",
     "contrast-summary-aaa": "Beste nivå for tekst (AAA)",
     "contrast-summary-aa" : "Godt nivå for tekst (AA)",
