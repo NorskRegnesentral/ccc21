@@ -86,20 +86,84 @@ function Home() {
         <Tabs defaultActiveKey="about" id="main-tab-group" className="mb-3">
           <Tab eventKey="about" title={t('about-tab-title')}>
             <div className="tab-section">
-              <div className="aboutSectionLeft">
+              <div className="row">
+                <h1 className="big-title">{t('about-section-title')}</h1>
+              </div>
+              <div>
+                <p className="p-small-about">{t('about-description')} </p>
+              </div>
+            </div>
+          </Tab>
+          <Tab eventKey="get-started" title={t('get-started-tab-title')}>
+            <div className="tab-section">
+              <div className="see-contrast-heading">
+                <h1 className="big-title">{t('get-started-section-title')}</h1>
+              </div>
+              <div>
+                <p className="p-small-about">{t('get-started-description')} </p>
+              </div>
+              <fieldset className="default-palettes-container">
+                {Object.values(defaultColorPalettes).map((palette, index) => (
+                  <div className="default-palette-container" onClick={()=>setColorList(palette)}>
+                    <input id={"color-palette-"+index} type="radio"  className="radio-button"  checked={colorList == palette ? true : false}/>   
+                    <ColorPalette colors={palette} labelId={"color-palette-"+index}></ColorPalette>
+                  </div>
+                ))}
+              </fieldset>
+            </div>
+          </Tab>
+          <Tab eventKey="contrast" title={t('contrast-tab-title')}>
+            <div className="tab-section">
+              <div className="see-contrast-heading">
+                <h1 className="big-title">{t('contrast-section-title')}</h1>
+              </div>
+              <ContrastTable aria-details={t('contrast-table-title')} contrastMatrix={contrastMatrix}></ContrastTable>
+            </div>
+          </Tab>
+          <Tab eventKey="recommendation" title={t('recommendation-tab-title')}>
+            <div className="tab-section">
+              <div className="see-contrast-heading">
+                <h1 className="big-title">{t('recommendation-section-title')}</h1>
+              </div>
+              <div className="aboutSectionTextBoxContainer">
+                <ContrastSummaryBox title={t('contrast-summary-aaa')} titleIcon={<TextFieldsIcon/>} backgroundColor={contrastColors.AAA}
+                                    colorCombinationsList={getContrastList(contrastMatrix, w.aaaTextMin, w.contrastMax)}></ContrastSummaryBox>
+                <ContrastSummaryBox title={t('contrast-summary-aa')} titleIcon={<TextFieldsIcon/>} backgroundColor={contrastColors.AA}
+                                    colorCombinationsList={getContrastList(contrastMatrix, w.aaTextMin, w.aaTextMax)}></ContrastSummaryBox>
+                <ContrastSummaryBox title={t('contrast-summary-nontext-aa')} titleIcon={<AutoAwesomeMosaicIcon/>} backgroundColor={contrastColors.AANontext}
+                                    colorCombinationsList={getContrastList(contrastMatrix, w.aaNonTextMin, w.aaNonTextMax)}></ContrastSummaryBox>
+                <ContrastSummaryBox title={t('contrast-summary-low')} titleIcon={<VisibilityOffIcon/>} backgroundColor={contrastColors.none}
+                                    colorCombinationsList={getContrastList(contrastMatrix, w.contrastMin, w.aaNonTextMin)}></ContrastSummaryBox>
+              </div>
+            </div>
+          </Tab>
+          <Tab eventKey="testing" title={t('testing-tab-title')}>
+            <div className="tab-section">
+              <div className="mockup-section-title">
+                <h1 className="big-title">{t('test-section-title')}</h1>
+              </div>
+              <div className="aboutSectionTextBoxContainer">
+                <MockupTextBox colorList={colorList} title={t('mockup-textbox-header')}  
+                               mainText={t('mockup-textbox-maintext')} 
+                               titleIcon={<AutoAwesomeIcon/>} color1={colorList[3]} color2={colorList[2]}></MockupTextBox>
+                <MockupIllustration colorList={colorList} color1={colorList[3]} color2={colorList[2]}></MockupIllustration>
+                <MockupGraph colorList={colorList}></MockupGraph>
+                <MockupButton colorList={colorList} contrastMatrix={contrastMatrix} color1={colorList[3]} color2={colorList[2]}></MockupButton>
+              </div>
+            </div>
+          </Tab>
+          <Tab eventKey="wcag" title={t('wcag-tab-title')}>
+            <div className="tab-section">
+              
                 <div className="row">
-                  <InvertColorsRoundedIcon></InvertColorsRoundedIcon>
-                  <h1 className="big-title">{t('about-title')}</h1>
+                  <h1 className="big-title">{t('wcag-section-title')}</h1>
                 </div>
                 <div>
-                  <p className="p-small-about">{t('about-description')} </p>
-                  {/*<p className="p-small-about">{t('about-wcag')}</p>*/}
+                  <p className="p-small-about">{t('about-wcag')} </p>
                   <a href="https://www.uutilsynet.no/fremtidig-regelverk/wcag-21-standarden/140"  target="_blank" rel="noreferrer noopener">
                     <button className="primaryButton">{t('about-button-linking-to-wcag')}</button>
                   </a> 
                 </div>
-              </div>
-              <div className="aboutSectionRight">
                 <ul className="aboutSectionTextBoxContainer" aria-label={t('about-wcag-list-heading')}>
                   <li>
                     <TextBox title={t('contrast-summary-aaa')} titleIcon={<TextFieldsIcon/>} 
@@ -118,67 +182,6 @@ function Home() {
                              backgroundColor={contrastColors.none} mainText={t('about-wcag-low')}></TextBox>
                   </li>
                 </ul>
-              </div>
-            </div>
-          </Tab>
-          <Tab eventKey="palette" title={t('default-palettes-tab-title')}>
-            <div className="tab-section">
-              <div className="see-contrast-heading">
-                <h1 className="big-title">{t('try-default-palettes')}</h1>
-              </div>
-              <fieldset className="default-palettes-container">
-                {Object.values(defaultColorPalettes).map((palette, index) => (
-                  <div className="default-palette-container" onClick={()=>setColorList(palette)}>
-                    <input id={"color-palette-"+index} type="radio"  className="radio-button"  checked={colorList == palette ? true : false}/>   
-                    <ColorPalette colors={palette} labelId={"color-palette-"+index}></ColorPalette>
-                  </div>
-                ))}
-              </fieldset>
-              <div className="speech-bubble">
-                <h2 className="speech-bubble-text">
-                  {t('try-palette-or-try-yourself')}
-                </h2>
-              </div>
-            </div>
-          </Tab>
-          <Tab eventKey="table" title={t('contrast-level-tab-title')}>
-            <div className="tab-section">
-              <div className="see-contrast-heading">
-                <h1 className="big-title">{t('table-section-title')}</h1>
-              </div>
-              <ContrastTable aria-details={t('contrast-table-title')} contrastMatrix={contrastMatrix}></ContrastTable>
-            </div>
-          </Tab>
-          <Tab eventKey="testing" title={t('testing-tab-title')}>
-            <div className="tab-section">
-              <div className="mockup-section-title">
-                <h1 className="big-title">{t('mockup-section-title')}</h1>
-              </div>
-              <div className="aboutSectionTextBoxContainer">
-                <MockupTextBox colorList={colorList} title={t('mockup-textbox-header')}  
-                               mainText={t('mockup-textbox-maintext')} 
-                               titleIcon={<AutoAwesomeIcon/>} color1={colorList[3]} color2={colorList[2]}></MockupTextBox>
-                <MockupIllustration colorList={colorList} color1={colorList[3]} color2={colorList[2]}></MockupIllustration>
-                <MockupGraph colorList={colorList}></MockupGraph>
-                <MockupButton colorList={colorList} contrastMatrix={contrastMatrix} color1={colorList[3]} color2={colorList[2]}></MockupButton>
-              </div>
-            </div>
-          </Tab>
-          <Tab eventKey="summary" title={t('summary-tab-title')}>
-            <div className="tab-section">
-              <div className="see-contrast-heading">
-                <h1 className="big-title">{t('recommendation-section-title')}</h1>
-              </div>
-              <div className="aboutSectionTextBoxContainer">
-                <ContrastSummaryBox title={t('contrast-summary-aaa')} titleIcon={<TextFieldsIcon/>} backgroundColor={contrastColors.AAA}
-                                    colorCombinationsList={getContrastList(contrastMatrix, w.aaaTextMin, w.contrastMax)}></ContrastSummaryBox>
-                <ContrastSummaryBox title={t('contrast-summary-aa')} titleIcon={<TextFieldsIcon/>} backgroundColor={contrastColors.AA}
-                                    colorCombinationsList={getContrastList(contrastMatrix, w.aaTextMin, w.aaTextMax)}></ContrastSummaryBox>
-                <ContrastSummaryBox title={t('contrast-summary-nontext-aa')} titleIcon={<AutoAwesomeMosaicIcon/>} backgroundColor={contrastColors.AANontext}
-                                    colorCombinationsList={getContrastList(contrastMatrix, w.aaNonTextMin, w.aaNonTextMax)}></ContrastSummaryBox>
-                <ContrastSummaryBox title={t('contrast-summary-low')} titleIcon={<VisibilityOffIcon/>} backgroundColor={contrastColors.none}
-                                    colorCombinationsList={getContrastList(contrastMatrix, w.contrastMin, w.aaNonTextMin)}></ContrastSummaryBox>
-              </div>
             </div>
           </Tab>
         </Tabs>
