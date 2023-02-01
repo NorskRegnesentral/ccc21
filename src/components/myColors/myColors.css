@@ -9,8 +9,8 @@
 @media screen and (min-width: 1400px) {
     .adaptive-bar {
         border-right: 2px groove var(--base-color-dark-grey);
-        grid-template-areas: "heading" "colorlist" "addbutton" "clearbutton";
-        grid-template-rows: max-content 1fr 82px;
+        grid-template-areas: "heading" "colorlist" "addbutton" "clearbutton" "freespace";
+        grid-template-rows: auto auto 82px 82px 1fr;
         height: 100vh;
     }
 }
@@ -18,8 +18,8 @@
 @media not screen and (min-width: 1400px) {
     .adaptive-bar {
         border-bottom: 2px groove var(--base-color-dark-grey);
-        grid-template-areas: "heading colorlist addbutton clearbutton";
-        grid-template-columns: max-content 1fr 150px;
+        grid-template-areas: "heading colorlist addbutton clearbutton freespace";
+        grid-template-columns: auto auto 150px 150px 1fr;
         height: 100px;
         width: 100vw;
     }
@@ -37,7 +37,7 @@
 }
 
 .dummy-item {
-    visibility: hidden;
+    visibility: collapse;
 }
 
 .empty-message {
@@ -74,17 +74,6 @@
 }
 
 .my-color-list-item {
-  padding: 0;
-}
-
-.toggle-button {
-  grid-area: togglebutton;
-  width: 50px;
-  height: 50px;
-  margin: 1rem; 
-  display: flex;
-  align-items: center;
-  justify-content: center;
   padding: 0;
 }
 
