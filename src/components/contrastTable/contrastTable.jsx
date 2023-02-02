@@ -90,7 +90,7 @@ const ContrastTable = ({ contrastMatrix }) => {
                     <div className={rowIndex !== colIndex ? "table-color-patch" : "table-color-blank"}
                          style={{ color: getColumnColor(rowIndex, colIndex, rowItem),
                                   backgroundColor: rowIndex !== colIndex ? getRowColor(rowIndex, colIndex, rowItem) : "transparent" }}>
-                      <p className="table-text-entry">
+                      <p className="table-text-entry" aria-hidden="true">
                         {rowIndex !== colIndex ? (textMode ? "Abc 123" : "▄▄▛▀") : ""}
                       </p> 
                     </div>
