@@ -6,7 +6,7 @@ import { contrastColors, wcagRules as w } from "../../variables";
 
 const ContrastTable = ({ contrastMatrix }) => {
   const { t } = useTranslation();
-  const [colorsInTable, setColorsInTable] = useState(false); 
+  const [textMode, setTextMode] = useState(true); 
 
   //Sjekker om verdien er en hex og returnerer fargen hvis ja
   const isHex = (possibleHex) => {
@@ -29,6 +29,24 @@ const ContrastTable = ({ contrastMatrix }) => {
       : "";
   };
 
+  const getWcagRatingFromContrast = (possibleContrast, textMode) => {
+    if (textMode) {
+      if (possibleContrast >= w.aaaTextMin) {
+        return "AAA";
+      } else if (possibleContrast >= w.aaTextMin) {
+        return "AA";
+      } else {
+        return "";
+      }
+    } else {
+      if (possibleContrast >= w.aaNonTextMin) {
+        return "AA";
+      } else {
+        return "";
+      }
+    }
+  };
+
   const getRowColor = (rowIndex, colIndex, rowItem) => {
     if(1 <= rowItem <= 21) return contrastMatrix[0][rowIndex]
     else return "";
@@ -42,18 +60,19 @@ const ContrastTable = ({ contrastMatrix }) => {
     <div className="contrastTable">
         <fieldset className="tableHeader">
           <legend hidden>{t('contrast-table-radiobutton-title')}</legend>
-          <div className="radio-button-container" onClick={()=>setColorsInTable(false)}>
-            <label for={t('view-contrast-level-by-color')}>
-              {t('view-contrast-level-by-color')}
+          {t('view-wcag-level')}
+          <div className="radio-button-container" onClick={()=>setTextMode(true)}>
+            <label for={t('view-wcag-level-text')}>
+              {t('view-wcag-level-text')}
             </label>
-            <input type="radio" className="radio-button" checked={colorsInTable ? false : true} id={t('view-contrast-level-by-color')}/>
-            </div>
-            <div className="radio-button-container" onClick={()=>setColorsInTable(true)}>
-              <label for={t('view-chosen-colors')}>
-                {t('view-chosen-colors')}
-              </label>
-              <input type="radio"  className="radio-button"  checked={colorsInTable ? true : false} id={t('view-chosen-colors')}/>   
-            </div>    
+            <input type="radio"  className="radio-button"  checked={textMode ? true : false} id={t('view-chosen-colors')}/>   
+          </div>    
+          <div className="radio-button-container" onClick={()=>setTextMode(false)}>
+            <label for={t('view-wcag-level-non-text')}>
+              {t('view-wcag-level-non-text')}
+            </label>
+            <input type="radio" className="radio-button" checked={textMode ? false : true} id={t('view-contrast-level-by-color')}/>
+          </div>
         </fieldset> 
       <div className="tableBody">
         <table>
@@ -63,15 +82,22 @@ const ContrastTable = ({ contrastMatrix }) => {
                 {Object.values(row).map((rowItem, colIndex) => (
                   rowIndex == 0 || colIndex == 0 ? 
                   <th key={"row" + rowIndex + "col" + colIndex}>
-                    <div style={{ backgroundColor: rowItem }} className="colorBox"/>
+                    <div style={{ backgroundColor: rowItem }} className={rowIndex > 0 || colIndex > 0 ? "colorBox" : ""}/>
                     <p className="table-text-header">{rowItem}</p> 
                   </th>
                   :
-                  <td
-                    key={"row" + rowIndex + "col" + colIndex}
-                    style={{ backgroundColor: colorsInTable && rowIndex !== colIndex ? getRowColor(rowIndex, colIndex, rowItem) : getCellColorFromContrast(rowItem) }}
-                  >
-                    <p className="table-text-entry"  style={{ color: colorsInTable ?  getColumnColor(rowIndex, colIndex, rowItem) : "#000000" }}>{rowItem}</p> 
+                  <td key={"row" + rowIndex + "col" + colIndex}>
+                    <div className={rowIndex !== colIndex ? "table-color-patch" : "table-color-blank"}
+                         style={{ color: getColumnColor(rowIndex, colIndex, rowItem),
+                                  backgroundColor: rowIndex !== colIndex ? getRowColor(rowIndex, colIndex, rowItem) : "transparent" }}>
+                      <p className="table-text-entry">
+                        {rowIndex !== colIndex ? (textMode ? "Abc 123" : "▄▄▛▀") : ""}
+                      </p> 
+                    </div>
+                    <div className="table-rating">
+                      <p className="table-rating-contrast">{rowItem}</p> 
+                      <p className={getWcagRatingFromContrast(rowItem, textMode) ? "table-rating-wcag" : ""}>{getWcagRatingFromContrast(rowItem, textMode)}</p> 
+                    </div>
                   </td>
                 ))}
               </tr>
