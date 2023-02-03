@@ -40,11 +40,11 @@ const MyColors = ({ colorList, setColorList, direction, setDirection }) => {
         {t('my-colors-heading')}
       </div>
       <ul className="adaptive-color-list">
-        <li className={`my-color-list-item empty-message ${colorList.length > 0 ? "disabled-message" : ""}`}>
-          TOM PALETT
-        </li>
-        <li className="my-color-list-item dummy-item">
-          <ColorInput/>
+        <li className={`my-color-list-item ${colorList.length > 0 ? "disabled-message" : "enabled-message"}`}>
+          <div className="empty-message">&lt;TOM PALETT&gt;</div>
+          <div className="dummy-item">
+            <ColorInput/>
+          </div>
         </li>
         {Object.values(colorList).map((color, index) => (
           <li className="my-color-list-item">

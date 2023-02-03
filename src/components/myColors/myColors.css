@@ -37,14 +37,25 @@
     display: none;
 }
 
+.enabled-message {
+    display: grid;
+    align-items: center;
+}
+
+.enabled-message > * {
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+
 .dummy-item {
-    visibility: collapse;
+    visibility: hidden;
+    position: relative;
 }
 
 .empty-message {
-    grid-area: colorlist;
     text-align: center;
     vertical-align: middle;
+    position: relative;
 }
 
 .color-list-controls {
