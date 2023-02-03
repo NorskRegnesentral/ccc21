@@ -15,7 +15,7 @@
   flex-direction: row;
   justify-content: left;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   padding-bottom: 12px;
   margin-left: 2px; /*fordi ytterse sirkel i radio button er 2px */
   border: none;
