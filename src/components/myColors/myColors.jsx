@@ -58,20 +58,19 @@ const MyColors = ({ colorList, setColorList, direction, setDirection }) => {
           </li>
         ))}
       </ul>
+      <ul className="color-list-controls">
         <button 
           disabled={colorList.length === numberOfColors.MAX ? true : false } 
           className="palette-button palette-add"
           onClick={addColorValue}
-        >
-          {t('add-color')}
-        </button>
+        >🞥</button>
+        <div className="color-list-control-separator"/>
         <button 
           disabled={colorList.length === 0 ? true : false } 
           className="palette-button palette-clear"
           onClick={clearColorValues}
-        >
-          {t('clear-palette')}
-        </button>
+        >🗑 </button>
+      </ul>
     </div>
   );
 };
