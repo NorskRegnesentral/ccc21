@@ -27,7 +27,12 @@
 
 .hex-input {
   width: 70px;
-  background-color: transparent;
+  background-color: #f0f0f0;
+  height: 2em;
+  padding: 0.5em;
+  border: 1px solid #aaa;
+  margin: 0 0.5em;
+  border-radius: 0.1em;
   font-size: 12px;
 }
 
