@@ -128,6 +128,9 @@ function Home() {
               <div className="see-contrast-heading">
                 <h1 className="big-title">{t('recommendation-section-title')}</h1>
               </div>
+              <p className="recommendation-explanation">
+                {t('recommendation-explanation')}
+              </p>
               <div className="aboutSectionTextBoxContainer">
                 <ContrastSummaryBox title={t('contrast-summary-aaa')} titleIcon={<TextFieldsIcon/>} backgroundColor={contrastColors.AAA}
                                     colorCombinationsList={getContrastList(contrastMatrix, w.aaaTextMin, w.contrastMax)}></ContrastSummaryBox>
