@@ -35,7 +35,7 @@ const MyColors = ({ colorList, setColorList, direction, setDirection }) => {
   };
 
   return (
-    <div className="adaptive-bar"  aria-label={t('my-colors-heading')}>
+    <div className="adaptive-bar">
       <h1 class="big-title">
         {t('my-colors-heading')}
       </h1>
