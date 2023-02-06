@@ -169,9 +169,13 @@ function Home() {
                 </div>
                 <div>
                   <p className="p-small-about">{t('about-wcag')} </p>
-                  <a href="https://www.uutilsynet.no/fremtidig-regelverk/wcag-21-standarden/140"  target="_blank" rel="noreferrer noopener">
-                    <button className="primaryButton">{t('about-button-linking-to-wcag')}</button>
-                  </a> 
+      <p className="p-small-about">
+                  <a href="https://www.w3.org/TR/WCAG21/#contrast-minimum" target="_blank" rel="noreferrer noopener">
+      {t('about-button-linking-to-wcag')}
+    </a>
+      &nbsp;{t('about-button-linking-to-wcag-ext')}
+      </p>
+                  <p className="p-small-about">{t('about-contrasts')} </p>
                 </div>
                 <ul className="aboutSectionTextBoxContainer" aria-label={t('about-wcag-list-heading')}>
                   <li>
