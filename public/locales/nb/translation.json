@@ -10,7 +10,7 @@
     "about-wcag-low" : "Verdier under 3. Anbefales ikke til bruk på tekst eller andre sentrale komponenter.",
     "contrast-section-title" : "Kontrastnivåer for paletten din",
     "get-started-section-title" : "Kom igang",
-    "get-started-description" : "I paletten kan du legge til og fjerne farger. Du kan også endre en farge, enten interaktivt, ved å klikke på fargen, eller ved å skrive inn hex-koden direkte. Under finner du et lite utvalg av forhånsdefinerte paletter som du kan bruke som utgangspunkt.",
+    "get-started-description" : "I «Din palett» kan du legge til og fjerne farger. Du endrer en farge ved å klikke på fargen eller ved å skrive inn hex-koden direkte. Under finner du et lite utvalg av forhånsdefinerte paletter som du kan bruke som utgangspunkt.",
     "test-section-title" : "Test fargene i praksis",
     "contrast-table-title"  : "Visning av valgte fargekombinasjoner med kontrastverdier i en matrise", 
     "contrast-table-radiobutton-title" :  "Velg visning for tabellen",
