@@ -148,6 +148,9 @@ function Home() {
               <div className="mockup-section-title">
                 <h1 className="big-title">{t('test-section-title')}</h1>
               </div>
+              <p className="mockup-section-explanation">
+                {t('test-section-explanation')}
+              </p>
               <div className="aboutSectionTextBoxContainer">
                 <MockupTextBox colorList={colorList} title={t('mockup-textbox-header')}  
                                mainText={t('mockup-textbox-maintext')} 
