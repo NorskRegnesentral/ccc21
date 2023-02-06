@@ -1,6 +1,6 @@
 {
     "about-section-title" : "Color contrast checker & designer 2.1",
-    "about-description" : "Dette er et verktøy for å utforme paletter med god kontrast.", 
+    "about-description" : "Dette er et verktøy for å hjelpe deg med å velge paletter (fargekombinasjoner) med gode kontraster mellom fargene.", 
     "about-wcag" : "Kontrasten mellom to farger kan beskrives som en verdi mellom 1 og 21. Bruk WCAGs retningslinjer for å designe produkter med gode kontraster!",
     "about-button-linking-to-wcag" : "Les om WCAG 2.1",
     "about-wcag-list-heading" : "Fire kategorier for fargekontraster definert av wcag:",
