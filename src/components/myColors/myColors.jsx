@@ -36,9 +36,9 @@ const MyColors = ({ colorList, setColorList, direction, setDirection }) => {
 
   return (
     <div className="adaptive-bar"  aria-label={t('my-colors-heading')}>
-      <div className="color-bar-heading">
+      <h1 class="big-title">
         {t('my-colors-heading')}
-      </div>
+      </h1>
       <ul className="adaptive-color-list">
         <li className={`my-color-list-item ${colorList.length > 0 ? "disabled-message" : "enabled-message"}`}>
           <div className="empty-message">{t('my-colors-empty')}</div>

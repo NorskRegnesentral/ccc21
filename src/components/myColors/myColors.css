@@ -87,14 +87,9 @@
     }
 }
 
-.color-bar-heading {
-    grid-area: heading;
-    padding: .7rem 0.7rem 0.7rem .7rem;
-    font-size: 16pt;
+h1 {
     margin: 1rem; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
 }
 
 .my-color-list-item {
