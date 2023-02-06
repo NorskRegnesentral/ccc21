@@ -88,8 +88,11 @@
 }
 
 h1 {
-    margin: 1rem 0; 
-    text-align: center;
+  margin: 1rem 0; 
+}
+.colorBar h1 {
+  margin: 1rem; 
+  text-align: center;
 }
 
 .my-color-list-item {
