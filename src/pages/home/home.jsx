@@ -135,9 +135,9 @@ function Home() {
                 <ContrastSummaryBox title={t('contrast-summary-aaa')} titleIcon={<TextFieldsIcon/>} backgroundColor={contrastColors.AAA}
                                     colorCombinationsList={getContrastList(contrastMatrix, w.aaaTextMin, w.contrastMax)}></ContrastSummaryBox>
                 <ContrastSummaryBox title={t('contrast-summary-aa')} titleIcon={<TextFieldsIcon/>} backgroundColor={contrastColors.AA}
-                                    colorCombinationsList={getContrastList(contrastMatrix, w.aaTextMin, w.aaTextMax)}></ContrastSummaryBox>
+                                    colorCombinationsList={getContrastList(contrastMatrix, w.aaTextMin, w.contrastMax)}></ContrastSummaryBox>
                 <ContrastSummaryBox title={t('contrast-summary-nontext-aa')} titleIcon={<AutoAwesomeMosaicIcon/>} backgroundColor={contrastColors.AANontext}
-                                    colorCombinationsList={getContrastList(contrastMatrix, w.aaNonTextMin, w.aaNonTextMax)}></ContrastSummaryBox>
+                                    colorCombinationsList={getContrastList(contrastMatrix, w.aaNonTextMin, w.contrastMax)}></ContrastSummaryBox>
                 <ContrastSummaryBox title={t('contrast-summary-low')} titleIcon={<VisibilityOffIcon/>} backgroundColor={contrastColors.none}
                                     colorCombinationsList={getContrastList(contrastMatrix, w.contrastMin, w.aaNonTextMin)}></ContrastSummaryBox>
               </div>
