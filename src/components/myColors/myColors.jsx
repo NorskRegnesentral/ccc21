@@ -41,7 +41,7 @@ const MyColors = ({ colorList, setColorList, direction, setDirection }) => {
       </div>
       <ul className="adaptive-color-list">
         <li className={`my-color-list-item ${colorList.length > 0 ? "disabled-message" : "enabled-message"}`}>
-          <div className="empty-message">&lt;TOM PALETT&gt;</div>
+          <div className="empty-message">{t('my-colors-empty')}</div>
           <div className="dummy-item">
             <ColorInput/>
           </div>
