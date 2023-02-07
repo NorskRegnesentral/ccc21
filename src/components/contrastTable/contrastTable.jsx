@@ -57,7 +57,8 @@ const ContrastTable = ({ contrastMatrix }) => {
   }
 
   return (
-    <div className="contrastTable">
+    contrastMatrix.length > 2 ?
+      <div className="contrastTable">
         <fieldset className="tableHeader">
           <legend hidden>{t('contrast-table-radiobutton-title')}</legend>
           {t('view-wcag-level')}
@@ -73,39 +74,41 @@ const ContrastTable = ({ contrastMatrix }) => {
             </label>
             <input type="radio" className="radio-button" checked={textMode ? false : true} id={t('view-contrast-level-by-color')}/>
           </div>
-        </fieldset> 
-      <div className="tableBody">
-        <table>
-          <tbody>
-            {contrastMatrix.map((row, rowIndex) => (
-              <tr key={"row" + rowIndex}>
-                {Object.values(row).map((rowItem, colIndex) => (
-                  rowIndex == 0 || colIndex == 0 ? 
-                  <th key={"row" + rowIndex + "col" + colIndex}>
-                    <div style={{ backgroundColor: rowItem }} className={rowIndex > 0 || colIndex > 0 ? "colorBox" : ""}/>
-                    <p className="table-text-header">{rowItem}</p> 
-                  </th>
-                  :
-                  <td key={"row" + rowIndex + "col" + colIndex}>
-                    <div className={rowIndex !== colIndex ? "table-color-patch" : "table-color-blank"}
-                         style={{ color: getColumnColor(rowIndex, colIndex, rowItem),
-                                  backgroundColor: rowIndex !== colIndex ? getRowColor(rowIndex, colIndex, rowItem) : "transparent" }}>
-                      <p className="table-text-entry" aria-hidden="true">
-                        {rowIndex !== colIndex ? (textMode ? "Abc 123" : "▄▄▛▀") : ""}
-                      </p> 
-                    </div>
-                    <div className="table-rating">
-                      <p className="table-rating-contrast">{rowItem}</p> 
-                      <p className={getWcagRatingFromContrast(rowItem, textMode) ? "table-rating-wcag" : ""}>{getWcagRatingFromContrast(rowItem, textMode)}</p> 
-                    </div>
-                  </td>
-                ))}
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        </fieldset>
+        <div className="tableBody">
+          <table>
+            <tbody>
+              {contrastMatrix.map((row, rowIndex) => (
+                <tr key={"row" + rowIndex}>
+                  {Object.values(row).map((rowItem, colIndex) => (
+                    rowIndex == 0 || colIndex == 0 ? 
+                      <th key={"row" + rowIndex + "col" + colIndex}>
+                        <div style={{ backgroundColor: rowItem }} className={rowIndex > 0 || colIndex > 0 ? "colorBox" : ""}/>
+                        <p className="table-text-header">{rowItem}</p> 
+                      </th>
+                    :
+                    <td key={"row" + rowIndex + "col" + colIndex}>
+                      <div className={rowIndex !== colIndex ? "table-color-patch" : "table-color-blank"}
+                           style={{ color: getColumnColor(rowIndex, colIndex, rowItem),
+                                    backgroundColor: rowIndex !== colIndex ? getRowColor(rowIndex, colIndex, rowItem) : "transparent" }}>
+                        <p className="table-text-entry" aria-hidden="true">
+                          {rowIndex !== colIndex ? (textMode ? "Abc 123" : "▄▄▛▀") : ""}
+                        </p> 
+                      </div>
+                      <div className="table-rating">
+                        <p className="table-rating-contrast">{rowItem}</p> 
+                        <p className={getWcagRatingFromContrast(rowItem, textMode) ? "table-rating-wcag" : ""}>{getWcagRatingFromContrast(rowItem, textMode)}</p> 
+                      </div>
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
-    </div>
+    :
+    <p>Tabellen er tom.</p>
   );
 };
 export default ContrastTable;
