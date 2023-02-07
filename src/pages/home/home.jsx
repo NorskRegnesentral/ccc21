@@ -99,10 +99,9 @@ function Home() {
               <div className="see-contrast-heading">
                 <h1 className="big-title">{t('get-started-section-title')}</h1>
               </div>
-              <div>
-                <p className="p-small-about">{t('get-started-description')} </p>
-              </div>
+              <p className="p-small-about">{t('get-started-description')}</p>
               <fieldset className="default-palettes-container">
+		<legend>{t('default-palettes-legend')}</legend>
                 {Object.values(defaultColorPalettes).map((palette, index) => (
                   <div className="default-palette-container" onClick={()=>setColorList(palette)}>
                     <input id={"color-palette-"+index} type="radio"  className="radio-button"  checked={colorList == palette ? true : false}/>   

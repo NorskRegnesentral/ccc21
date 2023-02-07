@@ -133,13 +133,19 @@
 
 .default-palettes-container {
   display: flex;
-  align-items: flex-start;
   flex-direction: column;
   flex-wrap: wrap;
   gap: .8rem;
   width: fit-content;
   height: fit-content;
   padding: 1rem;
+  border: 1px solid var(--base-color-mid-grey);
+}
+
+.default-palettes-container legend {
+  float: none;
+  padding: 0 1em;
+  font-size: 1.2em;
 }
 
 .default-palette-container{
