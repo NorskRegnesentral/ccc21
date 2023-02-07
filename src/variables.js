@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 
 export const contrastColors = {
-    none: "#ee8181",
-    AANontext: "#f7b87d",
-    AA: "#ecdb79",
-    AAA: "#cff7cf",
+    none: "#ffb8b8",
+    AANontext: "#ffd0a3",
+  AA: "#79da72", //"#ecdb79",
+    AAA: "#e3ffc2",
 }
 
 //https://www.uutilsynet.no/wcag-standarden/1411-kontrast-ikke-tekstlig-innhold-niva-aa/145
