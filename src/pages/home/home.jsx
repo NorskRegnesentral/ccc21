@@ -89,9 +89,8 @@ function Home() {
               <div className="row">
                 <h1 className="big-title">{t('about-section-title')}</h1>
               </div>
-              <div>
-                <p className="p-small-about">{t('about-description')} </p>
-              </div>
+              <p className="p-small-about">{t('about-summary')} </p>
+              <p className="p-small-about">{t('about-description')} </p>
             </div>
           </Tab>
           <Tab eventKey="get-started" title={t('get-started-tab-title')}>
