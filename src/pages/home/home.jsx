@@ -89,8 +89,32 @@ function Home() {
               <div className="row">
                 <h1 className="big-title">{t('about-section-title')}</h1>
               </div>
-              <p className="p-small-about">{t('about-summary')} </p>
-              <p className="p-small-about">{t('about-description')} </p>
+              <p className="p-small-about">{t('about-summary')}</p>
+              <p className="p-small-about">{t('about-description')}</p>
+	      <h2>{t('about-contributors-title')}</h2>
+              <p className="p-small-about">{t('about-contributors')}</p>
+              <p className="p-small-about">
+		{t('about-code-1')}
+                <a href="https://github.com/NorskRegnesentral/ccc21/" target="_blank" rel="noreferrer noopener">
+		  {t('about-code-link')}
+		</a>
+		{t('about-code-2')}
+	      </p>
+              <p className="p-small-about">
+		{t('about-funding-1')}
+                <a href="https://nr.no/" target="_blank" rel="noreferrer noopener">
+		  {t('about-funding-link')}
+		</a>
+		{t('about-funding-2')}
+		</p>
+	      <h2>{t('about-feedback-title')}</h2>
+              <p className="p-small-about">
+		{t('about-feedback-1')}
+                <a href="https://github.com/NorskRegnesentral/ccc21/issues/new/choose" target="_blank" rel="noreferrer noopener">
+		  {t('about-feedback-link')}
+		</a>
+		{t('about-feedback-2')}
+	      </p>
             </div>
           </Tab>
           <Tab eventKey="get-started" title={t('get-started-tab-title')}>
