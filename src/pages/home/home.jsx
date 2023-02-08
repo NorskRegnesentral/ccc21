@@ -186,19 +186,21 @@ function Home() {
           <Tab eventKey="wcag" title={t('wcag-tab-title')}>
             <div className="tab-section">
               
-                <div className="row">
-                  <h1 className="big-title">{t('wcag-section-title')}</h1>
-                </div>
-                <div>
-                  <p className="p-small-about">{t('about-wcag')} </p>
+      <div className="row">
+      <h1 className="big-title">{t('wcag-section-title')}</h1>
+      </div>
       <p className="p-small-about">
-                  <a href="https://www.w3.org/TR/WCAG21/#contrast-minimum" target="_blank" rel="noreferrer noopener">
+      {t('about-wcag')}
+    </p>
+      <p className="p-small-about">
+      {t('about-contrasts')}
+    </p>
+      <p className="p-small-about">
+      <a href="https://www.w3.org/TR/WCAG21/#contrast-minimum" target="_blank" rel="noreferrer noopener">
       {t('about-button-linking-to-wcag')}
     </a>
-      &nbsp;{t('about-button-linking-to-wcag-ext')}
-      </p>
-                  <p className="p-small-about">{t('about-contrasts')} </p>
-                </div>
+      {t('about-button-linking-to-wcag-ext')}
+    </p>
                 <ul className="aboutSectionTextBoxContainer" aria-label={t('about-wcag-list-heading')}>
                   <li>
                     <TextBox title={t('contrast-summary-aaa')} titleIcon={<TextFieldsIcon/>} 
