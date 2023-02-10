@@ -44,11 +44,11 @@ button:hover {
 
 button:disabled {
   cursor: default;
-  opacity: .20;
+  opacity: .60;
 }
 
 button:disabled:hover {
   background-color: var(--base-color-dark-grey);
   cursor: default;
-  opacity: .20;
+  opacity: .40;
 }
