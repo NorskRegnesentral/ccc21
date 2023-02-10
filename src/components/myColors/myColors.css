@@ -4,6 +4,7 @@
 .adaptive-bar {
   background-color: var(--base-color-light-grey);
   display: grid;
+  align-items: center;
 }
 
 @media screen and (min-width: 1400px) {
