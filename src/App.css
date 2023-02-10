@@ -39,7 +39,7 @@ button {
 
 button:hover {
   cursor: pointer;
-  background-color: var(--base-color-pink);
+  background-color: var(--base-color-dark-turquoise);
 }
 
 button:disabled {
