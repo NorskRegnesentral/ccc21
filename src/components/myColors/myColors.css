@@ -60,14 +60,12 @@
 
 .color-list-controls {
     display: flex;
-    flex-direction: row;
-    grid-area: controls;
+    flex-direction: column;
+  grid-area: controls;
+  grid-gap: .5em;
+  justify-content: center;
     padding: 0;
     margin: 0;
-}
-
-.color-list-control-separator {
-    flex-grow: 1;
 }
 
 @media screen and (min-width: 1400px) {
@@ -100,13 +98,13 @@ h1 {
 }
 
 .palette-button {
-  padding: 0;
-  width: 3rem;
-  height: 3rem;
+  padding: .7em;
+  width: 1em;
+  height: 1em;
   border-radius: .5rem;
   font-size: 30px;
   /* height: 50px; */
-  margin: 1rem; 
+  margin: 0; 
   display: flex;
   align-items: center;
   justify-content: center;

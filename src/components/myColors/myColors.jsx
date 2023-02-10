@@ -64,7 +64,6 @@ const MyColors = ({ colorList, setColorList, direction, setDirection }) => {
           className="palette-button palette-add"
           onClick={addColorValue}
         >🞥</button>
-        <div className="color-list-control-separator"/>
         <button 
           disabled={colorList.length === 0 ? true : false } 
           className="palette-button palette-clear"
