@@ -34,6 +34,17 @@
   width: 100%;
 }
 
+.nav-tabs {
+  background-color: azure;
+}
+
+li.nav-item {
+  padding-bottom: 0;
+}
+li.nav-item button:hover {
+  background-color: #dae1e1; /* a less saturated azure */
+}
+
 .tab-section {
   padding: 0 2rem;
   display: flex;
