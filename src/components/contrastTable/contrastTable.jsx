@@ -76,7 +76,7 @@ const ContrastTable = ({ contrastMatrix }) => {
           </div>
         </fieldset>
         <div className="tableBody">
-      <table>
+      <table aria-describedBy="contrastTableDescr">
             <tbody>
               {contrastMatrix.map((row, rowIndex) => (
                 <tr key={"row" + rowIndex}>

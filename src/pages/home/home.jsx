@@ -139,9 +139,7 @@ function Home() {
               <div className="see-contrast-heading">
                 <h1 className="big-title">{t('contrast-section-title')}</h1>
               </div>
-              <div>
-                <p className="p-small-about">{t('contrast-description')} </p>
-              </div>
+      <p id="contrastTableDescr" className="p-small-about">{t('contrast-description')} </p>
               <ContrastTable aria-details={t('contrast-table-title')} contrastMatrix={contrastMatrix}></ContrastTable>
             </div>
           </Tab>
