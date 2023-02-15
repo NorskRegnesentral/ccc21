@@ -26,7 +26,7 @@
   grid-area: colorbar;
 }
 
-.rightSideBar {
+.nav-bar {
   display: flex;
   flex-direction: column;
   overflow-y: scroll;

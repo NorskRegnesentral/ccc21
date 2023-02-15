@@ -82,7 +82,7 @@ function Home() {
           setColorList={setColorList}
         />
       </div>
-      <div className="rightSideBar">
+      <nav className="nav-bar">
         <Tabs defaultActiveKey="about" id="main-tab-group" className="mb-3">
           <Tab eventKey="about" title={t('about-tab-title')}>
             <div className="tab-section">
@@ -238,7 +238,7 @@ function Home() {
         textColor="#1f1235"  
         text={t('footer-text')}
         />
-      </div>
+      </nav>
     </div>
   );
 }
