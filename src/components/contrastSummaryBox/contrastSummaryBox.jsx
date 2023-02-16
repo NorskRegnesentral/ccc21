@@ -1,16 +1,18 @@
 /*SPDX-License-Identifier: GPL-3.0-or-later*/
 import "./contrastSummaryBox.css";
 import React from "react";
+import { useTranslation } from 'react-i18next';
 
 
 const ContrastSummaryBox = ({ colorCombinationsList, title, backgroundColor }) => {
-
+  const { t } = useTranslation();
   return (
-    <div className="contrastSummary" style={{ /*backgroundColor:backgroundColor*/ backgroundColor: '#f8f5f2' }}>
+    <div className="contrastSummary">
         <div className="title">
-            <h2 className="contrast-summary-h2"> {title} </h2>     
+            <h2 className="contrast-summary-h2">{title}</h2>     
         </div>
-        <div className="contrast-summary-content">  
+        <div className="contrast-summary-content">
+	  {Object.values(colorCombinationsList).length ?
             <ul className="contrastSummaryList">
                 {Object.values(colorCombinationsList).map((item, index) => (
                 <li key={"AA" + index} className="contrast-summary-list-item">
@@ -21,7 +23,9 @@ const ContrastSummaryBox = ({ colorCombinationsList, title, backgroundColor }) =
                     </div>
                 </li>
                 ))}
-            </ul>
+           </ul>
+	   :
+	   <p class="no-elements">{t('no-elements')}</p>}
         </div>  
     </div>
   );

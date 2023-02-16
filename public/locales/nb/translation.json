@@ -72,5 +72,6 @@
   "testing-tab-title" : "Test",
   "recommendation-tab-title" : "Anbefalinger",
   "wcag-tab-title" : "WCAG",
-  "default-palettes-legend": "Paletteksempler"
+  "default-palettes-legend": "Paletteksempler",
+  "no-elements": "Ingen anbefalinger"
 }
