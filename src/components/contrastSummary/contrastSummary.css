@@ -2,35 +2,35 @@
 @import "../../variables.css";
 
 .contrastSummary {
-    width: 14rem;
-    background-color: var(--base-color-light-grey);
-    padding: 1rem;
-    height: fit-content;
+  width: 14rem;
+  background-color: var(--light-scheme-block-background);
+  padding: 1rem;
+  height: fit-content;
 }
 
 .contrastSummaryHeading {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
 }
 
 .contrastSummaryHeadingFont{
-    font-size: 14px;
-    font-weight: normal;
-    margin: 0;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
 }
 
 .contrastSummaryList {
-    padding: 0;
-    margin: 0.1rem;
-    flex-wrap: wrap;
-    min-height: 40px;
-    align-items: center;
+  padding: 0;
+  margin: 0.1rem;
+  flex-wrap: wrap;
+  min-height: 40px;
+  align-items: center;
 }
 
 .contrastSummaryListItem{
-    padding: 0;
-    margin: .3rem .3rem .3rem .3rem;
+  padding: 0;
+  margin: .3rem .3rem .3rem .3rem;
 }

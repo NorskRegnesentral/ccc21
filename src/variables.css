@@ -10,5 +10,8 @@
   --base-color-white: #fcfcfc;
   --base-color-pink: #ff8280;
   --base-color-dark-pink: #b44d4b;
-  --base-color-dark-turquoise: #5c9bc1
+  --base-color-dark-turquoise: #5c9bc1;
+  --light-scheme-block-background: #fefbf8;
+  --light-scheme-tabs: azure;
+  --light-scheme-tabs-hover: #dae1e1 /* a less saturated azure */
 }

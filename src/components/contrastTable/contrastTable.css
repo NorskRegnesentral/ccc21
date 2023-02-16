@@ -2,9 +2,9 @@
 @import "../../variables.css";
 
 .contrastTable {
-    padding-top: 1rem;
-    width: fit-content;
-    height: fit-content;
+  padding-top: 1rem;
+  width: fit-content;
+  height: fit-content;
 }
 
 .tableHeader {
@@ -19,31 +19,31 @@
   border: none;
 }
 
- table, td, th {
-    /*border: 4px solid white;*/
-    border: 1px solid #ccc;
-    border-collapse: collapse;
-  }
+table, td, th {
+  background-color: var(--light-scheme-block-background);
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+}
 
-  td, th {
-      vertical-align: top;
-    padding: 0.5rem 0.5rem;
-    min-width: 85px; 
-    font-size: 14px;
-  }
+td, th {
+  vertical-align: top;
+  padding: 0.5rem 0.5rem;
+  min-width: 85px; 
+  font-size: 14px;
+}
 
-  .colorBox{
-    height: 20px;
-    width: 20px;
-    float: left;
-    border: 1px solid var(--base-color-mid-grey);
-  }
+.colorBox{
+  height: 20px;
+  width: 20px;
+  float: left;
+  border: 1px solid var(--base-color-mid-grey);
+}
 
-  .table-text-header{
-    margin: 0px 4px 0px 4px;
-    float: left;
-    font-weight: normal;
-  }
+.table-text-header{
+  margin: 0px 4px 0px 4px;
+  float: left;
+  font-weight: normal;
+}
 
 .radio-button-container {
   display: flex;
@@ -80,23 +80,23 @@
 }
 
 .table-rating {
-    display: grid;
-    grid-template-areas: "contrast stretch wcag-score";
-    grid-template-columns: auto 1fr auto;
+  display: grid;
+  grid-template-areas: "contrast stretch wcag-score";
+  grid-template-columns: auto 1fr auto;
 }
 
 .table-rating-contrast {
-    grid-area: contrast;
-    margin: 0.5em 0;
-    padding: 0;
+  grid-area: contrast;
+  margin: 0.5em 0;
+  padding: 0;
 }
 
 .table-rating-wcag {
-    grid-area: wcag-score;
-    margin: 0.5em 0;
-    padding: 0 0.5em;
-    font-weight: bold;
-    color: white;
-    background-color: black;
-    border-radius: 0.75em;
+  grid-area: wcag-score;
+  margin: 0.5em 0;
+  padding: 0 0.5em;
+  font-weight: bold;
+  color: white;
+  background-color: black;
+  border-radius: 0.75em;
 }

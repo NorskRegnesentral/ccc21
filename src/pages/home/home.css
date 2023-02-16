@@ -35,14 +35,14 @@
 }
 
 .nav-tabs {
-  background-color: azure;
+  background-color: var(--light-scheme-tabs);
 }
 
 li.nav-item {
   padding-bottom: 0;
 }
 li.nav-item button:hover {
-  background-color: #dae1e1; /* a less saturated azure */
+  background-color: var(--light-scheme-tabs-hover);
 }
 
 .tab-section {
