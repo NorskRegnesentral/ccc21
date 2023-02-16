@@ -219,6 +219,14 @@ function Home() {
                 </ul>
             </div>
           </Tab>
+          <Tab eventKey="colblind" title={t('tab-colblind-title-short')}>
+            <div className="tab-section">
+              <div className="see-contrast-heading">
+                <h1 className="big-title">{t('tab-colblind-title-long')}</h1>
+              </div>
+              <p className="p-small-about">{t('tab-colblind-title-description')} </p>
+            </div>
+          </Tab>
         </Tabs>
         {/*<div><ContrastSummary contrastMatrix={contrastMatrix}></ContrastSummary></div>*/}
         {/* 
