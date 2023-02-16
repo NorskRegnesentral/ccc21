@@ -82,7 +82,7 @@ const ContrastTable = ({ contrastMatrix }) => {
                 <tr key={"row" + rowIndex}>
                   {Object.values(row).map((rowItem, colIndex) => (
                     rowIndex == 0 || colIndex == 0 ? 
-                      <th key={"row" + rowIndex + "col" + colIndex}>
+                      <th scope={!rowIndex && colIndex ? "col" : (!colIndex && rowIndex ? "row" : "")} key={"row" + rowIndex + "col" + colIndex}>
                           <div style={{ backgroundColor: rowItem }} className={rowIndex > 0 || colIndex > 0 ? "colorBox" : ""}/>
                               <p className="table-text-header">{rowItem}</p> 
 			</th>
