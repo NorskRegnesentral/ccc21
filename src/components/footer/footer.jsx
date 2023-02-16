@@ -1,8 +1,10 @@
 /*SPDX-License-Identifier: GPL-3.0-or-later*/
 import "./footer.css";
 import React, { useState, useEffect } from "react";
+import { useTranslation } from 'react-i18next';
 
-const Footer = ({ backgroundColor, textColor, text }) => {
+const Footer = ({ backgroundColor, textColor }) => {
+  const { t } = useTranslation();
   return (
     <div
       className="footer"
@@ -11,7 +13,7 @@ const Footer = ({ backgroundColor, textColor, text }) => {
         color: textColor,
       }}
     >
-      <p>{text}</p>
+      <p>{t('about-section-title')}</p>
     </div>
   );
 };

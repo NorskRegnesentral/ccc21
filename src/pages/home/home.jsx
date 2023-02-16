@@ -241,8 +241,7 @@ function Home() {
         */}
         <Footer
         backgroundColor="#fcfcfc"
-        textColor="#1f1235"  
-        text={t('footer-text')}
+        textColor="#1f1235"
         />
       </nav>
     </div>
