@@ -21,14 +21,13 @@
 
  table, td, th {
     /*border: 4px solid white;*/
-    border: 1px solid #dddddd;
+    border: 1px solid #ccc;
     border-collapse: collapse;
   }
 
   td, th {
       vertical-align: top;
-    padding: 0.5rem 0.75rem;
-    /* background-color: var(--base-color-light-grey); */
+    padding: 0.5rem 0.5rem;
     min-width: 85px; 
     font-size: 14px;
   }
@@ -46,31 +45,26 @@
     font-weight: normal;
   }
 
-  .table-text-entry{
-    margin: 0.75em;
-    text-align: center;
-  }
+.radio-button-container {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: .3rem
+}
 
-  .radio-button-container {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    gap: .3rem
-  }
-
-  .radio-button {
-      /* Add if not using autoprefixer */
-    -webkit-appearance: none;
-    appearance: none;
-    /* For iOS < 15 to remove gradient background */
-    background-color: var(--base-color-light-grey);
-    /* Not removed via appearance */
-    margin: 0;
-    font: inherit;
-    width: 1.15rem;
-    height: 1.15rem;
-    border: 0.1rem solid var(--base-color-mid-grey)	;
-    border-radius: 50%;
+.radio-button {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  appearance: none;
+  /* For iOS < 15 to remove gradient background */
+  background-color: var(--base-color-light-grey);
+  /* Not removed via appearance */
+  margin: 0;
+  font: inherit;
+  width: 1.15rem;
+  height: 1.15rem;
+  border: 0.1rem solid var(--base-color-mid-grey)	;
+  border-radius: 50%;
 }
 
 
@@ -81,8 +75,8 @@
 }
 
 .table-color-patch {
-    border: 1px solid var(--base-color-mid-grey);
-    width: 6em;
+  border: 1px solid var(--base-color-mid-grey);
+  padding: 0 0.75em;
 }
 
 .table-rating {

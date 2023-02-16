@@ -88,16 +88,14 @@ const ContrastTable = ({ contrastMatrix }) => {
 			</th>
 			:
 			<td key={"row" + rowIndex + "col" + colIndex}>
-			    <div className={rowIndex !== colIndex ? "table-color-patch" : "table-color-blank"}
+			    <span className={rowIndex !== colIndex ? "table-color-patch" : "table-color-blank"}
 				   style={{ color: getColumnColor(rowIndex, colIndex, rowItem),
-					    backgroundColor: rowIndex !== colIndex ? getRowColor(rowIndex, colIndex, rowItem) : "transparent" }}>
-				<p className="table-text-entry" aria-hidden="true">
+					    backgroundColor: rowIndex !== colIndex ? getRowColor(rowIndex, colIndex, rowItem) : "transparent" }} aria-hidden="true">
 				    {rowIndex !== colIndex ? (textMode ? t('contrast-table-example') : "▄▄▛▀") : ""}
-				  </p> 
-			      </div>
+			      </span>
 			      <div className="table-rating">
-				  <p className="table-rating-contrast">{rowItem}</p> 
-				    <p className={getWcagRatingFromContrast(rowItem, textMode) ? "table-rating-wcag" : ""}>{getWcagRatingFromContrast(rowItem, textMode)}</p> 
+				  <span className="table-rating-contrast">{rowItem}</span> 
+				    <span className={getWcagRatingFromContrast(rowItem, textMode) ? "table-rating-wcag" : ""}>{getWcagRatingFromContrast(rowItem, textMode)}</span> 
 				</div>
 			  </td>
                   ))}
