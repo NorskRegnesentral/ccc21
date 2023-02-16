@@ -25,7 +25,7 @@
     "about-wcag-low" : "Kontrasttall under 3 er for dårlige, også til stor tekst og elementer som ikke er tekst. Må unngåes.",
     "contrast-section-title" : "Kontraster for din palett",
     "get-started-section-title" : "Kom igang",
-    "get-started-description" : "I «Din palett» kan du legge til og fjerne farger. Du endrer en farge ved å klikke på fargen eller ved å skrive inn hex-koden direkte. Under finner du et lite utvalg forhånsdefinerte eksempelpaletter du kan bruke som utgangspunkt. Ellers vil du finne ulik funksjonalitet under hver fane, så her bør du utforske hvilke funksjoner som er mest nyttige for deg.",
+    "get-started-description" : "I seksjonen «Din palett» kan du legge til og fjerne farger. Du endrer en farge ved å klikke på fargen eller ved å skrive inn hex-koden direkte. Under finner du et lite utvalg forhåndsdefinerte eksempelpaletter du kan bruke som utgangspunkt. Ellers vil du finne ulik funksjonalitet under hver fane, så her bør du utforske hvilke funksjoner som er mest nyttige for deg.",
     "test-section-title" : "Test fargene i praksis",
     "test-section-explanation" : "Her kan du se hvordan fargekombinasjonene kan se ut i praksis.",
     "contrast-table-title"  : "Visning av valgte fargekombinasjoner med kontrasttall i en matrise", 
