@@ -152,10 +152,10 @@ function Home() {
                 {t('recommendation-explanation')}
               </p>
               <div className="aboutSectionTextBoxContainer">
-                <ContrastSummaryBox title={t('contrast-summary-aaa')} titleIcon={<TextFieldsIcon/>} backgroundColor={contrastColors.AAA}
-                                    colorCombinationsList={getContrastList(contrastMatrix, w.aaaTextMin, w.contrastMax)}></ContrastSummaryBox>
                 <ContrastSummaryBox title={t('contrast-summary-aa')} titleIcon={<TextFieldsIcon/>} backgroundColor={contrastColors.AA}
                                     colorCombinationsList={getContrastList(contrastMatrix, w.aaTextMin, w.contrastMax)}></ContrastSummaryBox>
+                <ContrastSummaryBox title={t('contrast-summary-aaa')} titleIcon={<TextFieldsIcon/>} backgroundColor={contrastColors.AAA}
+                                    colorCombinationsList={getContrastList(contrastMatrix, w.aaaTextMin, w.contrastMax)}></ContrastSummaryBox>
                 <ContrastSummaryBox title={t('contrast-summary-nontext-aa')} titleIcon={<AutoAwesomeMosaicIcon/>} backgroundColor={contrastColors.AANontext}
                                     colorCombinationsList={getContrastList(contrastMatrix, w.aaNonTextMin, w.contrastMax)}></ContrastSummaryBox>
                 <ContrastSummaryBox title={t('contrast-summary-low')} titleIcon={<VisibilityOffIcon/>} backgroundColor={contrastColors.none}
@@ -228,17 +228,6 @@ function Home() {
             </div>
           </Tab>
         </Tabs>
-        {/*<div><ContrastSummary contrastMatrix={contrastMatrix}></ContrastSummary></div>*/}
-        {/* 
-         <div>
-          <div className="see-contrast-heading">
-            <InventoryRoundedIcon/>
-            <h1 className="big-title">{t('recommendation-section-title')}</h1>
-          </div>
-          <MockupPage contrastMatrix={contrastMatrix} colorList={colorList}></MockupPage>
-          <ContrastSummary contrastMatrix={contrastMatrix}></ContrastSummary>
-        </div>
-        */}
         <Footer
         backgroundColor="#fcfcfc"
         textColor="#1f1235"

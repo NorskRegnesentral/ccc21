@@ -36,29 +36,7 @@ const ContrastSummary = ({ contrastMatrix }) => {
     <div className="contrastSummary">
        <h1>{t('contrast-summary-heading')} </h1>
 
-      <div>
-      <div className="contrastSummaryHeading"  style={{ backgroundColor: contrastColors.AAA, borderRadius: "4px", padding:"2px"}}>
-        <TextFieldsIcon/>
-        <h3 className="contrastSummaryHeadingFont">{t('contrast-summary-aaa')}</h3>
-      </div>
-      <ul className="contrastSummaryList">
-        {Object.values(AAAContrasts).map((item, index) => (
-          <li key={"AA" + index} className="contrastSummaryListItem">
-            <div
-              className="colorBox"
-              style={{ backgroundColor: item.farge1 }}
-            />
-            <div
-              className="colorBox"
-              style={{ backgroundColor: item.farge2 }}
-            />
-          </li>
-        ))}
-      </ul>
-      </div>
-
       <div className="contrastSummaryHeading" style={{ backgroundColor: contrastColors.AA, borderRadius: "4px", padding:"2px"}}>
-        <TextFieldsIcon/>
         <h3 className="contrastSummaryHeadingFont">{t('contrast-summary-aa')}</h3>
       </div>
       <ul className="contrastSummaryList">
@@ -77,7 +55,6 @@ const ContrastSummary = ({ contrastMatrix }) => {
       </ul>
 
       <div className="contrastSummaryHeading"  style={{ backgroundColor: contrastColors.AANontext, borderRadius: "4px", padding:"2px"}}>
-        <AutoAwesomeMosaicIcon/>
         <h3 className="contrastSummaryHeadingFont">{t('contrast-summary-nontext-aa')}</h3>
       </div>
       <ul className="contrastSummaryList">
@@ -95,9 +72,25 @@ const ContrastSummary = ({ contrastMatrix }) => {
         ))}
       </ul>
 
-      <div>
+      <div className="contrastSummaryHeading"  style={{ backgroundColor: contrastColors.AAA, borderRadius: "4px", padding:"2px"}}>
+        <h3 className="contrastSummaryHeadingFont">{t('contrast-summary-aaa')}</h3>
+      </div>
+      <ul className="contrastSummaryList">
+        {Object.values(AAAContrasts).map((item, index) => (
+          <li key={"AA" + index} className="contrastSummaryListItem">
+            <div
+              className="colorBox"
+              style={{ backgroundColor: item.farge1 }}
+            />
+            <div
+              className="colorBox"
+              style={{ backgroundColor: item.farge2 }}
+            />
+          </li>
+        ))}
+      </ul>
+
       <div className="contrastSummaryHeading"  style={{ backgroundColor: contrastColors.none, borderRadius: "4px", padding:"2px"}}>
-        <VisibilityOffIcon />
         <h3 className="contrastSummaryHeadingFont">{t('contrast-summary-low')}</h3>
       </div>
       <ul className="contrastSummaryList">
@@ -114,7 +107,6 @@ const ContrastSummary = ({ contrastMatrix }) => {
           </li>
         ))}
       </ul>
-    </div>
     </div>
   );
 };
