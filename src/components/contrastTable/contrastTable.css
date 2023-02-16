@@ -2,9 +2,7 @@
 @import "../../variables.css";
 
 .contrastTable {
-    /*background-color: var(--base-color-light-grey);*/
-    padding: 1rem;
-    border-radius: 4px;
+    padding-top: 1rem;
     width: fit-content;
     height: fit-content;
 }
@@ -20,12 +18,6 @@
   margin-left: 2px; /*fordi ytterse sirkel i radio button er 2px */
   border: none;
 }
-
-.tableBody{
-  /* background-color: var(--base-color-light-grey); */
-  /* border: 15px solid var(--base-color-light-grey); */
-  border-radius: 4px;
-} 
 
  table, td, th {
     /*border: 4px solid white;*/
