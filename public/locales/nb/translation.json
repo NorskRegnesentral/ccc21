@@ -31,6 +31,7 @@
     "contrast-table-title"  : "Visning av valgte fargekombinasjoner med kontrasttall i en matrise", 
   "contrast-table-radiobutton-title" :  "Velg visning for tabellen",
   "contrast-table-example" :  "Abc 123",
+  "contrast-table-empty" :  "Tabellen er tom. Du trenger minst 2 farger for at kontraster kan vises.",
     "recommendation-section-title" : "Anbefalinger for fargekombinasjoner",
     "recommendation-explanation" : "Basert på din palett anbefales fargekombinasjonene under, delt inn i henhold til passende WCAG-nivå.",
     "wcag-section-title" : "WCAG",

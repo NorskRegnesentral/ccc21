@@ -108,7 +108,7 @@ const ContrastTable = ({ contrastMatrix }) => {
         </div>
       </div>
     :
-    <p>Tabellen er tom.</p>
+      <p>{t('contrast-table-empty')}</p>
   );
 };
 export default ContrastTable;
