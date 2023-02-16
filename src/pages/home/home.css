@@ -93,10 +93,6 @@ li.nav-item button:hover {
   padding: 0;
 }
 
-.aboutSectionTextBoxContainer li {
-  padding: 0;
-}
-
 .mockup-section-title {
   display: flex;
   flex-direction: row;

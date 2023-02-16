@@ -7,18 +7,24 @@
 }
 
 .contrast-summary-list-item {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  grid-gap: .5em;
+  padding: .5em;
+}
+
+li.contrast-summary-list-item + li.contrast-summary-list-item {
+  margin-top: .5em;
 }
 
 
 .color-combo-circle {
-    border-radius: 1.5em;
-    border-width: 1.5em;
-    border-style: solid;
-    height: 0px;
-    width: 0px;
+  border-radius: 1.5em;
+  border-width: 1.5em;
+  border-style: solid;
+  height: 0px;
+  width: 0px;
 }
 
 .color-combo-text {
