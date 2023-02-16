@@ -84,7 +84,7 @@ const ContrastTable = ({ contrastMatrix }) => {
                     rowIndex == 0 || colIndex == 0 ? 
                       <th scope={!rowIndex && colIndex ? "col" : (!colIndex && rowIndex ? "row" : "")} key={"row" + rowIndex + "col" + colIndex}>
                           <div style={{ backgroundColor: rowItem }} className={rowIndex > 0 || colIndex > 0 ? "colorBox" : ""}/>
-                              <p className="table-text-header">{rowItem}</p> 
+                              <span className="table-text-header">{rowItem}</span> 
 			</th>
 			:
 			<td key={"row" + rowIndex + "col" + colIndex}>
