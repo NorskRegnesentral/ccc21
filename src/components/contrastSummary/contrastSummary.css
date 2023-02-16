@@ -8,6 +8,10 @@
   height: fit-content;
 }
 
+.contrastSummary h2 {
+  margin: .5em 0;
+}
+
 .contrastSummaryHeading {
   width: 100%;
   display: flex;
