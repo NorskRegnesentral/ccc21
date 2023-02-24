@@ -39,6 +39,18 @@ const MyColors = ({ colorList, setColorList, direction, setDirection }) => {
       <h1 class="big-title">
         {t('my-colors-heading')}
       </h1>
+      <ul className="color-list-controls">
+        <button 
+          disabled={colorList.length === numberOfColors.MAX ? true : false } 
+          className="palette-button palette-add"
+          onClick={addColorValue}
+        >🞥</button>
+        <button 
+          disabled={colorList.length === 0 ? true : false } 
+          className="palette-button palette-clear"
+          onClick={clearColorValues}
+        >🗑 </button>
+      </ul>
       <ul className="adaptive-color-list">
         <li className={`my-color-list-item ${colorList.length > 0 ? "disabled-message" : "enabled-message"}`}>
           <div className="empty-message">{t('my-colors-empty')}</div>
@@ -57,18 +69,6 @@ const MyColors = ({ colorList, setColorList, direction, setDirection }) => {
             ></ColorInput>
           </li>
         ))}
-      </ul>
-      <ul className="color-list-controls">
-        <button 
-          disabled={colorList.length === numberOfColors.MAX ? true : false } 
-          className="palette-button palette-add"
-          onClick={addColorValue}
-        >🞥</button>
-        <button 
-          disabled={colorList.length === 0 ? true : false } 
-          className="palette-button palette-clear"
-          onClick={clearColorValues}
-        >🗑 </button>
       </ul>
     </div>
   );
