@@ -62,21 +62,21 @@ const ContrastTable = ({ contrastMatrix }) => {
         <fieldset className="tableHeader">
           <legend hidden>{t('contrast-table-radiobutton-title')}</legend>
           {t('view-wcag-level')}
-          <div className="radio-button-container" onClick={()=>setTextMode(true)}>
-            <label for={t('view-wcag-level-text')}>
+          <div className="radio-button-container">
+            <label htmlFor={t('view-wcag-level-text')}>
               {t('view-wcag-level-text')}
             </label>
-            <input type="radio"  className="radio-button"  checked={textMode ? true : false} id={t('view-chosen-colors')}/>   
+            <input type="radio"  className="radio-button" checked={textMode ? true : false} onChange={()=>setTextMode(true)} id={t('view-chosen-colors')}/>   
           </div>    
-          <div className="radio-button-container" onClick={()=>setTextMode(false)}>
-            <label for={t('view-wcag-level-non-text')}>
+          <div className="radio-button-container">
+            <label htmlFor={t('view-wcag-level-non-text')}>
               {t('view-wcag-level-non-text')}
             </label>
-            <input type="radio" className="radio-button" checked={textMode ? false : true} id={t('view-contrast-level-by-color')}/>
+            <input type="radio" className="radio-button" checked={textMode ? false : true} onChange={()=>setTextMode(false)} id={t('view-contrast-level-by-color')}/>
           </div>
         </fieldset>
         <div className="tableBody">
-      <table aria-describedBy="contrastTableDescr">
+      <table aria-describedby="contrastTableDescr">
             <tbody>
               {contrastMatrix.map((row, rowIndex) => (
                 <tr key={"row" + rowIndex}>

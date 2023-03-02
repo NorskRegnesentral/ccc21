@@ -6,7 +6,7 @@ const ColorPalette = ({ colors, labelId }) => {
 
   return (
     <div className="color-palette-container">
-        <label for={labelId} hidden>
+        <label htmlFor={labelId} hidden>
             {labelId}
         </label>
         {Object.values(colors).map((color, index) => (

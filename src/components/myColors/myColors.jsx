@@ -36,7 +36,7 @@ const MyColors = ({ colorList, setColorList, direction, setDirection }) => {
 
   return (
     <div className="adaptive-bar">
-      <h1 class="big-title">
+      <h1 className="big-title">
         {t('my-colors-heading')}
       </h1>
       <ul className="color-list-controls">

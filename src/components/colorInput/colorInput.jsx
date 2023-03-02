@@ -53,7 +53,7 @@ const ColorInput = ({
   return (
     <fieldset className="colorInput">
       <legend hidden>{colorValue}</legend>
-      <label for={'color-value-by-colorpicker-'+index} hidden> {"color from chooser box"} </label> 
+      <label htmlFor={'color-value-by-colorpicker-'+index} hidden> {"color from chooser box"} </label> 
       <input
           className="inputForColor"
           id={'color-value-by-colorpicker-'+index} 
@@ -61,7 +61,7 @@ const ColorInput = ({
           value={colorValue}
         onInput={(e) => {{ updateColorValue(index, e.target.value); updateValue(e); }}}
         ></input>
-      <label for={'color-value-by-text-'+index} hidden> {"color as text input"} </label>
+      <label htmlFor={'color-value-by-text-'+index} hidden> {"color as text input"} </label>
       <div className="hex-input-frame">
         <input
           className="inputForColor hex-input"
