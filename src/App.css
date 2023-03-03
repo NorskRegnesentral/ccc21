@@ -43,12 +43,11 @@ button:hover {
 }
 
 button:disabled {
-  cursor: default;
+  cursor: not-allowed;
   opacity: .60;
 }
 
 button:disabled:hover {
   background-color: var(--base-color-dark-grey);
-  cursor: default;
   opacity: .40;
 }
