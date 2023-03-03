@@ -4,13 +4,12 @@
 .adaptive-bar {
   background-color: var(--base-color-light-grey);
   display: grid;
-  align-items: center;
 }
 
 @media screen and (min-width: 1400px) {
     .adaptive-bar {
         border-right: 2px groove var(--base-color-dark-grey);
-        grid-template-areas: "heading" "colorlist" "controls" "freespace";
+        grid-template-areas: "heading" "controls" "colorlist" "freespace";
         grid-template-rows: auto auto auto 1fr;
         height: 100vh;
     }
@@ -19,7 +18,7 @@
 @media not screen and (min-width: 1400px) {
     .adaptive-bar {
         border-bottom: 2px groove var(--base-color-dark-grey);
-        grid-template-areas: "heading colorlist controls freespace";
+        grid-template-areas: "heading controls colorlist freespace";
         grid-template-columns: auto auto auto 1fr;
         height: 100px;
         width: 100vw;
@@ -64,7 +63,7 @@
     flex-direction: column;
   grid-area: controls;
   grid-gap: .5em;
-  justify-content: center;
+  justify-self: center;
     padding: 0;
     margin: 0;
 }

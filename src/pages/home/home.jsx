@@ -126,8 +126,8 @@ function Home() {
               <fieldset className="default-palettes-container">
 		<legend>{t('default-palettes-legend')}</legend>
                 {Object.values(defaultColorPalettes).map((palette, index) => (
-                  <div className="default-palette-container" onClick={()=>setColorList(palette)}>
-                    <input id={"color-palette-"+index} type="radio"  className="radio-button"  checked={colorList == palette ? true : false}/>   
+                  <div className="default-palette-container">
+                    <input id={"color-palette-"+index} type="radio"  className="radio-button"  checked={colorList == palette ? true : false} onChange={()=>setColorList(palette)}/>   
                     <ColorPalette colors={palette} labelId={"color-palette-"+index}></ColorPalette>
                   </div>
                 ))}

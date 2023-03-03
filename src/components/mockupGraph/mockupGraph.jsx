@@ -25,7 +25,7 @@ const MockupGraph = ({ colorList }) => {
   return (
     <div className="mockup-graph">
         <div>
-            <div class="piechart" style={{backgroundImage: pieChartValues}}></div>
+            <div className="piechart" style={{backgroundImage: pieChartValues}}></div>
         </div>
         <p>Kakediagrammet viser <br></br>alle fargene dine samlet! <br></br><br></br></p>
     </div>

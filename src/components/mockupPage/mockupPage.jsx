@@ -87,7 +87,7 @@ const getPieChartColors = () => {
                 name="vehicle1"
                 value="Bike"
               />
-              <label for="vehicle1" style={{ color: colorList[0],   fontSize: "12px" }}>
+              <label htmlFor="vehicle1" style={{ color: colorList[0],   fontSize: "12px" }}>
                 {t('mockup-form-statement1')}
               </label>
             </div>
@@ -98,13 +98,13 @@ const getPieChartColors = () => {
                 name="vehicle1"
                 value="Bike"
               />
-              <label for="vehicle1" style={{ color: colorList[0], fontSize: "12px"}}>
+              <label htmlFor="vehicle1" style={{ color: colorList[0], fontSize: "12px"}}>
                 {t('mockup-form-statement2')}
               </label>
             </div>
           </form>
         </div>
-        <div class="piechart" style={{backgroundImage: pieChartValues}}></div>
+        <div className="piechart" style={{backgroundImage: pieChartValues}}></div>
       </div>
       <Footer
         backgroundColor={getColor1FromCombo(0)}

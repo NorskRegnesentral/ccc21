@@ -25,15 +25,43 @@
   background-color: transparent;
 }
 
-.hex-input {
-  width: 70px;
+.hex-input-frame {
+  display: flex;
+  flex-direction: row;
   background-color: #f0f0f0;
   height: 2em;
-  padding: 0.5em;
+  padding: 0;
   border: 1px solid #aaa;
   margin: 0 0.5em;
   border-radius: 0.1em;
   font-size: 12px;
+}
+
+.hex-input {
+  width: 6em;
+  font-family: monospace;
+  height: 1.8em;
+  padding: 0 1em 0 0.5em;
+  margin: 0;
+  border-radius: 0.1em;
+  font-size: 12px;
+}
+
+.hex-input-validation-indicator {
+  text-align: center;
+  vertical-align: middle;  
+  width: 1.5em;
+  padding: 0 0.25em;
+  margin: 0;
+  font-size: 1em;
+}
+
+.hex-input-valid {
+    color: darkgreen;
+}
+
+.hex-input-invalid {
+    color: darkred;
 }
 
 .deleteInput {
