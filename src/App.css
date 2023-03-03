@@ -51,3 +51,7 @@ button:disabled:hover {
   background-color: var(--base-color-dark-grey);
   opacity: .40;
 }
+
+input[type="color"] {
+  cursor: pointer;
+}
