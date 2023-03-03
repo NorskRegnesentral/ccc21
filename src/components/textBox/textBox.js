@@ -15,9 +15,7 @@ const TextBox = ({ title, titleIcon, backgroundColor, textColor, mainText }) => 
         {titleIcon}
         <h2 className="h1-text-box">{title}</h2>
       </div>
-      <div>
-        <p className="p-text-box">{mainText}</p>
-      </div>
+      <p className="p-text-box">{mainText}</p>
     </div>
   );
 };

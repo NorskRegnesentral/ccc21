@@ -21,12 +21,10 @@
   }
   
   .h1-text-box {
-    font-size: 16px;
     font-weight: normal;
   }
 
   .p-text-box {
-    font-size: 14px;
     max-width: 30ch; 
     margin: 0 0 0 0;
     line-height: 150%;
