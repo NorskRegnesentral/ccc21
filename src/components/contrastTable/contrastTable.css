@@ -59,7 +59,7 @@ td, th {
   /* For iOS < 15 to remove gradient background */
   background-color: var(--base-color-light-grey);
   /* Not removed via appearance */
-  margin: 0;
+  margin: 0 .8em 0 0;
   font: inherit;
   width: 1.15rem;
   height: 1.15rem;
