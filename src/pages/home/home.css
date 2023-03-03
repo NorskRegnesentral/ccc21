@@ -116,11 +116,11 @@ li.nav-item button:hover {
 
 
 .big-title {
-  font-size: 26px;
+  font-size: 1.5em;
 }
 
 .h2-title {
-  font-size: 22px;
+  font-size: 1.2em;
   color: var(--base-color-black);
 }
 
@@ -135,7 +135,6 @@ li.nav-item button:hover {
 }
 
 .h3-small {
-  font-size: 16px;
   font-weight: normal;
 }
 
@@ -146,9 +145,7 @@ li.nav-item button:hover {
 }
 
 .p-small-about {
-  font-size: 14px;
   max-width: 75ch;
-  line-height: 150%;
 }
 
 .row{
@@ -191,7 +188,6 @@ li.nav-item button:hover {
 .speech-bubble {
   background: var(--base-color-pink);
   color: black;
-  font-size: 14px;
   line-height: 2em;
   margin-bottom: 1em;
   padding: 0 1em;
