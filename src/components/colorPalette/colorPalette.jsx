@@ -10,7 +10,7 @@ const ColorPalette = ({ colors, labelId }) => {
             {labelId}
         </label>
         {Object.values(colors).map((color, index) => (
-            <div className="color-palette-color" style={{backgroundColor:color}}>
+          <div className="color-palette-color" style={{backgroundColor:color}} key={"color-palette-color-" + index}>
             </div>
         ))}   
     </div>   

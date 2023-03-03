@@ -68,7 +68,7 @@ const ColorInput = ({
           type="text"
           id={'color-value-by-text-'+index}
           maxLength="7"
-          value={colorTextInput}
+          value={colorTextInput || ""}
           onChange={updateValue}
         ></input>
         <div className={syntaxValidationClass}>
