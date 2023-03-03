@@ -38,11 +38,11 @@
 }
 
 .hex-input {
-  width: 6em;
+  width: 5em;
   font-family: monospace;
   height: 1.8em;
-  padding: 0 1em 0 0.5em;
-  margin: 0;
+  padding: 0;
+  margin: 0 0 0 0.5em;
   border-radius: 0.1em;
   font-size: 12px;
 }
