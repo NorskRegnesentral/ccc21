@@ -59,7 +59,7 @@ const MyColors = ({ colorList, setColorList, direction, setDirection }) => {
           </div>
         </li>
         {Object.values(colorList).map((color, index) => (
-          <li className="my-color-list-item">
+          <li className="my-color-list-item" key={"my-color-list-item-" + index}>
             <ColorInput
               key={"color" + index}
               index={index}
