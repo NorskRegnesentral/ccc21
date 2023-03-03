@@ -201,12 +201,12 @@ function Home() {
     </p>
                 <ul className="aboutSectionTextBoxContainer" aria-label={t('about-wcag-list-heading')}>
                   <li>
-                    <TextBox title={t('contrast-summary-aaa')} titleIcon={<TextFieldsIcon/>} 
-                             backgroundColor={contrastColors.AAA} mainText={t('about-wcag-aaa')}></TextBox>
-                  </li>
-                  <li>
                     <TextBox title={t('contrast-summary-aa')} titleIcon={<TextFieldsIcon/>} 
                              backgroundColor={contrastColors.AA} mainText={t('about-wcag-aa')}></TextBox>
+                  </li>
+                  <li>
+                    <TextBox title={t('contrast-summary-aaa')} titleIcon={<TextFieldsIcon/>} 
+                             backgroundColor={contrastColors.AAA} mainText={t('about-wcag-aaa')}></TextBox>
                   </li>
                   <li>
                     <TextBox title={t('contrast-summary-nontext-aa')} titleIcon={<AutoAwesomeMosaicIcon/>} 
