@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 const ContrastSummaryBox = ({ colorCombinationsList, title, backgroundColor }) => {
   const { t } = useTranslation();
   return (
-    <div className="contrastSummary">
+    <div className="contrastSummary" style={{backgroundColor: backgroundColor}}>
         <div className="title">
             <h2 className="contrast-summary-h2">{title}</h2>     
         </div>

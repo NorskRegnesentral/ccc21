@@ -2,8 +2,8 @@
 @import "../../variables.css";
 
 .contrast-summary-content {
-    background-color: var(--base-color-white);
-    border-radius: 4px;
+  background-color: var(--base-color-white);
+  border-radius: .5em;
 }
 
 .contrast-summary-list-item {
@@ -28,11 +28,11 @@ li.contrast-summary-list-item + li.contrast-summary-list-item {
 }
 
 .color-combo-text {
-    margin: 0;
-    padding: .1rem 0rem .1rem .8rem;
+  margin: 0;
+  padding: .1rem 0rem .1rem .8rem;
 
 }
- 
+
 p.no-elements {
   padding: 1em;
 }
