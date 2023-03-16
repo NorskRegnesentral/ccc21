@@ -40,14 +40,9 @@ export const getContrastList = (contrastMatrix, minContrast, maxContrast) => {
 export const getColorsFromDefaultPalette = (numberOfColors, currentColorList) => {
   let colors = [];
   if(numberOfColors === 1){
-    /*if(currentSizeOfColorList < 2) colors.push(defaultPalette[Math.floor(Math.random() * defaultPalette.length)]);
-    else colors.push(defaultPalette[currentSizeOfColorList+1]);*/
-    let possibleColor = defaultColorPalette[Math.floor(Math.random() * defaultColorPalette.length)]
-    if(Object.values(currentColorList).includes(possibleColor)){
-      while(Object.values(currentColorList).includes(possibleColor)){
-        possibleColor = defaultColorPalette[Math.floor(Math.random() * defaultColorPalette.length)]
-
-      }
+    let possibleColor = getRandomColor();
+    while(Object.values(currentColorList).includes(possibleColor)){
+      possibleColor = getRandomColor();
     }
     colors.push(possibleColor)
   } 
@@ -63,4 +58,8 @@ export const getBlackOrWhiteAsBestContrast = (color) => {
   const black = "#1f1235";
   const contrastToBlack = checkColors(color, "#000000");
   return contrastToBlack.contrast > 7 ? black : white; 
+}
+
+const getRandomColor = () => {
+  return defaultColorPalette[Math.floor(Math.random() * defaultColorPalette.length)];
 }
