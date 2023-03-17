@@ -48,7 +48,7 @@ export const getColorsFromDefaultPalette = (numberOfColors, currentColorList, fi
     colors.push(new FilteredColor(possibleColor, filterType))
   } 
   if(numberOfColors > 1 && numberOfColors <= defaultColorPalette.length){
-    while (colors.length < numberOfColors) colors.push(new FilteredColor(defaultColorPalette[colors.length]))
+    while (colors.length < numberOfColors) colors.push(new FilteredColor(defaultColorPalette[colors.length], filterType))
   }
 
   return colors; 
