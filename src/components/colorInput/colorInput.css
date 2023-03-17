@@ -83,3 +83,10 @@
   color: var(--base-color-light-grey);
   background-color: var(--base-color-dark-grey);
 }
+
+.filtered-color-patch {
+    /* Trying to match the style of the color input box. */
+    width: 35px;  
+    height: 35px;
+    border: 1px solid gray;
+}

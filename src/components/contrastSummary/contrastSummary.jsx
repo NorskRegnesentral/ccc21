@@ -44,11 +44,11 @@ const ContrastSummary = ({ contrastMatrix }) => {
           <li key={"AAA" + index} className="contrastSummaryListItem">
              <div
               className="colorBox"
-              style={{ backgroundColor: item.farge1 }}
+              style={{ backgroundColor: item.farge1.filtered }}
             />
             <div
               className="colorBox"
-              style={{ backgroundColor: item.farge2 }}
+              style={{ backgroundColor: item.farge2.filtered }}
             />
           </li>
         ))}
@@ -62,11 +62,11 @@ const ContrastSummary = ({ contrastMatrix }) => {
           <li key={"AANontext" + index} className="contrastSummaryListItem">
              <div
               className="colorBox"
-              style={{ backgroundColor: item.farge1 }}
+              style={{ backgroundColor: item.farge1.filtered }}
             />
             <div
               className="colorBox"
-              style={{ backgroundColor: item.farge2 }}
+              style={{ backgroundColor: item.farge2.filtered }}
             />
           </li>
         ))}
@@ -80,11 +80,11 @@ const ContrastSummary = ({ contrastMatrix }) => {
           <li key={"AA" + index} className="contrastSummaryListItem">
             <div
               className="colorBox"
-              style={{ backgroundColor: item.farge1 }}
+              style={{ backgroundColor: item.farge1.filtered }}
             />
             <div
               className="colorBox"
-              style={{ backgroundColor: item.farge2 }}
+              style={{ backgroundColor: item.farge2.filtered }}
             />
           </li>
         ))}
@@ -98,11 +98,11 @@ const ContrastSummary = ({ contrastMatrix }) => {
           <li className="contrastSummaryListItem" key={"bad" + index}>
             <div
               className="colorBox"
-              style={{ backgroundColor: item.farge1 }}
+              style={{ backgroundColor: item.farge1.filtered }}
             />
             <div
               className="colorBox"
-              style={{ backgroundColor: item.farge2 }}
+              style={{ backgroundColor: item.farge2.filtered }}
             />
           </li>
         ))}

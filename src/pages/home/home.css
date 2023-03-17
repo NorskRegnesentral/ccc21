@@ -221,3 +221,10 @@ li.nav-item button:hover {
 fieldset.default-palettes-container {
   margin-top: 1em;
 }
+
+.filter-selector {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 1rem;
+}

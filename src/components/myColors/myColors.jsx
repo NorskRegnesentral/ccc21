@@ -6,7 +6,7 @@ import { getColorsFromDefaultPalette } from "../../contrast-calculations";
 import { useTranslation } from 'react-i18next';
 import { numberOfColors } from "../../variables";
 
-const MyColors = ({ colorList, setColorList, direction, setDirection }) => {
+const MyColors = ({ colorList, setColorList, direction, setDirection, filterType }) => {
   const { t } = useTranslation();
   
   /** Metoden oppdaterer en farge i listen når du endrer fargen i brukergrensesnittet */
@@ -19,7 +19,7 @@ const MyColors = ({ colorList, setColorList, direction, setDirection }) => {
   /** Legg til farge hvis vi ikke har nådd maks antall */
   const addColorValue = () => {
     if(colorList.length >= 0 && colorList.length < numberOfColors.MAX)
-    setColorList((colorList) => [...colorList, getColorsFromDefaultPalette(1, colorList)[0]])
+      setColorList((colorList) => [...colorList, getColorsFromDefaultPalette(1, colorList, filterType)[0]])
   }
 
   /** Fjern farge hvis det er flere enn minimum antall */
@@ -31,7 +31,7 @@ const MyColors = ({ colorList, setColorList, direction, setDirection }) => {
 
   /** Fjern farge hvis det er flere enn minimum antall */
   const clearColorValues = () => {
-    setColorList((colorList) => getColorsFromDefaultPalette(0, 0));
+    setColorList((colorList) => getColorsFromDefaultPalette(0, 0, filterType));
   };
 
   return (
@@ -63,9 +63,11 @@ const MyColors = ({ colorList, setColorList, direction, setDirection }) => {
             <ColorInput
               key={"color" + index}
               index={index}
-              colorValue={color}
+              colorValue={color.original}
+              filteredColorValue={color.filtered}
               updateColorValue={updateColorValue}
               removeColorValue={removeColorValue}
+              filterType={filterType}
             ></ColorInput>
           </li>
         ))}

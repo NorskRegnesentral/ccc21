@@ -2,13 +2,17 @@
 import "./colorInput.css";
 import React, { useState, useEffect } from "react";
 import { useTranslation } from 'react-i18next';
+import FilteredColor from "../../FilteredColor";
 
 const ColorInput = ({
   colorValue,
+  filteredColorValue,
   index,
   updateColorValue,
   removeColorValue,
+  filterType
 }) => {
+
   const validMark = "✔";
   const invalidMark = "✘";
   const validClass = "hex-input-validation-indicator hex-input-valid";
@@ -38,9 +42,9 @@ const ColorInput = ({
     var RegExp = /(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i;
     if (RegExp.test(e.target.value)) {
       if (e.target.value.length == 7) {
-        updateColorValue(index, e.target.value);
+        updateColorValue(index, new FilteredColor(e.target.value), filterType);
       } else {
-        updateColorValue(index, convertHexColor3To6(e.target.value));
+        updateColorValue(index, new FilteredColor(convertHexColor3To6(e.target.value), filterType));
       }
       setSyntaxValidationMark(validMark);
       setSyntaxValidationClass(validClass);
@@ -58,9 +62,11 @@ const ColorInput = ({
           className="inputForColor"
           id={'color-value-by-colorpicker-'+index} 
           type="color"
-          value={colorValue}
-        onInput={(e) => {{ updateColorValue(index, e.target.value); updateValue(e); }}}
-        ></input>
+        value={colorValue}
+        onInput={(e) => {{ updateColorValue(index, new FilteredColor(e.target.value, filterType)); updateValue(e); }}}
+      ></input>
+      <div class={ filterType === "none" ? "no-filtered-color-patch" : "filtered-color-patch"} style={{backgroundColor: filteredColorValue}}>
+      </div>
       <label htmlFor={'color-value-by-text-'+index} hidden> {"color as text input"} </label>
       <div className="hex-input-frame">
         <input

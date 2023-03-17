@@ -2,6 +2,7 @@
 
 import { checkColors } from "./color-checker";
 import { defaultColorPalette } from "./variables";
+import FilteredColor from "./FilteredColor";
 
 export const getContrastList = (contrastMatrix, minContrast, maxContrast) => {
   const list = [];
@@ -37,27 +38,27 @@ export const getContrastList = (contrastMatrix, minContrast, maxContrast) => {
   return list;
 };
 
-export const getColorsFromDefaultPalette = (numberOfColors, currentColorList) => {
+export const getColorsFromDefaultPalette = (numberOfColors, currentColorList, filterType) => {
   let colors = [];
   if(numberOfColors === 1){
     let possibleColor = getRandomColor();
-    while(Object.values(currentColorList).includes(possibleColor)){
+    while(Object.values(currentColorList).map(c => { return c.original }).includes(possibleColor)){
       possibleColor = getRandomColor();
     }
-    colors.push(possibleColor)
+    colors.push(new FilteredColor(possibleColor, filterType))
   } 
   if(numberOfColors > 1 && numberOfColors <= defaultColorPalette.length){
-    while (colors.length < numberOfColors) colors.push(defaultColorPalette[colors.length])
+    while (colors.length < numberOfColors) colors.push(new FilteredColor(defaultColorPalette[colors.length]))
   }
 
   return colors; 
 }
 
-export const getBlackOrWhiteAsBestContrast = (color) => {
+export const getBlackOrWhiteAsBestContrast = (color, filterType) => {
   const white = "#fcfcfc";
   const black = "#1f1235";
-  const contrastToBlack = checkColors(color, "#000000");
-  return contrastToBlack.contrast > 7 ? black : white; 
+  const contrastToBlack = checkColors(color.filtered, "#000000");
+  return contrastToBlack.contrast > 7 ? new FilteredColor(black, filterType) : new FilteredColor(white, filterType); 
 }
 
 const getRandomColor = () => {

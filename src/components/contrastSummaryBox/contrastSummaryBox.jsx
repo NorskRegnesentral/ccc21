@@ -16,10 +16,10 @@ const ContrastSummaryBox = ({ colorCombinationsList, title, backgroundColor }) =
             <ul className="contrastSummaryList">
                 {Object.values(colorCombinationsList).map((item, index) => (
                 <li key={"AA" + index} className="contrast-summary-list-item">
-                    <div className="color-combo-circle" style={{borderRightColor: item.farge1, borderTopColor: item.farge2, borderBottomColor: item.farge1, borderLeftColor: item.farge2}}></div>
+                    <div className="color-combo-circle" style={{borderRightColor: item.farge1.filtered, borderTopColor: item.farge2.filtered, borderBottomColor: item.farge1.filtered, borderLeftColor: item.farge2.filtered}}></div>
                     <div>
-                        <p className="color-combo-text">{item.farge1}</p>
-                        <p className="color-combo-text">{item.farge2}</p>    
+                        <p className="color-combo-text">{item.farge1.original}</p>
+                        <p className="color-combo-text">{item.farge2.original}</p>    
                     </div>
                 </li>
                 ))}

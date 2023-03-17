@@ -83,14 +83,14 @@ const ContrastTable = ({ contrastMatrix }) => {
                   {Object.values(row).map((rowItem, colIndex) => (
                     rowIndex == 0 || colIndex == 0 ? 
                       <th scope={!rowIndex && colIndex ? "col" : (!colIndex && rowIndex ? "row" : "")} key={"row" + rowIndex + "col" + colIndex}>
-                          <div style={{ backgroundColor: rowItem }} className={rowIndex > 0 || colIndex > 0 ? "colorBox" : ""}/>
-                              <span className="table-text-header">{rowItem}</span> 
+                          <div style={{ backgroundColor: rowItem.filtered }} className={rowIndex > 0 || colIndex > 0 ? "colorBox" : ""}/>
+                              <span className="table-text-header">{rowItem.original}</span> 
 			</th>
 			:
 			<td key={"row" + rowIndex + "col" + colIndex}>
 			    <span className={rowIndex !== colIndex ? "table-color-patch" : "table-color-blank"}
-				   style={{ color: getColumnColor(rowIndex, colIndex, rowItem),
-					    backgroundColor: rowIndex !== colIndex ? getRowColor(rowIndex, colIndex, rowItem) : "transparent" }} aria-hidden="true">
+				   style={{ color: getColumnColor(rowIndex, colIndex, rowItem).filtered,
+					    backgroundColor: rowIndex !== colIndex ? getRowColor(rowIndex, colIndex, rowItem).filtered : "transparent" }} aria-hidden="true">
 				    {rowIndex !== colIndex ? (textMode ? t('contrast-table-example') : "▄▄▛▀") : ""}
 			      </span>
 			      <div className="table-rating">

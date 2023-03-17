@@ -16,7 +16,7 @@ const MockupGraph = ({ colorList }) => {
   const getPieChartColors = () => {
     const degreesPerColor = (360/colorList.length);
     let string = "conic-gradient("
-    colorList.map((value, i) => (i+1 === colorList.length ? string = string + colorList[i] + " " + degreesPerColor*i + "deg " + (degreesPerColor*i+degreesPerColor) + "deg" : string = string + colorList[i] + " " + degreesPerColor*i + "deg " + (degreesPerColor*i+degreesPerColor) + "deg, "))
+    colorList.map((value, i) => (i+1 === colorList.length ? string = string + colorList[i].filtered + " " + degreesPerColor*i + "deg " + (degreesPerColor*i+degreesPerColor) + "deg" : string = string + colorList[i].filtered + " " + degreesPerColor*i + "deg " + (degreesPerColor*i+degreesPerColor) + "deg, "))
     string = string + ")"
     return string
   }

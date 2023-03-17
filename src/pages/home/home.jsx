@@ -27,11 +27,13 @@ import ContrastSummary from "../../components/contrastSummary/contrastSummary";
 import ColorPalette from "../../components/colorPalette/colorPalette";
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
+import FilteredColor from "../../FilteredColor";
 
 function Home() {
   const { t } = useTranslation();
   const [colorList, setColorList] = useState(getColorsFromDefaultPalette(0, 0)); // start with an empty palette
   const [tableList, setTableList] = useState([""]);
+  const [filterType,setFilterType] = useState("none");
   const [contrastMatrix, setContrastMatrix] = useState([""].concat(colorList));
 
   useEffect(() => {
@@ -66,10 +68,19 @@ function Home() {
     return getContrast(rowIndex, columnIndex);
   };
 
+  const getFilteredColorPalette = (palette) => {
+    return palette.map((c) => { return new FilteredColor(c, filterType); });
+  }
+
+  const updatePaletteFilter = (ft) => {
+    setFilterType(ft);
+    colorList.map((c) => { c.update(ft); });
+  }
+  
   //bruker den importerte metoden fra color API
   const getContrast = (rowIndex, columnIndex) => {
-    const color1 = tableList[columnIndex];
-    const color2 = tableList[rowIndex];
+    const color1 = tableList[columnIndex].filtered;
+    const color2 = tableList[rowIndex].filtered;
     const colorComparison = checkColors(color1, color2);
     return colorComparison.contrast; 
   };
@@ -80,6 +91,7 @@ function Home() {
         <MyColors
           colorList={colorList}
           setColorList={setColorList}
+          filterType={filterType}
         />
       </div>
       <nav className="nav-bar">
@@ -125,7 +137,7 @@ function Home() {
               <p className="p-small-about">{t('get-started-description')}</p>
               <fieldset className="default-palettes-container">
 		<legend>{t('default-palettes-legend')}</legend>
-                {Object.values(defaultColorPalettes).map((palette, index) => (
+                {Object.values(defaultColorPalettes).map((p) => { return getFilteredColorPalette(p); }).map((palette, index) => (
                   <div className="default-palette-container" key={"default-palette-container-" + index}>
                     <input id={"color-palette-"+index} type="radio"  className="radio-button"  checked={colorList == palette ? true : false} onChange={()=>setColorList(palette)}/>   
                     <ColorPalette colors={palette} labelId={"color-palette-"+index}></ColorPalette>
@@ -171,14 +183,18 @@ function Home() {
               <p className="mockup-section-explanation">
                 {t('test-section-explanation')}
               </p>
+              { colorList.length >= 2 ?
               <div className="aboutSectionTextBoxContainer">
                 <MockupTextBox colorList={colorList} title={t('mockup-textbox-header')}  
                                mainText={t('mockup-textbox-maintext')} 
-                               titleIcon={<AutoAwesomeIcon/>} color1={colorList[3]} color2={colorList[2]}></MockupTextBox>
-                <MockupIllustration colorList={colorList} color1={colorList[3]} color2={colorList[2]}></MockupIllustration>
+                               titleIcon={<AutoAwesomeIcon/>} color1={colorList[3]} color2={colorList[2]} filterType={filterType}></MockupTextBox>
+                <MockupIllustration colorList={colorList} color1={colorList[3]} color2={colorList[2]} filterType={filterType}></MockupIllustration>
                 <MockupGraph colorList={colorList}></MockupGraph>
-                <MockupButton colorList={colorList} contrastMatrix={contrastMatrix} color1={colorList[3]} color2={colorList[2]}></MockupButton>
+                <MockupButton colorList={colorList} contrastMatrix={contrastMatrix} color1={colorList[3]} color2={colorList[2]} filterType={filterType}></MockupButton>
               </div>
+                :
+                <p>{t("test-area-empty")}</p>
+              }
             </div>
           </Tab>
           <Tab eventKey="wcag" title={t('wcag-tab-title')}>
@@ -225,6 +241,24 @@ function Home() {
                 <h1 className="big-title">{t('tab-colblind-title-long')}</h1>
               </div>
               <p className="p-small-about">{t('tab-colblind-title-description')} </p>
+              <fieldset className="filter-selector">
+                <div className="radio-button-container">
+                  <label htmlFor="Normal">Normal</label>
+                  <input type="radio" className="radio-button" checked={filterType === "none"} onChange={()=>updatePaletteFilter("none")}/>   
+                </div>    
+                <div className="radio-button-container">
+                  <label htmlFor="Rød">Rød</label>
+                  <input type="radio" className="radio-button" checked={filterType === "red"} onChange={()=>updatePaletteFilter("red")}/>   
+                </div>    
+                <div className="radio-button-container">
+                  <label htmlFor="Grønn">Grønn</label>
+                  <input type="radio" className="radio-button" checked={filterType === "green"} onChange={()=>updatePaletteFilter("green")}/>   
+                </div>    
+                <div className="radio-button-container">
+                  <label htmlFor="Blå">Blå</label>
+                  <input type="radio" className="radio-button" checked={filterType === "blue"} onChange={()=>updatePaletteFilter("blue")}/>   
+                </div>    
+              </fieldset>
             </div>
           </Tab>
         </Tabs>
