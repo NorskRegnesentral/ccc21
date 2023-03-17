@@ -49,7 +49,7 @@ td, th {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
-  gap: .3rem
+  margin-right: 2em;
 }
 
 .radio-button {

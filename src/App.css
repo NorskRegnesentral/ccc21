@@ -43,12 +43,19 @@ button:hover {
 }
 
 button:disabled {
-  cursor: default;
+  cursor: not-allowed;
   opacity: .60;
 }
 
 button:disabled:hover {
   background-color: var(--base-color-dark-grey);
-  cursor: default;
   opacity: .40;
+}
+
+input[type="color"] {
+  cursor: pointer;
+}
+
+button:focus, button:focus, input:focus, a:focus {
+  outline: 4px dashed #e6700f;
 }
