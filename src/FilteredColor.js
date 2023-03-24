@@ -1,8 +1,8 @@
 class FilteredColor {
 
   /*
-   * original: The original color on canonical form #rrggbb             
-   * filtered: The filtered color on canonical form #rrggbb             
+   * original:     The original color on canonical form #rrggbb             
+   * filterType:   The type of color blindness filter
    * originalText: The original color as entered by user, that is, #rrggbb or #rgb (default: original)
    */
   
@@ -14,12 +14,12 @@ class FilteredColor {
   }
 
   update(filterType) {
-    if (filterType === "red") {
-      this.filtered = redFilter(this.original);
-    } else if (filterType === "green") {
-      this.filtered = greenFilter(this.original);
-    } else if (filterType === "blue") {
-      this.filtered = blueFilter(this.original);
+    if (filterType === "protan") {
+      this.filtered = protanFilter(this.original);
+    } else if (filterType === "deutan") {
+      this.filtered = deutanFilter(this.original);
+    } else if (filterType === "tritan") {
+      this.filtered = tritanFilter(this.original);
     } else {
       this.filtered = this.original;
     }
@@ -27,7 +27,8 @@ class FilteredColor {
 
 }
 
-let redFilter = (e) => {
+// Protan filter mockup (just removes red component)
+let protanFilter = (e) => {
   let s = "#";
   for (let i = 1; i < 7; i++) {
     s += (i === 1 || i === 2) ? '0' : e[i];
@@ -35,7 +36,8 @@ let redFilter = (e) => {
   return s;
 }
 
-let greenFilter = (e) => {
+// Deutan filter mockup (just removes green component)
+let deutanFilter = (e) => {
   let s = "#";
   for (let i = 1; i < 7; i++) {
     s += (i === 3 || i === 4) ? '0' : e[i];
@@ -43,7 +45,9 @@ let greenFilter = (e) => {
   return s;
 }
 
-let blueFilter = (e) => {
+
+// Tritan filter mockup (just removes blue component)
+let tritanFilter = (e) => {
   let s = "#";
   for (let i = 1; i < 7; i++) {
     s += (i === 5 || i === 6) ? '0' : e[i];

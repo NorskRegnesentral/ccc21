@@ -247,16 +247,16 @@ function Home() {
                   <input type="radio" className="radio-button" checked={filterType === "none"} onChange={()=>updatePaletteFilter("none")}/>   
                 </div>    
                 <div className="radio-button-container">
-                  <label htmlFor="Rød">Rød</label>
-                  <input type="radio" className="radio-button" checked={filterType === "red"} onChange={()=>updatePaletteFilter("red")}/>   
+                  <label htmlFor="Protan">Protan</label>
+                  <input type="radio" className="radio-button" checked={filterType === "protan"} onChange={()=>updatePaletteFilter("protan")}/>   
                 </div>    
                 <div className="radio-button-container">
-                  <label htmlFor="Grønn">Grønn</label>
-                  <input type="radio" className="radio-button" checked={filterType === "green"} onChange={()=>updatePaletteFilter("green")}/>   
+                  <label htmlFor="Deutan">Deutan</label>
+                  <input type="radio" className="radio-button" checked={filterType === "deutan"} onChange={()=>updatePaletteFilter("deutan")}/>   
                 </div>    
                 <div className="radio-button-container">
-                  <label htmlFor="Blå">Blå</label>
-                  <input type="radio" className="radio-button" checked={filterType === "blue"} onChange={()=>updatePaletteFilter("blue")}/>   
+                  <label htmlFor="Tritan">Tritan</label>
+                  <input type="radio" className="radio-button" checked={filterType === "tritan"} onChange={()=>updatePaletteFilter("tritan")}/>   
                 </div>    
               </fieldset>
             </div>
