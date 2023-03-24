@@ -74,7 +74,7 @@ function Home() {
 
   const updatePaletteFilter = (ft) => {
     setFilterType(ft);
-    colorList.map((c) => { c.update(ft); });
+    setColorList(colorList.map((value, i) => new FilteredColor(value.original, ft)));
   }
   
   //bruker den importerte metoden fra color API
