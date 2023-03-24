@@ -5,14 +5,16 @@ import ColorInput from "../colorInput/colorInput";
 import { getColorsFromDefaultPalette } from "../../contrast-calculations";
 import { useTranslation } from 'react-i18next';
 import { numberOfColors } from "../../variables";
+import FilteredColor from "../../FilteredColor";
 
 const MyColors = ({ colorList, setColorList, direction, setDirection, filterType }) => {
   const { t } = useTranslation();
-  
+
   /** Metoden oppdaterer en farge i listen når du endrer fargen i brukergrensesnittet */
-  const updateColorValue = (index, newValue) => {
+  const updateColorValue = (index, newOriginalValue, filterType, originalText) => {
+    let newFilteredColor = new FilteredColor(newOriginalValue, filterType, originalText);
     setColorList((colors) =>
-      colors.map((value, i) => (i === index ? newValue : value))
+      colors.map((value, i) => (i === index ? newFilteredColor : value))
     );
   };
 
@@ -63,8 +65,9 @@ const MyColors = ({ colorList, setColorList, direction, setDirection, filterType
             <ColorInput
               key={"color" + index}
               index={index}
-              colorValue={color.original}
+              originalColorValue={color.original}
               filteredColorValue={color.filtered}
+              originalColorText={color.originalText}
               updateColorValue={updateColorValue}
               removeColorValue={removeColorValue}
               filterType={filterType}

@@ -2,11 +2,11 @@
 import "./colorInput.css";
 import React, { useState, useEffect } from "react";
 import { useTranslation } from 'react-i18next';
-import FilteredColor from "../../FilteredColor";
 
 const ColorInput = ({
-  colorValue,
+  originalColorValue,
   filteredColorValue,
+  originalColorText,
   index,
   updateColorValue,
   removeColorValue,
@@ -19,14 +19,14 @@ const ColorInput = ({
   const invalidClass = "hex-input-validation-indicator hex-input-invalid";
   
   const { t } = useTranslation();
-  const [colorTextInput, setColorTextInput] = useState();
+  const [colorTextInput, setColorTextInput] = useState("");
   const [syntaxValidationMark, setSyntaxValidationMark] = useState();
   const [syntaxValidationClass, setSyntaxValidationClass] = useState();
   useEffect(() => {
-    setColorTextInput(colorValue);
+    setColorTextInput(originalColorText);
     setSyntaxValidationMark(validMark);
     setSyntaxValidationClass(validClass);
-  }, []);
+  }, [originalColorText]);
 
   let convertHexColor3To6 = (e) => {
     let s = "#";
@@ -36,16 +36,17 @@ const ColorInput = ({
     }
     return s;
   }
-
+  
+  let isValidHexColor = (s) => {
+    var RegExp = /(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i;
+    return RegExp.test(s);
+  }
+  
   let updateValue = (e) => {
     setColorTextInput(e.target.value);
-    var RegExp = /(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i;
-    if (RegExp.test(e.target.value)) {
-      if (e.target.value.length == 7) {
-        updateColorValue(index, new FilteredColor(e.target.value), filterType);
-      } else {
-        updateColorValue(index, new FilteredColor(convertHexColor3To6(e.target.value), filterType));
-      }
+    if (isValidHexColor(e.target.value)) {
+      let originalValue = e.target.value.length == 7 ? e.target.value : convertHexColor3To6(e.target.value);
+      updateColorValue(index, originalValue, filterType, e.target.value);
       setSyntaxValidationMark(validMark);
       setSyntaxValidationClass(validClass);
     } else {
@@ -56,14 +57,14 @@ const ColorInput = ({
 
   return (
     <fieldset className="colorInput">
-      <legend hidden>{colorValue}</legend>
+      <legend hidden>{originalColorValue}</legend>
       <label htmlFor={'color-value-by-colorpicker-'+index} hidden> {"color from chooser box"} </label> 
       <input
           className="inputForColor"
           id={'color-value-by-colorpicker-'+index} 
           type="color"
-        value={colorValue}
-        onInput={(e) => {{ updateColorValue(index, new FilteredColor(e.target.value, filterType)); updateValue(e); }}}
+        value={originalColorValue}
+        onInput={(e) => {{ updateValue(e); }}}
       ></input>
       <div class={ filterType === "none" ? "no-filtered-color-patch" : "filtered-color-patch"} style={{backgroundColor: filteredColorValue}}>
       </div>
@@ -74,7 +75,7 @@ const ColorInput = ({
           type="text"
           id={'color-value-by-text-'+index}
           maxLength="7"
-          value={colorTextInput || ""}
+          value={colorTextInput}
           onChange={updateValue}
         ></input>
         <div className={syntaxValidationClass}>

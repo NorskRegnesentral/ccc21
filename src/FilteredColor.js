@@ -1,8 +1,15 @@
 class FilteredColor {
 
-  constructor(original, filterType) {
-    this.original = original;
-    this.filtered = original;
+  /*
+   * original: The original color on canonical form #rrggbb             
+   * filtered: The filtered color on canonical form #rrggbb             
+   * originalText: The original color as entered by user, that is, #rrggbb or #rgb (default: original)
+   */
+  
+  constructor(original, filterType, originalText) {
+    this.original = original;                                    
+    this.filtered = original;                                    
+    this.originalText = originalText ? originalText : original;  
     this.update(filterType);
   }
 
