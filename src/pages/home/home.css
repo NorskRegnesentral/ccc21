@@ -9,14 +9,14 @@
   overflow: hidden;
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 900px) {
     .app-adaptive-bar {
         grid-template-areas: "colorbar content";
         grid-template-columns: max-content auto;
     }
 }
 
-@media not screen and (min-width: 1400px) {
+@media not screen and (min-width: 900px) {
     .app-adaptive-bar {
         grid-template-areas: "colorbar" "content";
     }

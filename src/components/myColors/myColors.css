@@ -6,7 +6,7 @@
   display: grid;
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 900px) {
     .adaptive-bar {
         border-right: 2px groove var(--base-color-dark-grey);
         grid-template-areas: "heading" "controls" "colorlist" "freespace";
@@ -15,7 +15,7 @@
     }
 }
 
-@media not screen and (min-width: 1400px) {
+@media not screen and (min-width: 900px) {
     .adaptive-bar {
         border-bottom: 2px groove var(--base-color-dark-grey);
         grid-template-areas: "heading controls colorlist freespace";
@@ -68,7 +68,7 @@
     margin: 0;
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 900px) {
     .adaptive-color-list {
         display: flex;
         flex-direction: column;
@@ -77,7 +77,7 @@
     }
 }
 
-@media not screen and (min-width: 1400px) {
+@media not screen and (min-width: 900px) {
     .adaptive-color-list {
         flex-wrap: nowrap;
         overflow-x: auto;
