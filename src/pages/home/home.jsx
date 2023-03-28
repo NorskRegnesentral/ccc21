@@ -259,6 +259,7 @@ function Home() {
                   <input type="radio" className="radio-button" checked={filterType === "tritan"} onChange={()=>updatePaletteFilter("tritan")}/>   
                 </div>    
               </fieldset>
+              <p className="p-small-about">[1] Brettel, H., Viénot, F., & Mollon, J. D. (1997). Computerized simulation of color appearance for dichromats. Journal of the Optical Society of America. A, Optics, Image Science, and Vision, 14(10), 2647–2655. <a href="https://doi.org/10.1364/josaa.14.002647">https://doi.org/10.1364/josaa.14.002647</a></p>
             </div>
           </Tab>
         </Tabs>

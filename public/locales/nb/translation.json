@@ -63,7 +63,7 @@
   "try-palette-or-try-yourself" : "...eller legg til fargekoder fra menyen til venstre!",
   "tab-colblind-title-short" : "Fargeblindhet",
   "tab-colblind-title-long" : "Simulering av fargeblindhet",
-  "tab-colblind-title-description" : "Her kan du snart simulere ulike typer fargeblindhet.",
+  "tab-colblind-title-description" : "Her kan du simulere ulike typer fargeblindhet ved hjelp av Brettel-algoritmen [1].",
     "ok" : "ok",
   "cancel" : "avbryt",
   "about-tab-title" : "Om",
