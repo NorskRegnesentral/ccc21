@@ -240,7 +240,8 @@ function Home() {
               <div className="see-contrast-heading">
                 <h1 className="big-title">{t('tab-colblind-title-long')}</h1>
               </div>
-              <p className="p-small-about">{t('tab-colblind-title-description')} </p>
+              <p className="p-small-about">{t('tab-colblind-title-description-1')} </p>
+              <p className="p-small-about">{t('tab-colblind-title-description-2')} </p>
               <fieldset className="filter-selector">
                 <div className="radio-button-container">
                   <label htmlFor="Normal">Normal</label>
