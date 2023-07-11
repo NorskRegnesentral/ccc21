@@ -1,4 +1,5 @@
-Siden er hostet via github pages: https://kamillamortensen.github.io/contrastMatch/
+Kontrastsjekkeren er tilgjengelig gjennom [GitHub pages](https://norskregnesentral.github.io/ccc21/).
+The contrast checker is available through [GitHub pages](https://norskregnesentral.github.io/ccc21/)
 
 # Hvordan kjøre koden i development-modus fra datamaskinen!
 ## Slik gjør du
@@ -13,12 +14,9 @@ Du må ha npm/node installert på maskinen for de neste to trinn:
 
 Når du gjør endringer i koden skal localhost:3000 oppdateres automatisk. 
 
-
 # Hvordan deploye react-koden til github pages
 Det du må gjøre i dette prosjektet er å sørge for at du og den nye koden er på master branch. Deretter kan du kjøre `npm run deploy` fra terminalen, og siden skal oppdateres! <br>
 Tutorial til oppsett og endring av host-side: https://www.freecodecamp.org/news/deploy-a-react-app-to-github-pages/
-
-
 
 # Litt om systemet!
 
@@ -33,9 +31,6 @@ Inne i mappen til prosjektet ser det slik ut om du åpner den i en fil-editor: <
 <li><b>viarbles.css og variables.js</b> er filer som inneholder variabler som går igjen på tvers av sider og filer. Endres de, så endres variablen alle steder de har blitt brukt. </li>
 </ul>
 
-
-
-
 ## Bibliotek / dependencies
 
 <b>react i18next</b> er brukt for å enkelt kunne oversette siden mellom norsk og andre språk om det skulle bli ønskelig. Lenke: https://react.i18next.com/
@@ -48,3 +43,4 @@ Illustrasjonene kommer fra Undraw, en side hvor du kan finne svg-animasjoner på
 Biblioteket har ikke alle illustrasjonene som Undraw har, men utvalget finnes her: https://graemefulton.github.io/. <br> 
 En god bruksanvisning for hvordan man bruker komponentene er her:  https://github.com/GraemeFulton/react-undraw-illustrations.
 
+Siden er hostet via [GitHub pages](https://github.com/NorskRegnesentral/ccc21/)
