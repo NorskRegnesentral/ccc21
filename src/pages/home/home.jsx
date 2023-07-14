@@ -103,6 +103,17 @@ function Home() {
               </div>
               <p className="p-small-about">{t('about-summary')}</p>
               <p className="p-small-about">{t('about-description')}</p>
+         <h2>{t('shortcuts-title')}</h2>
+         {t('shortcuts')}
+         <ul class="regular">
+            <li><b>"{t('my-colors-heading')}"</b>: {t('my-colors-description')}</li>
+            <li><b>"{t('get-started-tab-title')}"</b>: {t('get-started-tab-description')}</li>
+            <li><b>"{t('contrast-tab-title')}"</b>: {t('contrast-tab-description')}</li>
+            <li><b>"{t('recommendation-tab-title')}"</b>: {t('recommendation-tab-description')}</li>
+            <li><b>"{t('testing-tab-title')}"</b>: {t('testing-tab-description')}</li>
+            <li><b>"{t('wcag-tab-title')}"</b>: {t('wcag-tab-description')}</li>
+            <li><b>"{t('coldef-tab-title')}"</b>: {t('coldef-tab-description')}</li>
+         </ul>
 	      <h2>{t('about-contributors-title')}</h2>
               <p className="p-small-about">{t('about-contributors')}: <a href={t('contributor-link-1')} target="_blank" rel="noreferrer noopener">{t('contributor-1')}</a>, <a href={t('contributor-link-2')} target="_blank" rel="noreferrer noopener">{t('contributor-2')}</a>, <a href={t('contributor-link-3')} target="_blank" rel="noreferrer noopener">{t('contributor-3')}</a>, <a href={t('contributor-link-4')} target="_blank" rel="noreferrer noopener">{t('contributor-4')}</a>.  
 			</p>
@@ -148,7 +159,7 @@ function Home() {
                   </div>
                 ))}
               </fieldset>
-              <p className="p-small-about">({t('default-palettes-description')} <a href="https://www.bufdir.no/tilskudd/uu/" targets="_blank" rel="noreferrer noopener">ColorBrewer 2.0</a>.)</p>
+              <p className="p-small-about">({t('default-palettes-description')} <a href="https://colorbrewer2.org/" targets="_blank" rel="noreferrer noopener">ColorBrewer 2.0</a> & <a href="https://colorhunt.co/" targets="_blank" rel="noreferrer noopener">Color Hunt</a>.)</p>
             </div>
           </Tab>
           <Tab eventKey="contrast" title={t('contrast-tab-title')}>
@@ -243,7 +254,7 @@ function Home() {
                 </ul>
             </div>
           </Tab>
-          <Tab eventKey="colblind" title={t('tab-colblind-title-short')}>
+          <Tab eventKey="colblind" title={t('coldef-tab-title')}>
             <div className="tab-section">
               <div className="see-contrast-heading">
                 <h1 className="big-title">{t('tab-colblind-title-long')}</h1>

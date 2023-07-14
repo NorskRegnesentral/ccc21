@@ -11,6 +11,15 @@ ul {
   list-style-type: none;
 }
 
+ul.regular {
+  display: block;
+  list-style-type: disc;
+}
+
+ul.regular li {
+  padding: 0px;
+}
+
 li {
   padding: .5rem;
 }
