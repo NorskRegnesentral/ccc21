@@ -148,6 +148,7 @@ function Home() {
                   </div>
                 ))}
               </fieldset>
+              <p className="p-small-about">({t('default-palettes-description')} <a href="https://www.bufdir.no/tilskudd/uu/" targets="_blank" rel="noreferrer noopener">ColorBrewer 2.0</a>.)</p>
             </div>
           </Tab>
           <Tab eventKey="contrast" title={t('contrast-tab-title')}>
