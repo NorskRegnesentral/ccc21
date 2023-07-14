@@ -18,6 +18,11 @@ Når du gjør endringer i koden skal localhost:3000 oppdateres automatisk.
 Det du må gjøre i dette prosjektet er å sørge for at du og den nye koden er på master branch. Deretter kan du kjøre `npm run deploy` fra terminalen, og siden skal oppdateres! <br>
 Tutorial til oppsett og endring av host-side: https://www.freecodecamp.org/news/deploy-a-react-app-to-github-pages/
 
+# Legg til default fargepaletter
+
+Gå til src > variables.
+Legg til under defaultColorPalettes.
+
 # Litt om systemet!
 
 ## Mappestruktur / arkitektur
