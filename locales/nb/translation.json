@@ -1,5 +1,5 @@
 {
-    "about-section-title" : "Fargekontrastsjekker og -designer 2.1",
+    "about-section-title" : "Fargekontrastsjekker og -designer for WACG 2.1 (CCC2.1)",
     "about-summary" : "Dette er et verktøy for å øke tilgjengelighet og lesbarhet av visuell informasjon på nettsider og i IKT-applikasjoner. Verktøyet hjelper deg med å velge paletter (fargekombinasjoner) med gode kontraster mellom fargene. Gode kontraster følger retningslinjene for tilgjengelig webinnhold (WCAG).", 
     "about-description" : "Verktøyet beregner fargekontraster, finner matchende WCAG-nivå, gir forslag for gode kontraster og tilbyr også et område som lar deg teste ut paletten i praksis med eksempler som ofte brukes i digital brukergrensesnitt.", 
     "shortcuts-title": "Snarveier",
