@@ -86,16 +86,18 @@ function Home() {
   };
 
   return (
-    <div className="app-adaptive-bar"> 
-      <div className="colorBar">
-        <MyColors
-          colorList={colorList}
-          setColorList={setColorList}
-          filterType={filterType}
-        />
-      </div>
-      <nav className="nav-bar">
-        <Tabs defaultActiveKey="about" id="main-tab-group" className="mb-3">
+<div className="app-adaptive-bar"> 
+	<div className="colorBar">
+   		<MyColors
+      		colorList={colorList}
+         setColorList={setColorList}
+         filterType={filterType}
+      />
+   </div>
+   <nav className="nav-bar">
+		<Tabs defaultActiveKey="contrast" id="main-tab-group" className="mb-3">
+         
+         {/* About Tab*/}
           <Tab eventKey="about" title={t('about-tab-title')}>
             <div className="tab-section">
               <div className="row">
@@ -144,6 +146,8 @@ function Home() {
 	      </p>
             </div>
           </Tab>
+         
+         {/* Get Started Tab */}
           <Tab eventKey="get-started" title={t('get-started-tab-title')}>
             <div className="tab-section">
               <div className="see-contrast-heading">
@@ -162,6 +166,8 @@ function Home() {
               <p className="p-small-about">({t('default-palettes-description')} <a href="https://colorbrewer2.org/" targets="_blank" rel="noreferrer noopener">ColorBrewer 2.0</a> & <a href="https://colorhunt.co/" targets="_blank" rel="noreferrer noopener">Color Hunt</a>.)</p>
             </div>
           </Tab>
+          
+          {/* Contrast Tab */}
           <Tab eventKey="contrast" title={t('contrast-tab-title')}>
             <div className="tab-section">
               <div className="see-contrast-heading">
@@ -171,14 +177,22 @@ function Home() {
               <ContrastTable aria-details={t('contrast-table-title')} contrastMatrix={contrastMatrix}></ContrastTable>
             </div>
           </Tab>
+          
+          {/* Recommendation Tab */}
           <Tab eventKey="recommendation" title={t('recommendation-tab-title')}>
             <div className="tab-section">
               <div className="see-contrast-heading">
                 <h1 className="big-title">{t('recommendation-section-title')}</h1>
               </div>
+              { colorList.length >= 0 ? 
+              <p className="recommendation-explanation">
+                {t('recommendation-no-colors')}
+              </p>
+              : 
               <p className="recommendation-explanation">
                 {t('recommendation-explanation')}
               </p>
+              }
               <div className="aboutSectionTextBoxContainer">
                 <ContrastSummaryBox title={t('contrast-summary-aa')} titleIcon={<TextFieldsIcon/>} backgroundColor={contrastColors.AA}
                                     colorCombinationsList={getContrastList(contrastMatrix, w.aaTextMin, w.contrastMax)}></ContrastSummaryBox>
@@ -191,6 +205,8 @@ function Home() {
               </div>
             </div>
           </Tab>
+          
+          {/* Testing Tab */}
           <Tab eventKey="testing" title={t('testing-tab-title')}>
             <div className="tab-section">
               <div className="mockup-section-title">
@@ -213,6 +229,8 @@ function Home() {
               }
             </div>
           </Tab>
+          
+          {/* WCAG Tab*/}
           <Tab eventKey="wcag" title={t('wcag-tab-title')}>
             <div className="tab-section">
               

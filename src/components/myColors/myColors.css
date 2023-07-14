@@ -12,7 +12,12 @@
         grid-template-areas: "heading" "controls" "colorlist" "freespace";
         grid-template-rows: auto auto auto 1fr;
         height: 100vh;
+        max-width: 209px;
     }
+    
+    .empty-message {
+	    width: 85%;
+	}
 }
 
 @media not screen and (min-width: 900px) {

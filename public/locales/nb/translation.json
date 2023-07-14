@@ -1,5 +1,5 @@
 {
-    "about-section-title" : "Fargekontrastsjekker og -designer 2.1",
+    "about-section-title" : "Fargekontrastsjekker og -designer for WCAG 2.1 (CCC 2.1)",
     "about-summary" : "Dette er et verktøy for å øke tilgjengelighet og lesbarhet av visuell informasjon på nettsider og i IKT-applikasjoner. Verktøyet hjelper deg med å velge paletter (fargekombinasjoner) med gode kontraster mellom fargene. Gode kontraster følger retningslinjene for tilgjengelig webinnhold (WCAG).", 
     "about-description" : "Verktøyet beregner fargekontraster, finner matchende WCAG-nivå, gir forslag for gode kontraster og tilbyr også et område som lar deg teste ut paletten i praksis med eksempler som ofte brukes i digital brukergrensesnitt.", 
     "shortcuts-title": "Snarveier",
@@ -56,13 +56,13 @@
     "contrast-table-title"  : "Visning av valgte fargekombinasjoner med kontrasttall i en matrise", 
   "contrast-table-radiobutton-title" :  "Velg visning for tabellen",
   "contrast-table-example" :  "Abc 123",
-  "contrast-table-empty" :  "Tabellen er tom. Du trenger minst 2 farger for at kontraster kan vises.",
+  "contrast-table-empty" :  "Tabellen er tom. Klikk på plusstegnet (+) under «Din palett» for å legge til en farge. Du trenger minst 2 farger for at kontraster kan vises.",
     "recommendation-section-title" : "Anbefalinger for fargekombinasjoner",
     "recommendation-explanation" : "Basert på din palett anbefales fargekombinasjonene under, delt inn i henhold til passende WCAG-nivå.",
     "wcag-section-title" : "Retningslinjer for tilgjengelig webinnhold (WCAG)",
   "my-colors-heading" : "Din palett",
   "my-colors-description" : "Her kan du velge farger for å lage en fargepalette.",
-  "my-colors-empty" : "Paletten er tom.",
+  "my-colors-empty" : "Paletten er tom. Klikk på plusstegnet (+) for å legge til en farge.",
     "change-color" : "Endre farge",
     "input-delete" : "fjern farge",
     "add-color" : "legg til fargekode",
@@ -92,7 +92,7 @@
   "tab-colblind-title-description-2" : "Ved å trykke på knappene nedenfor, kan du velge en av de mest vanlige fargeblindhetene for å se hvordan noen med nedsatt fargesyn opplever farger sammenliknet med en \"normalt\" seende. Her kan du simulere ulike typer fargeblindhet ved hjelp av Brettel-algoritmen [1].",
   "ok" : "ok",
   "cancel" : "avbryt",
-  "about-tab-title" : "Om",
+  "about-tab-title" : "Om CCC 2.1",
   "get-started-tab-title" : "Kom igang",
   "get-started-tab-description" : "Her får du mer informasjon om paletten og et utvalg av paletteeksempler.",
   "contrast-tab-title" : "Kontraster",
@@ -106,6 +106,7 @@
   "coldef-tab-title" : "Fargeblindhet",
   "coldef-tab-description" : "Her kan du velge ulike fargeblindhetssimuleringer for dine valgte farger.",
   "default-palettes-legend": "Paletteksempler",
-  "no-elements": "Ingen anbefalinger. Du trenger minst 2 farger for at anbefalinger kan beregnes.",
-  "test-area-empty": "Du trenger minst 2 farger for å teste."
+  "no-elements": "Ingen anbefalinger fordi du ikke har valgt noen farger ennå.",
+  "recommendation-no-colors" : "Du har ikke valgt noen farger enda. Klikk på plusstegnet (+) under «Din palett» for å legge til en farge. Du trenger minst 2 farger for at anbefalinger kan beregnes.",
+  "test-area-empty": "Ingen eksempler ennå. Klikk på plusstegnet (+) under «Din palett» for å legge til en farge. Du trenger minst 2 farger for å teste."
 }
