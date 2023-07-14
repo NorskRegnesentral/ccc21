@@ -18,6 +18,10 @@
     .empty-message {
 	    width: 85%;
 	}
+	
+	.color-list-controls {
+    	flex-direction: row;
+    }
 }
 
 @media not screen and (min-width: 900px) {
@@ -27,6 +31,10 @@
         grid-template-columns: auto auto auto 1fr;
         height: 100px;
         width: 100vw;
+    }
+    
+    .color-list-controls {
+    	flex-direction: column;
     }
 }
 
@@ -65,7 +73,6 @@
 
 .color-list-controls {
     display: flex;
-    flex-direction: column;
   grid-area: controls;
   grid-gap: .5em;
   justify-self: center;
@@ -111,6 +118,7 @@ h1 {
   /* height: 50px; */
   margin: 0; 
   display: flex;
+  float: left;
   align-items: center;
   justify-content: center;
 }
