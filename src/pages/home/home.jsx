@@ -104,7 +104,8 @@ function Home() {
               <p className="p-small-about">{t('about-summary')}</p>
               <p className="p-small-about">{t('about-description')}</p>
 	      <h2>{t('about-contributors-title')}</h2>
-              <p className="p-small-about">{t('about-contributors')}</p>
+              <p className="p-small-about">{t('about-contributors')}: <a href={t('contributor-link-1')} target="_blank" rel="noreferrer noopener">{t('contributor-1')}</a>, <a href={t('contributor-link-2')} target="_blank" rel="noreferrer noopener">{t('contributor-2')}</a>, <a href={t('contributor-link-3')} target="_blank" rel="noreferrer noopener">{t('contributor-3')}</a>, <a href={t('contributor-link-4')} target="_blank" rel="noreferrer noopener">{t('contributor-4')}</a>.  
+			</p>
               <p className="p-small-about">
 		{t('about-code-1')}
                 <a href="https://github.com/NorskRegnesentral/ccc21/" target="_blank" rel="noreferrer noopener">
@@ -114,10 +115,13 @@ function Home() {
 	      </p>
               <p className="p-small-about">
 		{t('about-funding-1')}
-                <a href="https://nr.no/" target="_blank" rel="noreferrer noopener">
-		  {t('about-funding-link')}
+                <a href="https://nr.no/prosjekter/tilgjengelige-kontraster/" target="_blank" rel="noreferrer noopener">
+		  {t('about-funding-link-1')}
 		</a>
 		{t('about-funding-2')}
+		  			<a href="https://www.bufdir.no/tilskudd/uu/" targets="_blank" rel="noreferrer noopener">
+		  {t('about-funding-link-2')}
+		</a>.
 		</p>
 	      <h2>{t('about-feedback-title')}</h2>
               <p className="p-small-about">
@@ -207,9 +211,12 @@ function Home() {
       {t('about-wcag')}
     </p>
       <p className="p-small-about">
-      {t('about-contrasts')}
+      {t('about-wcag-versions-1')} <a href={t('wcag-20-link')} target="_blank" rel="noreferrer noopener">{t('wcag-20')}</a>, <a href={t('wcag-21-link')} target="_blank" rel="noreferrer noopener">{t('wcag-21')}</a>, & <a href={t('wcag-22-link')} target="_blank" rel="noreferrer noopener">{t('wcag-22')}</a>.&nbsp; 
+       {t('about-wcag-legal-1')} <a href={t('wcag-legal-1')} target="_blank" rel="noreferrer noopener">{t('wcag-legal-1')}</a> {t('about-wcag-legal-2')}.
     </p>
+    <h2>{t('about-contrasts-title')}</h2>
       <p className="p-small-about">
+      {t('about-contrasts')}&nbsp;
       <a href="https://www.w3.org/TR/WCAG21/#contrast-minimum" target="_blank" rel="noreferrer noopener">
       {t('about-button-linking-to-wcag')}
     </a>
