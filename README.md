@@ -4,6 +4,10 @@
 
 * [NO](#no)
 * [EN](#en)
+* filer / files
+   * [HOWTO.md](HOWTO.md)
+   * [LICENSE](./LICENSE)
+   * [README.md](./README.md)
 
 ## NO
 
