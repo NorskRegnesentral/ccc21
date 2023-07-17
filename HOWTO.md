@@ -1,5 +1,7 @@
 # Hvordan bruke CCC 2.1 / How to use CCC 2.1
 
+Denne filen innholder informasjon om hvordan installere og bruker CCC 2.1. /
+This document contains information on how to install and use CCC 2.1.
 
 ## Hvordan kjøre koden i development-modus fra datamaskinen?
 
