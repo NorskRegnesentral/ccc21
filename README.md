@@ -1,4 +1,4 @@
-# Fargekontrastsjekker 2.1 - CCC 2.1 / Color Contrast Checker 2.1.
+# Fargekontrastsjekker 2.1 / Color Contrast Checker 2.1 - CCC 2.1 
 
 ## Oversikt / Overview
 
