@@ -108,6 +108,6 @@
   "coldef-tab-description" : "Simulering av fargeblindhet med valgt fargepalett.",
   "default-palettes-legend": "Paletteksempler",
   "no-elements": "Ingen anbefalinger fordi du ikke har valgt noen farger ennå.",
-  "recommendation-no-colors" : "Du har ikke valgt noen farger enda. Klikk på plusstegnet (+) under «Din palett» for å legge til en farge. Du trenger minst 2 farger for at anbefalinger kan beregnes.",
+  "recommendation-no-colors" : "Du har ikke valgt noen farger enda. Trykk på knappen med plusstegnet under «Din palett» for å legge til en farge. Du trenger minst 2 farger for at anbefalinger kan beregnes.",
   "test-area-empty": "Ingen eksempler ennå. Klikk på plusstegnet (+) under «Din palett» for å legge til en farge. Du trenger minst 2 farger for å teste."
 }
