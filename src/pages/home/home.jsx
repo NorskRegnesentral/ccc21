@@ -163,7 +163,7 @@ function Home() {
                   </div>
                 ))}
               </fieldset>
-              <p className="p-small-about">({t('default-palettes-description')} <a href="https://colorbrewer2.org/" targets="_blank" rel="noreferrer noopener">ColorBrewer 2.0</a> & <a href="https://colorhunt.co/" targets="_blank" rel="noreferrer noopener">Color Hunt</a>.)</p>
+              <p className="p-small-about">{t('default-palettes-description-1')} <a href="https://colorbrewer2.org/" targets="_blank" rel="noreferrer noopener">ColorBrewer 2.0</a> {t('default-palettes-description-2')} <a href="https://colorhunt.co/" targets="_blank" rel="noreferrer noopener">Color Hunt</a>{t('default-palettes-description-3')}</p>
             </div>
           </Tab>
           
