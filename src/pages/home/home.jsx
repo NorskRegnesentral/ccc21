@@ -276,27 +276,31 @@ function Home() {
               <div className="see-contrast-heading">
                 <h1 className="big-title">{t('tab-colblind-title-long')}</h1>
               </div>
-              <p className="p-small-about">{t('tab-colblind-title-description-1')} </p>
-              <p className="p-small-about">{t('tab-colblind-title-description-2')} </p>
-              <fieldset className="filter-selector">
+              <p className="p-small-about">{t('tab-colblind-title-description-2')}</p>
+              <fieldset className="colblind-container">
+		<legend>{t('tab-colblind-fieldset-title')}</legend>
                 <div className="radio-button-container">
-                  <label htmlFor="Normal">Normal</label>
-                  <input type="radio" className="radio-button" checked={filterType === "none"} onChange={()=>updatePaletteFilter("none")}/>   
+                  <input type="radio" id="cb-none" className="radio-button" checked={filterType === "none"} onChange={()=>updatePaletteFilter("none")}/>   
+                  <label htmlFor="cb-none">Normal</label>
                 </div>    
                 <div className="radio-button-container">
-                  <label htmlFor="Protan">Protan</label>
-                  <input type="radio" className="radio-button" checked={filterType === "protan"} onChange={()=>updatePaletteFilter("protan")}/>   
+                  <input type="radio" id="cb-protan" className="radio-button" checked={filterType === "protan"} onChange={()=>updatePaletteFilter("protan")}/>   
+                  <label htmlFor="cb-protan">Protan</label>
                 </div>    
                 <div className="radio-button-container">
-                  <label htmlFor="Deutan">Deutan</label>
-                  <input type="radio" className="radio-button" checked={filterType === "deutan"} onChange={()=>updatePaletteFilter("deutan")}/>   
+                  <input type="radio" id="cb-deutan" className="radio-button" checked={filterType === "deutan"} onChange={()=>updatePaletteFilter("deutan")}/>   
+                  <label htmlFor="cb-deutan">Deutan</label>
                 </div>    
                 <div className="radio-button-container">
-                  <label htmlFor="Tritan">Tritan</label>
-                  <input type="radio" className="radio-button" checked={filterType === "tritan"} onChange={()=>updatePaletteFilter("tritan")}/>   
+                  <input type="radio" id="cb-tritan" className="radio-button" checked={filterType === "tritan"} onChange={()=>updatePaletteFilter("tritan")}/>   
+                  <label htmlFor="cb-tritan">Tritan</label>
                 </div>    
               </fieldset>
-              <p className="p-small-about">[1] Brettel, H., Viénot, F., & Mollon, J. D. (1997). Computerized simulation of color appearance for dichromats. Journal of the Optical Society of America. A, Optics, Image Science, and Vision, 14(10), 2647–2655. <a href="https://doi.org/10.1364/josaa.14.002647">https://doi.org/10.1364/josaa.14.002647</a></p>
+              <p className="p-small-about">{t('tab-colblind-title-description-1')}</p>
+              <p className="p-small-about">
+		<span>{t('tab-colblind-reference')} </span>
+		<a href={t('tab-colblind-reference-link')} target="_blank" rel="noreferrer noopener">{t('tab-colblind-reference-link')}</a>
+	      </p>
             </div>
           </Tab>
         </Tabs>

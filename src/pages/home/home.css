@@ -228,3 +228,21 @@ fieldset.default-palettes-container {
     justify-content: left;
     gap: 1rem;
 }
+
+.colblind-container {
+  border: 1px solid #999;
+  margin: 1em 0;
+  padding: 1em;
+}
+
+.colblind-container legend {
+  float: none;
+  width: auto;
+  padding: 0 .5em;
+  margin: 0 1em;
+  font-size: 1em;
+}
+
+.colblind-container .radio-button-container {
+  flex-direction: row;
+}
