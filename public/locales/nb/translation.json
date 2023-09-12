@@ -61,7 +61,7 @@
     "recommendation-explanation" : "Basert på din palett anbefales fargekombinasjonene under, delt inn i henhold til passende WCAG-nivå.",
     "wcag-section-title" : "Retningslinjer for tilgjengelig webinnhold (WCAG)",
   "my-colors-heading" : "Din palett",
-  "my-colors-empty" : "Paletten er tom. Klikk på plusstegnet (+) for å legge til en farge.",
+  "my-colors-empty" : "Paletten er tom. Trykk på knappen med plusstegnet for å legge til en farge.",
     "change-color" : "Endre farge",
     "input-delete" : "fjern farge",
     "add-color" : "legg til fargekode",
