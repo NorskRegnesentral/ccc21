@@ -1,5 +1,6 @@
 {
-    "about-section-title" : "Fargekontrastsjekker og -designer for WCAG 2.1 (CCC 2.1)",
+    "name-full" : "Multi-Color Contrast Checker",
+    "name-short" : "M3C",
     "about-summary" : "Dette er et verktøy for å øke tilgjengelighet og lesbarhet av visuell informasjon på nettsider og i IKT-applikasjoner. Verktøyet skal hjelpe deg med å velge paletter (fargekombinasjoner) med gode kontraster mellom fargene. Dette er gjort med utgangspunkt i retningslinjene for tilgjengelig webinnhold, WCAG.", 
     "about-description" : "Verktøyet beregner fargekontraster, finner matchende WCAG-nivå, gir forslag for gode kontraster og tilbyr også et område som lar deg teste ut paletten i praksis med eksempler som ofte brukes i digital brukergrensesnitt.", 
     "structure-title": "Struktur",
@@ -92,7 +93,7 @@
   "tab-colblind-reference-link" : "https://doi.org/10.1364/josaa.14.002647",
   "ok" : "ok",
   "cancel" : "avbryt",
-  "about-tab-title" : "Om CCC 2.1",
+  "about-tab-title" : "Om",
   "get-started-tab-title" : "Kom igang",
   "get-started-tab-description" : "Her kan du velge fra fiks ferdige fargepaletter.",
   "contrast-tab-title" : "Kontraster",

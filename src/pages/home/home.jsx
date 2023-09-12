@@ -98,10 +98,10 @@ function Home() {
 		<Tabs defaultActiveKey="contrast" id="main-tab-group" className="mb-3">
          
          {/* About Tab*/}
-          <Tab eventKey="about" title={t('about-tab-title')}>
+		  <Tab eventKey="about" title={t('about-tab-title')}>
             <div className="tab-section">
               <div className="row">
-                <h1 className="big-title">{t('about-section-title')}</h1>
+                <h1 className="big-title">{t('name-full')} ({t('name-short')})</h1>
               </div>
               <p className="p-small-about">{t('about-summary')}</p>
               <p className="p-small-about">{t('about-description')}</p>

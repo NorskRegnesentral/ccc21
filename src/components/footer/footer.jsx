@@ -13,7 +13,7 @@ const Footer = ({ backgroundColor, textColor }) => {
         color: textColor,
       }}
     >
-      <p>{t('about-section-title')}</p>
+      <p>©&nbsp;{t('name-full')} ({t('name-short')})</p>
     </div>
   );
 };
