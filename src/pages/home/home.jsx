@@ -241,8 +241,7 @@ function Home() {
       {t('about-wcag')}
     </p>
       <p className="p-small-about">
-      {t('about-wcag-versions-1')} <a href={t('wcag-20-link')} target="_blank" rel="noreferrer noopener">{t('wcag-20')}</a>, <a href={t('wcag-21-link')} target="_blank" rel="noreferrer noopener">{t('wcag-21')}</a>, & <a href={t('wcag-22-link')} target="_blank" rel="noreferrer noopener">{t('wcag-22')}</a>.&nbsp; 
-       {t('about-wcag-legal-1')} <a href={t('wcag-legal-1')} target="_blank" rel="noreferrer noopener">{t('wcag-legal-1')}</a> {t('about-wcag-legal-2')}.
+      {t('about-wcag-versions-1')} <a href={t('wcag-20-link')} target="_blank" rel="noreferrer noopener">{t('wcag-20')}</a>, <a href={t('wcag-21-link')} target="_blank" rel="noreferrer noopener">{t('wcag-21')}</a> {t('wcag-22-1')} <a href={t('wcag-22-link')} target="_blank" rel="noreferrer noopener">{t('wcag-22')}</a>.
     </p>
     <h2>{t('about-contrasts-title')}</h2>
       <p className="p-small-about">
