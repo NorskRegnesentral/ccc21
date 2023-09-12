@@ -105,16 +105,15 @@ function Home() {
               </div>
               <p className="p-small-about">{t('about-summary')}</p>
               <p className="p-small-about">{t('about-description')}</p>
-         <h2>{t('shortcuts-title')}</h2>
-         {t('shortcuts')}
+         <h2>{t('structure-title')}</h2>
+         {t('structure')}
          <ul class="regular">
-            <li><b>"{t('my-colors-heading')}"</b>: {t('my-colors-description')}</li>
-            <li><b>"{t('get-started-tab-title')}"</b>: {t('get-started-tab-description')}</li>
-            <li><b>"{t('contrast-tab-title')}"</b>: {t('contrast-tab-description')}</li>
-            <li><b>"{t('recommendation-tab-title')}"</b>: {t('recommendation-tab-description')}</li>
-            <li><b>"{t('testing-tab-title')}"</b>: {t('testing-tab-description')}</li>
-            <li><b>"{t('wcag-tab-title')}"</b>: {t('wcag-tab-description')}</li>
-            <li><b>"{t('coldef-tab-title')}"</b>: {t('coldef-tab-description')}</li>
+            <li><b>«{t('get-started-tab-title')}»</b>: {t('get-started-tab-description')}</li>
+            <li><b>«{t('contrast-tab-title')}»</b>: {t('contrast-tab-description')}</li>
+            <li><b>«{t('recommendation-tab-title')}»</b>: {t('recommendation-tab-description')}</li>
+            <li><b>«{t('testing-tab-title')}»</b>: {t('testing-tab-description')}</li>
+            <li><b>«{t('wcag-tab-title')}»</b>: {t('wcag-tab-description')}</li>
+            <li><b>«{t('coldef-tab-title')}»</b>: {t('coldef-tab-description')}</li>
          </ul>
 	      <h2>{t('about-contributors-title')}</h2>
               <p className="p-small-about">{t('about-contributors')}: <a href={t('contributor-link-1')} target="_blank" rel="noreferrer noopener">{t('contributor-1')}</a>, <a href={t('contributor-link-2')} target="_blank" rel="noreferrer noopener">{t('contributor-2')}</a>, <a href={t('contributor-link-3')} target="_blank" rel="noreferrer noopener">{t('contributor-3')}</a>, <a href={t('contributor-link-4')} target="_blank" rel="noreferrer noopener">{t('contributor-4')}</a>.  
@@ -134,7 +133,8 @@ function Home() {
 		{t('about-funding-2')}
 		  			<a href="https://www.bufdir.no/tilskudd/uu/" targets="_blank" rel="noreferrer noopener">
 		  {t('about-funding-link-2')}
-		</a>.
+		</a>
+		  {t('about-funding-3')}
 		</p>
 	      <h2>{t('about-feedback-title')}</h2>
               <p className="p-small-about">
