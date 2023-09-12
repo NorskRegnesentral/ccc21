@@ -46,11 +46,13 @@ const MyColors = ({ colorList, setColorList, direction, setDirection, filterType
           disabled={colorList.length === numberOfColors.MAX ? true : false } 
           className="palette-button palette-add"
           onClick={addColorValue}
+	  aria-label={t('add-color')}
         >🞥</button>
         <button 
           disabled={colorList.length === 0 ? true : false } 
           className="palette-button palette-clear"
           onClick={clearColorValues}
+	  aria-label={t('clear-palette')}
         >🗑 </button>
       </ul>
       <ul className="adaptive-color-list">
