@@ -54,7 +54,7 @@
     "default-palettes-description-2" : "og",
     "default-palettes-description-3" : ".",
     "test-section-title" : "Kontrast eksempler",
-    "test-section-explanation" : "Test fargene i praksis. Her kan du se hvordan fargekombinasjonene kan se ut i praksis.",
+    "test-section-explanation" : "Her kan du se hvordan fargekombinasjonene dine kan se ut i praksis.",
     "contrast-table-title"  : "Visning av valgte fargekombinasjoner med kontrasttall i en matrise", 
   "contrast-table-radiobutton-title" :  "Velg visning for tabellen",
   "contrast-table-example" :  "Abc 123",
@@ -109,5 +109,5 @@
   "default-palettes-legend": "Paletteksempler",
   "no-elements": "Ingen anbefalinger fordi du ikke har valgt noen farger ennå.",
   "recommendation-no-colors" : "Du har ikke valgt noen farger enda. Trykk på knappen med plusstegnet under «Din palett» for å legge til en farge. Du trenger minst 2 farger for at anbefalinger kan beregnes.",
-  "test-area-empty": "Ingen eksempler ennå. Klikk på plusstegnet (+) under «Din palett» for å legge til en farge. Du trenger minst 2 farger for å teste."
+  "test-area-empty": "Ingen eksempler ennå. Trykk på knappen med plusstegnet under «Din palett» for å legge til en farge. Du trenger minst 2 farger for at eksemplene kan vises."
 }
