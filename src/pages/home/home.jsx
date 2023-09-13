@@ -29,6 +29,7 @@ import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import FilteredColor from "../../FilteredColor";
 import i18next from 'i18next';
+import {HashLink as Link} from 'react-router-hash-link';
 
 function Home() {
   const { t } = useTranslation();
@@ -87,7 +88,9 @@ function Home() {
   };
 
   return (
-<div className="app-adaptive-bar"> 
+    <div>
+      <Link class="skip-link" to="#main-tab-group">{t('skip-link')}</Link>
+      <div className="app-adaptive-bar"> 
 	<div className="colorBar">
    		<MyColors
       		colorList={colorList}
@@ -335,6 +338,7 @@ function Home() {
         textColor="#1f1235"
         />
       </nav>
+    </div>
     </div>
   );
 }
