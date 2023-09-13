@@ -86,6 +86,7 @@ const ColorInput = ({
         className="deleteInput"
         value="delete color"
         title={t('input-delete')}
+	aria-label={t('input-delete')}
         onClick={(e) => {{ removeColorValue({ index }) }}}> 
           ×
       </button>
