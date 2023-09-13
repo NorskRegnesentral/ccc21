@@ -246,3 +246,7 @@ fieldset.default-palettes-container {
 .colblind-container .radio-button-container {
   flex-direction: row;
 }
+
+.setting .label {
+  padding-right: 1em;
+}

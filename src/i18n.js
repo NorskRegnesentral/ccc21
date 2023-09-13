@@ -10,11 +10,11 @@ i18next
 .use(LanguageDetector)
 .use(Backend)
 .init({
-    debug: true,
-    fallbackLng: 'nb', //norwegian bokmål
-    backend: {
-        //trenger linjen fordi homepage er satt i package.json, må tilpasses eget prosjekt
-        loadPath: '/ccc21/locales/nb/{{ns}}.json' //BRUK DEN UNDER OM DET BLIR AKTUELT MED SPRÅKBYTTE
-        //loadPath: '/ccc21/locales/{{lng}}/{{ns}}.json'
-    }
+  debug: true,
+  fallbackLng: 'nb', // Norwegian bokmål
+  backend: {
+    //trenger linjen fordi homepage er satt i package.json, må tilpasses eget prosjekt
+    //loadPath: '/ccc21/locales/nb/{{ns}}.json' //BRUK DEN UNDER OM DET BLIR AKTUELT MED SPRÅKBYTTE
+    loadPath: '/ccc21/locales/{{lng}}/{{ns}}.json'
+  }
 })

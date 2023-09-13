@@ -28,6 +28,7 @@ import ColorPalette from "../../components/colorPalette/colorPalette";
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import FilteredColor from "../../FilteredColor";
+import i18next from 'i18next';
 
 function Home() {
   const { t } = useTranslation();
@@ -303,6 +304,29 @@ function Home() {
 		<span>{t('tab-colblind-reference')} </span>
 		<a href={t('tab-colblind-reference-link')} target="_blank" rel="noreferrer noopener">{t('tab-colblind-reference-link')}</a>
 	      </p>
+            </div>
+          </Tab>
+          <Tab eventKey="prefs" title={t('prefs-title')}>
+            <div className="tab-section">
+              <div className="see-contrast-heading">
+                <h1 className="big-title">{t('prefs-title')}</h1>
+              </div>
+	      <section class="setting">
+		<p className="p-small-about">
+		  {t('prefs-description')}
+		</p>
+		<h2>{t('prefs-language')}</h2>
+		<span class="label">
+		  <label htmlFor="uiLang">{t('prefs-language-selected')}</label>:
+		</span>
+		<select id="uiLang" className="uiLang" defaultValue={i18next.language} onChange={ ( evt) => {
+			  i18next.changeLanguage( evt.target.value);
+			  document.documentElement.lang = evt.target.value; // better would be to use react-helmet or react-helmet-async
+			} }>
+		  <option value="en">English</option>
+		  <option value="nb">Norsk (bokmål)</option>
+		</select>
+	      </section>
             </div>
           </Tab>
         </Tabs>
