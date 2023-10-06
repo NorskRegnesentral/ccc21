@@ -1,4 +1,4 @@
-# Fargekontrastsjekker 2.1 / Color Contrast Checker 2.1 - CCC 2.1 
+# Flerfarge-kontrastsjekker (FFKS) / Multi-Color Contrast Checker (M3C)
 
 ## Oversikt / Overview
 
@@ -15,9 +15,9 @@ Dette er et verktøy for å øke tilgjengelighet og lesbarhet av visuell informa
 
 Verktøyet beregner fargekontraster, finner matchende WCAG-nivå, gir forslag for gode kontraster og tilbyr også et område som lar deg teste ut paletten i praksis med eksempler som ofte brukes i digital brukergrensesnitt.
 
-Kontrastsjekkeren er tilgjengelig gjennom [GitHub pages](https://norskregnesentral.github.io/ccc21/).
+Kontrastsjekkeren er tilgjengelig gjennom [GitHub pages](https://norskregnesentral.github.io/m3c/).
 
-Prosjektet er hostet via [GitHub pages](https://github.com/NorskRegnesentral/ccc21/).
+Prosjektet er hostet via [GitHub pages](https://github.com/NorskRegnesentral/m3c/).
 
 ## EN
 
@@ -25,6 +25,6 @@ This is a tool to incrase accessibility and readability of visual informaiton on
 
 The tool calculates color contrast between chosen colors, indicates the matching WCAG level to the respective success criteria, gives recommendations for accessible and readable contrasts, and offers an example maker that visualizes the chosen palette with examples that can typically be found in digital interfaces.
 
-The contrast checker is available through [GitHub pages](https://norskregnesentral.github.io/ccc21/).
+The contrast checker is available through [GitHub pages](https://norskregnesentral.github.io/m3c/).
 
-This project is hosted on [GitHub pages](https://github.com/NorskRegnesentral/ccc21/).
+This project is hosted on [GitHub pages](https://github.com/NorskRegnesentral/m3c/).
