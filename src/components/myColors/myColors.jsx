@@ -53,7 +53,7 @@ const MyColors = ({ colorList, setColorList, direction, setDirection, filterType
           className="palette-button palette-clear"
           onClick={clearColorValues}
 	  aria-label={t('clear-palette')}
-        >🗑 </button>
+        >🗑 </button> 
       </ul>
       <ul className="adaptive-color-list">
         <li className={`my-color-list-item ${colorList.length > 0 ? "disabled-message" : "enabled-message"}`}>
@@ -62,8 +62,19 @@ const MyColors = ({ colorList, setColorList, direction, setDirection, filterType
             <ColorInput/>
           </div>
         </li>
+        {colorList.length > 0 ?
+            colorList.length > 1 ?
+               filterType=="none" ? <li>{t('original-colors-label-pl')}</li> :  <li>{t('simulated-colors-label-pl', {filterType: filterType})}</li> 
+            :
+               filterType=="none" ? <li>{t('original-colors-label')}</li> :  <li>{t('simulated-colors-label', {filterType: filterType})}</li> 
+         : 
+         ""
+        }
         {Object.values(colorList).map((color, index) => (
+        
           <li className="my-color-list-item" key={"my-color-list-item-" + index}>
+            
+              
             <ColorInput
               key={"color" + index}
               index={index}
@@ -73,7 +84,7 @@ const MyColors = ({ colorList, setColorList, direction, setDirection, filterType
               updateColorValue={updateColorValue}
               removeColorValue={removeColorValue}
               filterType={filterType}
-            ></ColorInput>
+            ></ColorInput> 
           </li>
         ))}
       </ul>

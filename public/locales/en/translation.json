@@ -114,5 +114,9 @@
   "prefs-description": "Here you can change your settings.",
   "prefs-language-selected": "Selected language",
   "prefs-language": "Language",
-  "skip-link": "Go to main content"
+  "skip-link": "Go to main content",
+  "original-colors-label": "Original color.",
+  "simulated-colors-label": "Original | {{filterType}} color.",
+  "original-colors-label-pl": "Original colors.",
+  "simulated-colors-label-pl": "Original | {{filterType}} colors."
 }
