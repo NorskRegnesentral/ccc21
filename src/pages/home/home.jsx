@@ -124,7 +124,7 @@ function Home() {
 			</p>
               <p className="p-small-about">
 		{t('about-code-1')}
-                <a href="https://github.com/NorskRegnesentral/ccc21/" target="_blank" rel="noreferrer noopener">
+                <a href="https://github.com/NorskRegnesentral/m3c/" target="_blank" rel="noreferrer noopener">
 		  {t('about-code-link')}
 		</a>
 		{t('about-code-2')}
@@ -143,7 +143,7 @@ function Home() {
 	      <h2>{t('about-feedback-title')}</h2>
               <p className="p-small-about">
 		{t('about-feedback-1')}
-                <a href="https://github.com/NorskRegnesentral/ccc21/issues/new/choose" target="_blank" rel="noreferrer noopener">
+                <a href="https://github.com/NorskRegnesentral/m3c/issues/new/choose" target="_blank" rel="noreferrer noopener">
 		  {t('about-feedback-link')}
 		</a>
 		{t('about-feedback-2')}
@@ -326,8 +326,8 @@ function Home() {
 			  i18next.changeLanguage( evt.target.value);
 			  document.documentElement.lang = evt.target.value; // better would be to use react-helmet or react-helmet-async
 			} }>
-		  <option value="en">English</option>
 		  <option value="nb">Norsk (bokmål)</option>
+		  <option value="en">English</option>
 		</select>
 	      </section>
             </div>
