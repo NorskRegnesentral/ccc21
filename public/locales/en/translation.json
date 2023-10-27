@@ -2,7 +2,7 @@
   "name-full" : "Multi-Color Contrast Checker",
   "name-short" : "M3C",
   "about-summary" : "This is a tool designed to enhance accessibility and readability of visual information on websites and in ICT applications. The tool will help you select palettes (color combinations) with good contrasts between the colors, based on the Web Content Accessibility Guidelines, WCAG.",
-  "about-description" : "The tool calculates color contrasts, finds matching WCAG levels, suggests good contrasts, and also provides an area for testing the palette in practice with commonly used examples in digital user interfaces.",
+  "about-description" : "The tool calculates color contrasts, finds matching WCAG levels, suggests good contrasts, and also provides an area for testing the palette in practice with commonly used examples in digital user interfaces. There is also support for the simulation of selected color vision deficiencies.",
   "structure-title": "Structure",
   "structure": "The most important area is 'Your palette', which contains your color choices. The other functions are distributed under these tabs:",
   "about-contributors-title" : "Contributors and Support",

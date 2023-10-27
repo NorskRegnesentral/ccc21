@@ -11,7 +11,8 @@ i18next
 .use(Backend)
 .init({
   debug: true,
-  fallbackLng: 'nb', // Norwegian bokmål
+  lng: 'en', // setting English as default language
+  fallbackLng: 'en',
   backend: {
     //trenger linjen fordi homepage er satt i package.json, må tilpasses eget prosjekt
     //loadPath: '/m3c/locales/nb/{{ns}}.json' //BRUK DEN UNDER OM DET BLIR AKTUELT MED SPRÅKBYTTE
