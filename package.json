@@ -1,7 +1,7 @@
 {
   "name": "first-react-app",
   "version": "0.1.0",
-  "homepage": "https://norskregnesentral.github.io/ccc21/",
+  "homepage": "https://norskregnesentral.github.io/m3c/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.9.3",
