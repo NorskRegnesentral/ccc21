@@ -2,7 +2,7 @@
   "name-full" : "Flerfarge-kontrastsjekker",
   "name-short" : "FFKS",
     "about-summary" : "Dette er et verktøy for å øke tilgjengelighet og lesbarhet av visuell informasjon på nettsider og i IKT-applikasjoner. Verktøyet skal hjelpe deg med å velge paletter (fargekombinasjoner) med gode kontraster mellom fargene. Dette er gjort med utgangspunkt i retningslinjene for tilgjengelig webinnhold, WCAG.", 
-    "about-description" : "Verktøyet beregner fargekontraster, finner matchende WCAG-nivå, gir forslag for gode kontraster og tilbyr også et område som lar deg teste ut paletten i praksis med eksempler som ofte brukes i digital brukergrensesnitt.", 
+    "about-description" : "Verktøyet beregner fargekontraster, finner matchende WCAG-nivå, gir forslag for gode kontraster og tilbyr et område som lar deg teste ut paletten i praksis med eksempler som ofte brukes i digital brukergrensesnitt. Verktøyet støtter også simulering av utvalgte typer nedsatt fargesyn.",
     "structure-title": "Struktur",
     "structure": "Det viktigste området er «Din palett», som inneholder dine fargevalg. De andre funksjonene ligger fordelt under disse fanene:",
     "about-contributors-title" : "Bidragsytere og støtte", 
